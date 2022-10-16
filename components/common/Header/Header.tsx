@@ -10,13 +10,21 @@ const Header = () => {
   const { openDrawer, isDrawerOpen } = useUI();
 
   const [scrollY, setScrollY] = useState(0);
-  const switchAnimationY = 100;
+  const switchAnimationY = 300;
   const [scrollListner, setScrollListoner] = useState(true);
+
   const underContainerClassNames = cn(
     style.under_link, {
+      [style.show]: scrollY >= switchAnimationY,
+      [style.hide]: scrollY <= switchAnimationY
+  })
+  
+  const headerClassNames = cn(
+    style.header, {
       [style.show]: scrollY <= switchAnimationY,
       [style.hide]: scrollY >= switchAnimationY
-    })
+    }
+  )
 
   const windowToTop = (e: any) => {
     setScrollY(0);
@@ -53,7 +61,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={style.header}>
+      <header className={headerClassNames}>
         <div className={style.wrapper}>
           <Link href={"/"} passHref>
             <div className="flex items-center">
