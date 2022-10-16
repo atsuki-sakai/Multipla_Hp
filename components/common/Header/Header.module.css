@@ -1,0 +1,41 @@
+
+.header {
+    @apply fixed top-0 w-full shadow-md bg-white z-40;
+}
+
+.wrapper {
+    @apply flex justify-between mx-6 py-1;
+}
+
+.title {
+    @apply text-2xl font-noto_sans font-bold;
+}
+
+.subtitle {
+    @apply font-noto_sans text-[10px];
+}
+
+.mobile_menu {
+    @apply flex md:hidden justify-around items-center cursor-pointer;
+}
+
+.desktop_menu {
+    @apply hidden md:flex items-center justify-end space-x-3 text-xs lg:space-x-6 ml-12;
+}
+
+.under_link {
+    @apply fixed bottom-10 lg:bottom-20 right-0 z-50 pr-4  bg-gradient-to-t to-red-400 from-purple-700 rounded-l-2xl h-16 w-16 md:h-20 md:w-20  shadow-md transform duration-300 ease-in-out hover:scale-105;
+}
+
+.under_button {
+    @apply text-center flex flex-col z-50 justify-center items-center ml-5 md:ml-6;
+     & > p {
+        @apply mt-2 text-xs md:text-base font-bold font-noto_sans w-full text-center text-white;
+     }
+}
+.show {
+    @apply opacity-100;
+}
+.hide {
+    @apply opacity-0;
+}

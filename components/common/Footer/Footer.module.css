@@ -1,0 +1,32 @@
+
+.root {
+    @apply p-4 bg-gray-700 z-40;
+}
+
+.logo {
+    @apply relative w-[35px] h-[35px] md:w-[45px] md:h-[45px];
+}
+
+.logo_text {
+    @apply text-white font-noto_sans font-bold text-[14px] md:text-[24px];
+}
+
+.navigation {
+    @apply grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3;
+}
+
+.navTitle {
+    @apply mb-4 font-bold font-noto_sans text-sm md:text-lg text-white;
+}
+
+.navbar {
+    @apply text-white font-thin font-noto_sans text-xs md:text-sm;
+}
+
+.link {
+    @apply font-noto_sans hover:underline;
+}
+
+.sns_icon {
+    @apply transform duration-200 ease-in-out hover:scale-125 w-5 h-5 md:w-7 md:h-7;
+}

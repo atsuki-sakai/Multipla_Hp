@@ -1,0 +1,20 @@
+
+.root {
+    @apply flex text-white;
+}
+
+.link {
+    @apply text-sm text-white font-bold hover:opacity-60 opacity-100;
+}
+
+.text {
+    @apply ml-2;
+}
+
+.subText {
+    @apply ml-2 font-light;
+}
+
+.line {
+    @apply h-[1px] w-full my-2 bg-white;
+}

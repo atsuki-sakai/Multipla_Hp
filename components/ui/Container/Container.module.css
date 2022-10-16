@@ -1,0 +1,4 @@
+
+.root {
+    @apply px-6 mx-auto max-w-[1920px] pt-16 ;
+}
