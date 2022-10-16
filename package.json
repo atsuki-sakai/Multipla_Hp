@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build && next-sitemap npx tailwindcss -o globals.css --minify",
     "start": "next start",
-    "sitemap:build": "next-sitemap",
     "lint": "next lint"
   },
   "dependencies": {
