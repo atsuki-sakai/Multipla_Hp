@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useUI } from "@components/context";
 import style from "./Header.module.css";
 import cn from "classnames"
-import { UnderLineAnimationLink } from "@components/ui/UnderLineAnimationLink";
+import { UnderLineAnimationLink } from "@components/ui"
 
 const Header = () => {
   const { openDrawer, isDrawerOpen } = useUI();
@@ -18,7 +18,7 @@ const Header = () => {
       [style.show]: scrollY >= switchAnimationY,
       [style.hide]: scrollY <= switchAnimationY
   })
-  
+
   const headerClassNames = cn(
     style.header, {
       [style.show]: scrollY <= switchAnimationY,

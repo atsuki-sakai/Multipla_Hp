@@ -1,2 +1,2 @@
 
-export { default as UnderLineAnimationLink } from "./UnderLineAnimationLink"
+export { default } from "./UnderLineAnimationLink"
