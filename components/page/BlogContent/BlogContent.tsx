@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { BlogCard } from "@components/ui/page/BlogContent"
+import { BlogCard } from "@components/page/BlogContent"
 import Link from 'next/link';
 
 interface Props {

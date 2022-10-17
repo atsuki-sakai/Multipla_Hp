@@ -7,7 +7,7 @@ import {
   ActualSite,
   StrongPointContent,
   BlogContent
-} from "@components/ui/page"
+} from "@components/page"
 import { MetaHead } from "@components/common";
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 

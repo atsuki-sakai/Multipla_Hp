@@ -10,13 +10,13 @@ interface Props {
     type?: string
 }
 
-// TODO: ogimageを作成して差し替える & 動作の確認
+// TODO: facebook app idを新しく取得
 
 const MetaHead = ({
                     title = "MULTIPLA/マルチプラ",
                     description = "WEBのことならぜひ一度ご相談ください。遠方のお客様も全てオンライン上で全て完結いたしますので是非ご利用下さい。直接打ち合わせも可",
                     keyword = ["マルチプラ","MALTIPLA","ホームページ","ECサイト", "篠山"],
-                    ogImgPath = "https://byte-ecommerce.com/images/byte-ogp.png",
+                    ogImgPath = "https://multipla-webservice/images/test-og-image.png",
                     url = "https://multipla-webservice.com",
                     type = "website",
                 }: Props) => {
@@ -35,7 +35,7 @@ const MetaHead = ({
             <meta property="og:image:height" content="630" />
             <meta property="og:site_name" content={title} />
             <meta property="og:locale" content="ja_JP" />
-            <meta property="fb:app_id" content="3128697494014223" />
+            {/* <meta property="fb:app_id" content="3128697494014223" /> */}
             <meta property="og:description" content={description} />
         </Head>
     )
