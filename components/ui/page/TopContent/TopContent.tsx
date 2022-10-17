@@ -24,17 +24,18 @@ const TopContent = () => {
         return () => document.removeEventListener('scroll', handleScrollY);
     }, [scrollY]);
 
+
     return (
-        <div className='h-screen w-full sticky top-0 overflow-hidden' >
+        <div className="h-screen w-full sticky top-0 overflow-hidden -z-10">
             <div style={{
                             transform:`translateY(-${scrollY > 1400 ? 0.0 : progress * 30 }vh)`
-                        }} ref={ref} className='h-full w-full z-20'>
+                        }} ref={ref} className='h-full w-full -z-20' >
                 <VideoPlayer
                     // poster={"images/poster1.png"}
                     webm={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1659846147/bg-wave-2_fzh8v6.webm"}
                     mp4={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1659846310/bg-wave-2_bzjmi2.mp4"}
                 />
-                <div className={`absolute flex flex-col justify-around items-center w-full h-full z-10 `}>
+                <div className={`absolute flex flex-col justify-around items-center w-full h-full `}>
                     <motion.div initial={{ scale: 1.0 }} animate={{ scale: progress == 1 ? 1.0 : 1.0 + (1.01 * progress), opacity: 1 + (-progress) }} className='flex flex-col items-center pt-8'>
                     <div>
                         <motion.div initial={{ opacity: 0, y:30 }} animate={{ opacity: 1.0, y:0 }} transition={{ duration: 0.8, delay: 0.8 }} className="visible relative w-[120px] h-[120px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px] flex items-center">
@@ -44,7 +45,7 @@ const TopContent = () => {
                     <motion.p initial={{ opacity: 0, y:30 }} animate={{ opacity: 1.0, y:0 }} transition={{ duration:0.8, delay: 0.8 }} className='text-shadow-xl text-shadow-black text-3xl md:text-5xl lg:text-6xl w-fit h-fit -translate-x-1/2 text-left font-bold tracking-wide'>
                         ビジネスにWEBの力を<br/>PLUS +
                     </motion.p>
-                    <motion.div initial={{ opacity:0  }} animate={{ opacity: 1.0 }}  transition={{ duration:0.8, delay: 0.8}} className='drop-shadow-2xl mt-20 transform duration-300 px-6 py-2  md:px-12 md:py-4 text-white text-xl md:text-2xl shadow-md rounded-md bg-orange-600 hover:-translate-y-1 hover:bg-white hover:text-orange-600 hover:border hover:border-orange-600' >
+                    <motion.div initial={{ opacity:0  }} animate={{ opacity: 1.0 }}  transition={{ duration:0.8, delay: 0.8}} className='drop-shadow-2xl mt-20 transform duration-300 px-6 py-2  md:px-12 md:py-4 text-white text-xl md:text-2xl shadow-md rounded-md bg-gradient-to-tr to-orange-600 from-purple-700  hover:-translate-y-1' >
                         <Link href={"/contact"} passHref>
                             <a>
                             お問合せ・相談はこちら

@@ -9,3 +9,7 @@
 .drawer_header {
     @apply flex items-center mt-3 mx-8 justify-around;
 }
+
+.under_logo_container {
+    @apply w-full flex items-center justify-center;
+}

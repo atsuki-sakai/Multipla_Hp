@@ -31,11 +31,9 @@ const ServiceContents = () => {
 
     return (
         <>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:py-12 relative py-6 bg-transparent">
                 <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
-                    <div className='pb-12 md:pb-16 lg:pb-20'>
-                        <h3 className='text-lg md:text-2xl  lg:text-3xl font-bold text-center title-font mb-4'><span className='font-bold text-4xl md:text-5xl lg:text-6xl'>byte</span>の提供するサービス</h3>
-                    </div>
+                    <h3 className='text-xl md:text-2xl lg:text-3xl font-bold text-center title-font '><span className=' font-bold text-4xl md:text-5xl lg:text-6xl'>MULTIPLA</span>のサービス</h3>
                 </motion.div>
                 <div className="mt-6">
                     <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">

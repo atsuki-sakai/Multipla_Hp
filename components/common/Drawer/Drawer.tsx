@@ -4,15 +4,20 @@ import { motion } from 'framer-motion'
 import { DrawerMenu } from "@components/common/Drawer/DrawerMenu"
 import { useUI } from "@components/context"
 import style from "./Drawer.module.css"
+import {
+    CircleClose,
+    Chat,
+    Calculator,
+} from '@components/icon';
 
 
 const Drawer = () => {
 
     const { isDrawerOpen, closeDrawer } = useUI();
     return (
-        <motion.div 
-            initial={{ y:"-100%", opacity:0.0 }} 
-            animate={{ y: isDrawerOpen ? 0.0 : "-100%", opacity: isDrawerOpen ? 1.0 : 0.0 }} 
+        <motion.div
+            initial={{ y:"-100%", opacity:0.0 }}
+            animate={{ y: isDrawerOpen ? 0.0 : "-100%", opacity: isDrawerOpen ? 1.0 : 0.0 }}
             transition={{ duration:"0.8" }}
             className={style.root}
         >
@@ -22,23 +27,20 @@ const Drawer = () => {
                         <h3 className="uppercase text-xl text-white font-light">
                             Menu / Infomation
                         </h3>
-                        <div className='uppercase text-white font-bold cursor-pointer' onClick={() => closeDrawer()}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
+                        <div
+                            className='uppercase text-white font-bold cursor-pointer'
+                            onClick={() => closeDrawer()}
+                        >
+                            <CircleClose/>
                         </div>
                     </div>
                     <div className="-ml-4 mt-4">
                         <div className='space-y-3 p-6'>
                             <DrawerMenu show={isDrawerOpen} text={"お問合わせ"} subText={"Contact"} link={"/contact"} animDelay={0} animDuration={0.5}>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" strokeWidth="0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                                </svg>
+                                <Chat/>
                             </DrawerMenu>
                             <DrawerMenu show={isDrawerOpen} text={"お見積りシュミレーター"} subText={"Estimate Simulator"} link={"/plan-calc"} animDelay={0.1} animDuration={0.5}>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="0.5">
-                                    <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                                </svg>
+                                <Calculator/>
                             </DrawerMenu>
                             <DrawerMenu show={isDrawerOpen} text={"サービスについて"} subText={"Service"} link={"/lp"} animDelay={0.3} animDuration={0.5}>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="0.5">
@@ -72,7 +74,7 @@ const Drawer = () => {
                             </DrawerMenu>
                         </div>
                     </div>
-                    <div className='w-full flex items-center justify-center'>
+                    <div className={style.under_logo_container}>
                         <div className="relative w-[35px] h-[35px]">
                             <Image className="w-full h-full" src={"/images/test-logo.png"} layout="fill" priority={true} loading='eager' objectFit="cover" alt="Byte Logo" />
                         </div>
