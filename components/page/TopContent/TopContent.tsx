@@ -36,7 +36,7 @@ const TopContent = () => {
                     mp4={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1659846310/bg-wave-2_bzjmi2.mp4"}
                 />
                 <div className={`absolute flex flex-col justify-around items-center w-full h-full `}>
-                    <motion.div initial={{ scale: 1.0 }} animate={{ scale: progress == 1 ? 1.0 : 1.0 + (1.01 * progress), opacity: 1 + (-progress) }} className='flex flex-col items-center pt-14'>
+                    <motion.div initial={{ scale: 1.0 }} animate={{ scale: progress == 1 ? 1.0 : 1.0 + (1.01 * progress), opacity: 1 + (-progress) }} className='flex flex-col items-center pt-24'>
                     <div>
                         <motion.div initial={{ opacity: 0, y:30 }} animate={{ opacity: 1.0, y:0 }} transition={{ duration: 0.8, delay: 0.8 }} className="visible relative w-[120px] h-[120px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px] flex items-center">
                             <Image className="w-full h-full" src={"/images/test-logo.png"} layout="fill" alt="logo" />

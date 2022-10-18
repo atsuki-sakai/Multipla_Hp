@@ -6,7 +6,11 @@ import style from "./Header.module.css";
 import cn from "classnames"
 import { UnderLineAnimationLink } from "@components/ui"
 
-const Header = () => {
+interface Props {
+  hidden?: boolean
+}
+
+const Header = ({hidden = false}: Props) => {
   const { openDrawer, isDrawerOpen } = useUI();
 
   const [scrollY, setScrollY] = useState(0);
@@ -22,7 +26,8 @@ const Header = () => {
   const headerClassNames = cn(
     style.header, {
       [style.show]: scrollY <= switchAnimationY,
-      [style.hide]: scrollY >= switchAnimationY
+      [style.hide]: scrollY >= switchAnimationY,
+      [style.hidden_header]: hidden
     }
   )
 
@@ -85,12 +90,13 @@ const Header = () => {
           </div>
           {/* md ~ lg */}
           <div className={style.desktop_menu}>
-            <UnderLineAnimationLink text="ご契約プランについて" link="/"/>
-            <UnderLineAnimationLink text="契約までの流れ" link="/"/>
-            <UnderLineAnimationLink text="ブログ" link="/"/>
-            <UnderLineAnimationLink text="よくある質問" link="/"/>
-            <UnderLineAnimationLink text="お問い合せ" link="/"/>
-            <UnderLineAnimationLink text="ECお見積りシュミレーター" link="/"/>
+            <UnderLineAnimationLink text="ご契約プランについて" link="/plan"/>
+            <UnderLineAnimationLink text="契約までの流れ" link="/agreement"/>
+            <UnderLineAnimationLink text="ECサイト構築" link="/ec-lp"/>
+            <UnderLineAnimationLink text="ブログ" link="/blog/page/1"/>
+            <UnderLineAnimationLink text="よくある質問" link="/faq"/>
+            <UnderLineAnimationLink text="お問い合せ" link="/contact"/>
+            <UnderLineAnimationLink text="ECお見積りシュミレーター" link="/plan-calc"/>
           </div>
         </div>
       </header>

@@ -1,9 +1,11 @@
 
-export interface breadcrumbItem {
+
+export interface BreadcrumbItem {
     name: string
     url: string
 }
-export default function createBreadcrumbList(items: breadcrumbItem[]) {
+
+export default function createBreadcrumbList_JSON_LD(items: BreadcrumbItem[]) {
     return {__html: `{
                 "name": "パンくずリスト",
                 "@context":"https://schema.org",
@@ -11,12 +13,14 @@ export default function createBreadcrumbList(items: breadcrumbItem[]) {
                 "itemListElement":[
                     ${
                         items.map((item, index) => {
-                            return {
+                            return (
+                                `{
                                 "@type":"ListItem",
-                                "position": index++,
-                                "name": item.name,
-                                "item": item.url
-                            }
+                                "position": ${index++},
+                                "name": "${item.name}",
+                                "item": "${item.url}"
+                                }`
+                                )
                         })
                     }
                 ]

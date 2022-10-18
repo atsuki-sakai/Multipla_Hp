@@ -9,7 +9,7 @@ interface Props {
 const Layout: FC<Props> = ({ children }: Props) => {
     return (
         <div className={style.root}>
-            <Header/>
+            <Header />
                 <main>
                     { children }
                 </main>

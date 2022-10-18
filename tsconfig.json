@@ -21,6 +21,6 @@
       "@icons/*": ["components/icon/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/ui/Pagination"],
   "exclude": ["node_modules"]
 }

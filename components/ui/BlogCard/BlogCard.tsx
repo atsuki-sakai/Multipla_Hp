@@ -40,7 +40,7 @@ const BlogCard = ({ blog, id = 1 }: Props) => {
                 </div>
                 <div className='flex items-center space-x-2'>
                     {
-                        blog.catergory.map((category: any,index: number) => {
+                        blog.category.map((category: any,index: number) => {
                             return <div key={index} className='border border-indigo-700 w-fit rounded-sm py-0.5 px-3'>
                                 <Link href={`/blog/category/${category.id}`} passHref><a><span className='text-indigo-700 text-xs md:text-sm'>{category.category}</span></a></Link>
                         </div>;

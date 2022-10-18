@@ -8,6 +8,7 @@ interface Props {
     ogImgPath?: string
     url?: string
     type?: string
+    children?: ReactNode | ReactNode[]
 }
 
 // TODO: facebook app idを新しく取得
@@ -19,6 +20,7 @@ const MetaHead = ({
                     ogImgPath = "https://multipla-webservice/images/test-og-image.png",
                     url = "https://multipla-webservice.com",
                     type = "website",
+                    children
                 }: Props) => {
     return (
         <Head>
@@ -37,6 +39,7 @@ const MetaHead = ({
             <meta property="og:locale" content="ja_JP" />
             {/* <meta property="fb:app_id" content="3128697494014223" /> */}
             <meta property="og:description" content={description} />
+            {children}
         </Head>
     )
 }

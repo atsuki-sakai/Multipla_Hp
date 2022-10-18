@@ -39,3 +39,7 @@
 .hide {
     @apply opacity-0;
 }
+
+.hidden_header {
+    @apply hidden;
+}
