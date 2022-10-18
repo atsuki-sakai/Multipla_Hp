@@ -1,14 +1,16 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Layout } from "@components/common"
-import { UIProvider } from "@components/context"
+import { UIProvider, CanPlayMovieProvider } from "@components/context"
 
 function MyApp({ Component, pageProps }: AppProps) {
 
   return  <UIProvider>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
+            <CanPlayMovieProvider>
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </CanPlayMovieProvider>
           </UIProvider>
 }
 

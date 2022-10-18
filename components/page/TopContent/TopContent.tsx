@@ -1,13 +1,13 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, createContext, useContext } from "react";
 import Image from "next/image"
 import { VideoPlayer } from "@components/ui";
+import { useCanPlayMovie } from "@components/context"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
-
 const TopContent = () => {
 
-    const [ isLoaded, setIsLoaded ] = useState<boolean>(false)
+    const { onPlay } = useCanPlayMovie()
     const [scrollY, setScrollY] = useState<number>(0)
     let progress = 0
 
@@ -22,14 +22,6 @@ const TopContent = () => {
         setScrollY(window.scrollY);
     }
 
-    const endAnimation = () => {
-        if(isLoaded) return;
-        setTimeout(() => {
-            console.log('movie is loaded. to end opening animation.')
-            setIsLoaded(true)
-        }, 1500)
-    }
-
     useEffect(() => {
         document.addEventListener('scroll', handleScrollY);
         return () => document.removeEventListener('scroll', handleScrollY);
@@ -37,11 +29,6 @@ const TopContent = () => {
 
     return (
         <>
-            <motion.div initial={{ x:0 }} animate={{ x: isLoaded ? "-100%": "0" }} transition={{ duration:2, ease: "easeInOut" }} className="absolute top-0 left-0 h-screen w-screen">
-                <div className="bg-black h-full w-full flex justify-center items-center py-auto">
-                    <div className="flex justify-center text-white font-bold font-noto_sans text-3xl">MULTIPLA/マルチプラ</div>
-                </div>
-            </motion.div>
             <div className="h-screen w-full sticky top-0 overflow-hidden -z-10">
                 <div style={{
                                 transform:`translateY(-${scrollY > 1400 ? 0.0 : progress * 30 }vh)`
@@ -49,7 +36,7 @@ const TopContent = () => {
                     <VideoPlayer
                         webm={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1666118752/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%81%AE%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3-_3__1_dfdju8.webm"}
                         mp4={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1666118009/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%81%AE%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3_3_ye5s54.mp4"}
-                        onPlay={() => endAnimation()}
+                        onPlay={onPlay}
                     />
                     <div className={`absolute flex flex-col justify-around items-center w-full h-full `}>
                         <motion.div initial={{ scale: 1.0 }} animate={{ scale: progress == 1 ? 1.0 : 1.0 + (1.01 * progress), opacity: 1 + (-progress) }} className='flex flex-col items-center pt-24'>

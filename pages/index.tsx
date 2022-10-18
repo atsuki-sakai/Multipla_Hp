@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { microcmsClient, MICROCMS_ENDPOINT_BLOG }  from "@service/micro-cms";
 import {
   TopContent,
@@ -9,7 +10,9 @@ import {
   BlogContent
 } from "@components/page"
 import { MetaHead } from "@components/common";
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { useCanPlayMovie } from "@components/context"
+
+import { motion } from "framer-motion";
 
 
 const dataLimit = 4;
@@ -28,11 +31,18 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default function index({blogDatas}: InferGetStaticPropsType<typeof getStaticProps>){
+export default function Index({blogDatas}: InferGetStaticPropsType<typeof getStaticProps>){
+
+  const { isPlaying } = useCanPlayMovie()
   return (
   <>
     <MetaHead/>
     <div className="relative bg-transparent z-10">
+      <motion.div initial={{ x:0 }} animate={{ x: isPlaying ? "-100%": "0" }} transition={{ duration:2, ease: "easeInOut" }} className="absolute top-0 left-0 h-screen w-screen">
+          <div className="bg-black h-full w-full flex justify-center items-center py-auto">
+              <div className="flex justify-center text-white font-bold font-noto_sans text-3xl">MULTIPLA/マルチプラ</div>
+          </div>
+      </motion.div>
       <TopContent />
       <SalesContent/>
       <ServiceContent/>
