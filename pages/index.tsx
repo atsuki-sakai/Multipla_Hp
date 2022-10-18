@@ -34,17 +34,17 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Index({blogDatas}: InferGetStaticPropsType<typeof getStaticProps>){
 
   const { isPlaying } = useCanPlayMovie()
-
   const [ endAnimation, setEndAnimation ] = useState(false)
+  const complated = isPlaying && endAnimation
+
   const handle = (e: any) => {
     e.preventDefault();
   };
 
-  const complated = isPlaying && endAnimation
   useEffect(() => {
     setTimeout(() => {
       setEndAnimation(true)
-    },3000)
+    },2 * 1000)
     if(!complated){
       document.addEventListener("wheel", handle, { passive: false });
       document.addEventListener("touchmove", handle, { passive: false });

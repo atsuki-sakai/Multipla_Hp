@@ -32,6 +32,7 @@ const CanPlayMovieContext = createContext<State>({
 
 
 function loadedReducer(state: StateValue, action: Action) {
+    console.log('loadedReducer => onPlay()')
     switch(action.type){
         case "LOADING": {
             return {
