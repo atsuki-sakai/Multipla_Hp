@@ -23,12 +23,11 @@ const TopContent = () => {
     }
 
     const endAnimation = () => {
-        if(!isLoaded){
-            setTimeout(() => {
-                console.log('movie is loaded. to end opening animation.')
-                setIsLoaded(true)
-            }, 1500)
-        }
+        if(isLoaded) return;
+        setTimeout(() => {
+            console.log('movie is loaded. to end opening animation.')
+            setIsLoaded(true)
+        }, 1500)
     }
 
     useEffect(() => {
