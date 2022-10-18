@@ -14,7 +14,7 @@ interface Props {
     animDuration?: number
 }
 
-const DrawerMenu: FC<Props> = ({ show, text, subText, link, underline = true, animDuration = 0.3, animDelay = 0.7, children }: Props) => {
+const DrawerMenu: FC<Props> = ({ show, text, link, animDuration = 0.3, animDelay = 0.7, children }: Props) => {
     return (
         <>
             <motion.div
@@ -23,18 +23,13 @@ const DrawerMenu: FC<Props> = ({ show, text, subText, link, underline = true, an
                 transition={{ duration: animDuration, delay: animDelay, type: "spring" }}
             >
                 <div className={style.root}>
-                    { children }
                     <Link href={link} passHref>
                         <div className={style.link}>
-                            <a className={style.text}>{text}</a>
-                            <p className={style.subText}>{ subText }</p>
+                            <p className={style.text}>{text}</p>
                         </div>
                     </Link>
                 </div>
             </motion.div>
-            {
-                underline ? <div className={style.line}></div> : null
-            }
         </>
     )
 }

@@ -1,6 +1,6 @@
 
 .root {
-    @apply flex text-white;
+    @apply flex text-white font-noto_sans;
 }
 
 .link {
@@ -8,13 +8,5 @@
 }
 
 .text {
-    @apply ml-2;
-}
-
-.subText {
-    @apply ml-2 font-light;
-}
-
-.line {
-    @apply h-[1px] w-full my-2 bg-white;
+    @apply  text-lg;
 }

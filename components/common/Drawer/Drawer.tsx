@@ -24,18 +24,18 @@ const Drawer = () => {
             <div className='h-full w-full'>
                 <div className={style.wrapper}>
                     <div className={style.drawer_header}>
-                        <h3 className="uppercase text-xl text-white font-light">
-                            Menu / Infomation
+                        <h3 className="uppercase text-4xl text-white font-bold font-noto_sans">
+                           MULTIPLA
                         </h3>
                         <div
-                            className='uppercase text-white font-bold cursor-pointer'
+                            className='uppercase text-white font-bold cursor-pointer ml-12'
                             onClick={() => closeDrawer()}
                         >
                             <CircleClose/>
                         </div>
                     </div>
                     <div className="-ml-4 mt-4">
-                        <div className='space-y-3 p-6'>
+                        <div className='space-y-6 p-6'>
                             <DrawerMenu show={isDrawerOpen} text={"お問合わせ"} subText={"Contact"} link={"/contact"} animDelay={0} animDuration={0.5}>
                                 <Chat/>
                             </DrawerMenu>
@@ -80,7 +80,7 @@ const Drawer = () => {
                         </div>
                         <div>
                             <p className='text-white font-bold text-base font-noto_sans'>MULTIPLA</p>
-                            <p className='text-[10px] text-white'>マルチプラ</p>
+                            <p className='text-[10px] scale-75 -translate-x-2 -translate-y-1  text-white'>マルチプラ</p>
                         </div>
                     </div>
                 </div>
