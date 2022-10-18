@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { microcmsClient, MICROCMS_ENDPOINT_BLOG }  from "@service/micro-cms";
 import {
   TopContent,
@@ -33,7 +33,7 @@ export default function index({blogDatas}: InferGetStaticPropsType<typeof getSta
   <>
     <MetaHead/>
     <div className="relative bg-transparent z-10">
-      <TopContent/>
+      <TopContent />
       <SalesContent/>
       <ServiceContent/>
       <ActualSite/>
