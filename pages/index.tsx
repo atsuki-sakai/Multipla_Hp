@@ -44,7 +44,7 @@ export default function Index({blogDatas}: InferGetStaticPropsType<typeof getSta
   useEffect(() => {
     setTimeout(() => {
       setEndAnimation(true)
-    },2 * 1000)
+    },0.6 * 1000)
     if(!complated){
       document.addEventListener("wheel", handle, { passive: false });
       document.addEventListener("touchmove", handle, { passive: false });
