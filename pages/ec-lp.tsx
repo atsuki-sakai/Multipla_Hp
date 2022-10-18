@@ -206,11 +206,6 @@ const ECLP = () => {
                                             </div>
                                         </div>
                                         <Swiper
-                                            style={{
-                                                "--swiper-navigation-color": "#8033ff" ,
-                                                "--swiper-pagination-color": "#8033ff",
-                                                "--swiper-navigation-size": "30px",
-                                            }}
                                             slidesPerView={1}
                                             spaceBetween={30}
                                             keyboard={{

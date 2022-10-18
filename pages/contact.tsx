@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link'
+import Image from 'next/image';
 import Script from 'next/script';
 
 import { Field, CustomSelect } from '@components/ui';
@@ -46,7 +47,8 @@ const Contact = () => {
     ];
 
     const getSelectValue = (id: string) => {
-        return document.getElementById(id)?.value;
+        const select = document.getElementById(id) as HTMLSelectElement
+        return select.value
     };
 
     const sendmail = () => {
@@ -161,7 +163,9 @@ const Contact = () => {
                                     <p className='grow w-64 text-gray-500 tracking-wide text-sm md:text-base lg:text-xl'><span className='text-green-500 text-2xl md:text-3xl lg:text-4xl font-bold'>Line</span>でお問い合わせ</p>
                                     <div className='grow'>
                                         <Link href="https://lin.ee/KDk1uI3">
-                                            <a><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0" /></a>
+                                            <a>
+                                                <Image src={"https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" } alt={"友だち追加"} height={36} width={96} layout="responsive"/>
+                                            </a>
                                         </Link>
                                     </div>
                                 </div>
