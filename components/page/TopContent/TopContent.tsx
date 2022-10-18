@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 
 const TopContent = () => {
 
-    const { onPlay } = useCanPlayMovie()
+    const { isPlaying ,onPlay } = useCanPlayMovie()
     const [scrollY, setScrollY] = useState<number>(0)
     let progress = 0
 
@@ -25,7 +25,7 @@ const TopContent = () => {
     useEffect(() => {
         document.addEventListener('scroll', handleScrollY);
         return () => document.removeEventListener('scroll', handleScrollY);
-    }, [scrollY]);
+    }, [scrollY, isPlaying]);
 
     return (
         <>
