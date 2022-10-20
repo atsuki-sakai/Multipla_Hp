@@ -18,7 +18,7 @@ const SalesContent = () => {
                         <div className='md:flex md:flex-row-reverse  items-end justify-center max-w-4xl mx-auto'>
                             <div className="flex justify-center my-12 md:my-16 lg:my-20">
                                 <motion.div initial={{scale:0.5, opacity:0}} whileInView={{ scale:1.0, opacity:1.0 }} transition={{ duration:0.8 }} className="mx-auto relative h-48 w-48 md:h-72 md:w-72 lg:h-96 lg:w-96 ">
-                                    <Image src={"/images/step-up.png"} loading="eager" priority={true} layout="fill" alt="call-center" />
+                                    <Image src={"/images/step-up.png"} loading="eager" layout="fill" alt="call-center" />
                                 </motion.div>
                             </div>
                             <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1.0, y:0 }} transition={{ duration:0.8 }}>

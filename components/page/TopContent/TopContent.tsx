@@ -1,13 +1,11 @@
-import React, { useRef, useEffect, useState, createContext, useContext } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image"
 import { VideoPlayer } from "@components/ui";
-import { useCanPlayMovie } from "@components/context"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
 const TopContent = () => {
 
-    const { isPlaying ,onPlay } = useCanPlayMovie()
     const [scrollY, setScrollY] = useState<number>(0)
     let progress = 0
 
@@ -25,7 +23,7 @@ const TopContent = () => {
     useEffect(() => {
         document.addEventListener('scroll', handleScrollY);
         return () => document.removeEventListener('scroll', handleScrollY);
-    }, [scrollY, isPlaying]);
+    }, [scrollY]);
 
     return (
         <>
@@ -36,7 +34,6 @@ const TopContent = () => {
                     <VideoPlayer
                         webm={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1666118752/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%81%AE%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3-_3__1_dfdju8.webm"}
                         mp4={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1666118009/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%81%AE%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3_3_ye5s54.mp4"}
-                        onPlay={onPlay}
                     />
                     <div className={`absolute flex flex-col justify-around items-center w-full h-full `}>
                         <motion.div initial={{ scale: 1.0 }} animate={{ scale: progress == 1 ? 1.0 : 1.0 + (1.01 * progress), opacity: 1 + (-progress) }} className='flex flex-col items-center pt-24'>

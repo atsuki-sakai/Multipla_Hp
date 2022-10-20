@@ -3,7 +3,7 @@
     @apply fixed h-screen w-screen top-0 left-0 z-50;
 }
 .wrapper {
-    @apply relative h-screen w-screen bg-gradient-to-tl to-red-500 from-purple-700 backdrop-blur-sm z-40  px-4 py-2;
+    @apply h-screen w-screen bg-gradient-to-tl to-red-500 from-purple-700 backdrop-blur-sm z-40  px-4 py-2;
 }
 
 .drawer_header {
@@ -11,5 +11,5 @@
 }
 
 .under_logo_container {
-    @apply absolute bottom-14 right-12 flex items-center justify-center mt-8;
+    @apply flex items-center justify-center mt-12;
 }

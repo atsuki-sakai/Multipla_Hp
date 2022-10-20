@@ -25,7 +25,7 @@ const Drawer = () => {
                 <div className={style.wrapper}>
                     <div className={style.drawer_header}>
                         <h3 className="uppercase text-4xl text-white font-bold font-noto_sans">
-                           MULTIPLA
+                            MULTIPLA
                         </h3>
                         <div
                             className='uppercase text-white font-bold cursor-pointer ml-12'
@@ -34,8 +34,8 @@ const Drawer = () => {
                             <CircleClose/>
                         </div>
                     </div>
-                    <div className="-ml-4 mt-4">
-                        <div className='space-y-6 p-6'>
+                    <div className="-ml-4 mt-12">
+                        <div className='space-y-6 px-6'>
                             <DrawerMenu show={isDrawerOpen} text={"お問合わせ"} subText={"Contact"} link={"/contact"} animDelay={0} animDuration={0.5}>
                                 <Chat/>
                             </DrawerMenu>

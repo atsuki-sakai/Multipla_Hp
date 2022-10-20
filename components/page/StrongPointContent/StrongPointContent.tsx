@@ -15,7 +15,7 @@ const StrongPointContents = () => {
                 <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
                     <div className="flex justify-center my-3 md:my-6">
                         <div className=" relative h-48 md:h-72 md:w-72 lg:h-96 lg:w-96 w-48">
-                            <Image src={"/images/data-access.png"} loading="eager" priority={true} layout="fill" alt="call-center" />
+                            <Image src={"/images/data-access.png"} loading="eager" layout="fill" alt="call-center" />
                         </div>
                     </div>
                 </motion.div>

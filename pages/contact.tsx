@@ -9,6 +9,7 @@ import { MetaHead } from '@components/common';
 import { motion } from 'framer-motion';
 
 // TODO: - 副作用: sendedをtrueにすると入力を促すテキストも消える
+// TODO: - LINEのQRをbyteから新しくする
 
 const Contact = () => {
 
