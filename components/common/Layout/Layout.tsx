@@ -15,7 +15,7 @@ interface Props {
 }
 const Layout: FC<Props> = ({ children }: Props) => {
 
-    const [ isLoaded, setIsLoaded ] = useState(false);
+    const [ isLoaded, setIsLoaded ] = useState(true);
 
     const defaultOptions = {
         loop: true,
@@ -25,7 +25,7 @@ const Layout: FC<Props> = ({ children }: Props) => {
 
     const handle = (e: any) => {
         e.preventDefault();
-    } 
+    }
 
     useEffect(() => {
         window.addEventListener('load', function() {
@@ -45,7 +45,12 @@ const Layout: FC<Props> = ({ children }: Props) => {
     }, [isLoaded])
     return (
         <div className='relative'>
-            <motion.div initial={{ x:0, opacity:1 }} animate={{ x: isLoaded ? "-100%": "0", opacity: isLoaded ? 0: 1 }} transition={{ duration:1, ease: "easeInOut" }} className="absolute top-0 left-0 h-screen w-screen z-50">
+            <motion.div
+                initial={{ x:0, opacity:1 }}
+                animate={{ x: isLoaded ? "-100%": "0", opacity: isLoaded ? 0: 1 }}
+                transition={{ duration:1, ease: "easeInOut" }}
+                className="absolute top-0 left-0 h-screen w-screen z-50"
+            >
                 <div className="bg-gradient-to-bl to-purple-400 from-red-300 h-full w-full flex justify-center items-center">
                     <div className='animate-pulse'>
                         <div className="flex items-center justify-center mb-12">

@@ -4,12 +4,23 @@ import { motion } from 'framer-motion'
 import { DrawerMenu } from "@components/common/Drawer/DrawerMenu"
 import { useUI } from "@components/context"
 import style from "./Drawer.module.css"
-import {
-    CircleClose,
-    Chat,
-    Calculator,
-} from '@components/icon';
+import { CircleClose } from '@components/icon';
 
+interface MenuItem {
+    text: string
+    link: string
+}
+
+const items: MenuItem[] = [
+    {text: "お問い合せ", link: "/contact"},
+    {text: "お見積りシュミレーター", link: "/plan-calc"},
+    {text: "サービスについて", link: "/ec-lp"},
+    {text: "ご契約プランについて", link: "/plan"},
+    {text: "ご契約の流れ", link: "/agreement"},
+    {text: "ブログ", link: "/blog/page/1"},
+    {text: "よくある質問", link: "/faq"},
+    {text: "プライバシーポリシー", link: "privacy-policy"},
+]
 
 const Drawer = () => {
 
@@ -36,42 +47,21 @@ const Drawer = () => {
                     </div>
                     <div className="-ml-4 mt-12">
                         <div className='space-y-6 px-6'>
-                            <DrawerMenu show={isDrawerOpen} text={"お問合わせ"} subText={"Contact"} link={"/contact"} animDelay={0} animDuration={0.5}>
-                                <Chat/>
-                            </DrawerMenu>
-                            <DrawerMenu show={isDrawerOpen} text={"お見積りシュミレーター"} subText={"Estimate Simulator"} link={"/plan-calc"} animDelay={0.1} animDuration={0.5}>
-                                <Calculator/>
-                            </DrawerMenu>
-                            <DrawerMenu show={isDrawerOpen} text={"サービスについて"} subText={"Service"} link={"/lp"} animDelay={0.3} animDuration={0.5}>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="0.5">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
-                                </svg>
-                            </DrawerMenu>
-                            <DrawerMenu show={isDrawerOpen} text={"ご契約プランについて"} subText={"Contact Plans"} link={"/plan"} animDelay={0.4} animDuration={0.5}>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" strokeWidth="0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" />
-                                </svg>
-                            </DrawerMenu>
-                            <DrawerMenu show={isDrawerOpen} text={"ご契約の流れ"} subText={"Contract Flow"} link={"/agreement"} animDelay={0.5} animDuration={0.5}>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" strokeWidth="0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                                </svg>
-                            </DrawerMenu>
-                            <DrawerMenu show={isDrawerOpen} text={"byteブログ"} subText={"Blog"} link={"/blog/page/1"} animDelay={0.6} animDuration={0.5}>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" strokeWidth="0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z" />
-                                </svg>
-                            </DrawerMenu>
-                            <DrawerMenu show={isDrawerOpen} text={"よくある質問"} subText={"FAQ"} link={"/question"} animDelay={0.7} animDuration={0.5}>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" strokeWidth="0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </DrawerMenu>
-                            <DrawerMenu show={isDrawerOpen} text={"プライバシーポリシー"} subText={"Privacy Policy"} link={"/privacy-policy"} animDelay={0.8} animDuration={0.5}>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" strokeWidth="0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </DrawerMenu>
+                            {
+                                items.map((item, index) => {
+                                    return (
+                                        <div key={`${index}_${item.link.split("/")[1]}`}>
+                                            <DrawerMenu 
+                                                show={isDrawerOpen}
+                                                text={item.text}
+                                                link={item.link}
+                                                animDelay={0.1 * index}
+                                                animDuration={0.5}
+                                            />
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                     <div className={style.under_logo_container}>
