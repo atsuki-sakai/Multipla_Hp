@@ -32,8 +32,8 @@ const TopContent = () => {
                                 transform:`translateY(-${scrollY > 1400 ? 0.0 : progress * 30 }vh)`
                             }} ref={ref} className='h-full w-full -z-20' >
                     <VideoPlayer
-                        webm={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1666118752/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%81%AE%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3-_3__1_dfdju8.webm"}
                         mp4={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1666118009/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%81%AE%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3_3_ye5s54.mp4"}
+                        webm={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1666118752/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%81%AE%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3-_3__1_dfdju8.webm"}
                     />
                     <div className={`absolute flex flex-col justify-around items-center w-full h-full `}>
                         <motion.div initial={{ scale: 1.0 }} animate={{ scale: progress == 1 ? 1.0 : 1.0 + (1.01 * progress), opacity: 1 + (-progress) }} className='flex flex-col items-center pt-24'>
