@@ -38,8 +38,8 @@ const Layout: FC<Props> = ({ children }: Props) => {
         }
         return () => {
             if(!isLoaded){
-                document.addEventListener('wheel', handle)
-                document.addEventListener('touchmove', handle)
+                document.removeEventListener('wheel', handle)
+                document.removeEventListener('touchmove', handle)
             }
         }
     }, [isLoaded])
