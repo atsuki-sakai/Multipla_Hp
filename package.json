@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build && npx tailwindcss -o globals.css --minify",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "unsafe": "npx react-codemod rename-unsafe-lifecycles "
   },
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
