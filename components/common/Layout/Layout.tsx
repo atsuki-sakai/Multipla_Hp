@@ -20,10 +20,7 @@ const Layout: FC<Props> = ({ children }: Props) => {
     const defaultOptions = {
         loop: true,
         autoplay: true,
-        animationData: KnotLoader,
-        renderSettings: {
-            preserveAspectRatio: "xMidYMid slice"
-        }
+        animationData: KnotLoader
     }
 
     const handle = (e: any) => {
