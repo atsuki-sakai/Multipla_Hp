@@ -66,7 +66,7 @@ const Drawer = () => {
                     </div>
                     <div className={style.under_logo_container}>
                         <div className="relative w-[35px] h-[35px]">
-                            <Image className="w-full h-full" src={"/images/test-logo.png"} layout="fill" priority={true} loading='eager' objectFit="cover" alt="Byte Logo" />
+                            <Image className="w-full h-full" src={"/images/test-logo.png"} layout="fill" priority={true} loading='eager' objectFit="cover" alt="MULTIPLA Logo" />
                         </div>
                         <div>
                             <p className='text-white font-bold text-base font-noto_sans'>MULTIPLA</p>

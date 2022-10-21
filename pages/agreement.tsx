@@ -21,7 +21,7 @@ const Agreement = () => {
         <>
             <MetaHead
                 title={"ご契約の流れ"}
-                description={"ECサイト制作ならbyte/バイト!EC以外でもWEBのことならぜひ一度ご相談ください。遠方のお客様も全てオンライン上で全て完結いたしますので是非ご利用下さい。直接打ち合わせも可"}
+                description={"WEBのことならぜひMULTIPLA/マルチプラ一度ご相談ください。遠方のお客様も全てオンライン上で全て完結いたしますので是非ご利用下さい。直接打ち合わせも可"}
             >
                 <Script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-agreement`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
@@ -45,7 +45,7 @@ const Agreement = () => {
                             duration: 0.7,
                         }}
                     >
-                        <div className="mx-8">
+                        <div className="in-range:">
                             <div className="max-w-6xl mx-auto">
                                 <div className="h-fit py-6">
                                     <div className='mb-12'>
@@ -183,7 +183,7 @@ const Agreement = () => {
                             </div>
                         </div>
                     </motion.div>
-                    <div className='mx-8'>
+                    <div className=''>
                         <div className='mx-auto max-w-2xl  rounded-md shadow-md bg-gradient-to-tr to-green-400 from-lime-400 p-5'>
                             <div className='md:flex items-center'>
                                 <div className='w-full'>
@@ -206,7 +206,7 @@ const Agreement = () => {
                         <Link href={"/contact"}>
                             <a>
                                 <div className='flex justify-center mt-4'>
-                                    <button className="my-8 text-lg font-bold bg-white border border-cyan-700 shadow-md text-cyan-700 rounded-md hover:bg-cyan-700 hover:text-white">
+                                    <button className="my-8 text-lg font-bold bg-white border border-indigo-700 shadow-md text-indigo-700 rounded-md hover:bg-indigo-700 hover:text-white">
                                         <p className="px-6 py-3 rounded-md shadow-md  transform duration-300 ease-in-out">
                                             無料で相談する
                                         </p>

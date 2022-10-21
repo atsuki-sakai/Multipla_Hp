@@ -15,7 +15,7 @@ const ECLP = () => {
     return (
         <>
         <MetaHead
-            title={'ECサイトのお悩み解決！byte/バイト'}
+            title={'ECサイトのお悩み解決！MULTIPLA/マルチプラ'}
         />
             <motion.div
                 initial={{ opacity:0 }}
@@ -28,9 +28,9 @@ const ECLP = () => {
                <div className="bg-gray-100 relative">
                 <div >
                     {/* MAIN  */}
-                    <div className="relative">
+                    <div className="relative pt-14">
                         {/* FIXED BANNER */}
-                        <div className="fixed w-fit z-20 bottom-0 md:top-0 right-0">
+                        {/* <div className="fixed w-fit z-20 bottom-0 md:top-0 right-0">
                             <Link href={"/plan-calc"} passHref>
                                 <a>
                                     <div className='text-center lg:animate-pulse bg-gradient-to-tr to-lime-400 from-green-400 pb-0.5 pt-2 lg:py-2 px-6 lg:px-12 rounded-tl-md md:rounded-bl-md md:rounded-tl-none  shadow-md  hover:scale-105 transform duration-200 ease-in-out cursor-pointer'>
@@ -44,14 +44,14 @@ const ECLP = () => {
                                     </div>
                                 </a>
                             </Link>
-                        </div>
+                        </div> */}
                         {/* LP TOP */}
                         <div className="relative h-[600px] lg:h-[900px] w-full overflow-hidden">
                             <Image src={"/images/lp_b.jpg"} loading="eager" priority={true} layout="fill" objectFit='cover' alt='bg-image' />
                             <div className="absolute z-10 inset-0">
                                 <div className="p-2 bg-purple-600 bg-opacity-60 rounded-md w-fit flex justify-start items-center space-x-2 mx-8 my-2">
                                     <div className="relative w-[70px] h-[25px]">
-                                        <Image className="w-full h-full" src={"/images/byte-logo.png"} layout="fill" loading='eager' objectFit="cover" alt="Byte Logo" />
+                                        <Image className="w-full h-full" src={"/images/byte-logo.png"} layout="fill" loading='eager' objectFit="cover" alt="MULTIPLA Logo" />
                                     </div>
                                     <p className='text-xl'>×</p>
                                     <div className="relative w-[84px] h-[30px] p-2">
@@ -65,7 +65,7 @@ const ECLP = () => {
                                                 <h2 className='text-2xl font-extrabold uppercase md:text-3xl lg:text-5xl xl:7xl'>EC事業を本格化</h2>
                                                 <h2 className='text-xl font-extrabold uppercase md:text-3xl lg:text-5xl xl:7xl'>データを活用した運用へ</h2>
                                                 <div className='text-[12px] md:text-[20px] lg:text-[28px] text-gray-600 mt-1'>
-                                                    <p>売れるECサイト作るならbyte</p>
+                                                    <p>売れるECサイト作るならMULTIPLA/マルチプラ</p>
                                                     <p>EC運用まで徹底サポート！</p>
                                                 </div>
                                             </div>
@@ -182,7 +182,7 @@ const ECLP = () => {
                                 </div>
                             </motion.div>
                         </div>
-                        {/* なぜbyteなのか？*/}
+                        {/* なぜMULTIPLAなのか？*/}
                         <div className='bg-gradient-to-tr from-blue-100 to-purple-50'>
                             <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
                                 <div className='mx-12 md:mx-24 py-12 '>
@@ -193,9 +193,9 @@ const ECLP = () => {
                                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 lg:h-10 lg:w-10  text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
                                                         <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                                     </svg>
-                                                    <p className='ml-1 text-sm text-gray-500 font-thin md:text-lg lg:text-3xl'>why Byte</p>
+                                                    <p className='ml-1 text-sm text-gray-500 font-thin md:text-lg lg:text-3xl'>why MULTIPLA</p>
                                                 </div>
-                                                <p className='text-xl md:text-2xl lg:text-4xl font-bold'>byteが<br/>選ばれる理由</p>
+                                                <p className='text-xl md:text-2xl lg:text-4xl font-bold'>MULTIPLAが<br/>選ばれる理由</p>
                                             </div>
                                             <div className='w-full'>
                                                 <div className="flex justify-center">
@@ -251,7 +251,7 @@ const ECLP = () => {
                                                     <div className="h-[270px] md:h-[350px] lg:h-[400px] px-8 md:px-16 lg:px-24 py-4 rounded-md bg-white mt-4">
                                                         <p className='text-base md:text-3xl lg:text-4xl font-bold'>快適なUI/UX</p>
                                                         <div className="w-24 md:w-32 lg:w-44 h-0.5 my-1 bg-purple-500"></div>
-                                                        <p className='mt-2 text-sm md:text-2xl lg:text-3xl text-gray-500 md:py-4'>Byteの制作するサイトはレスポンシブ対応で快適な使い心地を提供しお客様のビジネスチャンスを逃しません。サイトのデザイン変更なども承っております。サイトに訪れたユーザーに快適な購入体験を。サイトを作ってもレイアウト崩れなどを起こしていれば効果は出ません。</p>
+                                                        <p className='mt-2 text-sm md:text-2xl lg:text-3xl text-gray-500 md:py-4'>MULTIPLA/マルチプラの制作するサイトはレスポンシブ対応で快適な使い心地を提供しお客様のビジネスチャンスを逃しません。サイトのデザイン変更なども承っております。サイトに訪れたユーザーに快適な購入体験を。サイトを作ってもレイアウト崩れなどを起こしていれば効果は出ません。</p>
                                                     </div>
                                                 </SwiperSlide>
                                             </div>
@@ -524,7 +524,7 @@ const ECLP = () => {
                                     <div className='pt-24 pb-12'>
                                         <div className='flex justify-around items-center max-w-5xl mx-auto'>
                                             <div className='w-full'>
-                                                <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-gray-800 font-bold text-5xl'>byte</span></h3>
+                                                <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-gray-800 font-bold text-5xl'>MULTIPLA</span></h3>
                                                 <p className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'>構築費用</p>
                                                 <p className='text-center text-gray-600 text-sm lg:text-xl'> 弊社のサイト構築に対してお支払い頂く費用</p>
                                             </div>
@@ -592,12 +592,12 @@ const ECLP = () => {
                                 </div>
                             </motion.div>
                         </div>
-                        {/* Byteのサポートプラン */}
+                        {/* MULTIPLAのサポートプラン */}
                         <div className='bg-gradient-to-tl from-purple-50 to-blue-100'>
                             <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
                                 <div className='mx-8 sm:mx-24 md:mx-12'>
                                     <div className='pt-24 pb-6'>
-                                        <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-gray-800 font-bold text-5xl'>byte</span>のサポートサービス</h3>
+                                        <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-gray-800 font-bold text-5xl'>MULTIPLA</span>のサポートサービス</h3>
                                         <p className='text-gray-600 text-sm lg:text-xl text-center'> 弊社の月額サポートに対してお支払い頂く費用です。必要に応じて加入できます。</p>
                                     </div>
                                     <div className="flex justify-center">
@@ -739,7 +739,7 @@ const ECLP = () => {
                                                         <span className='text-gray-600 text-left text-sm md:text-base xl:text-lg tracking-wide'>
                                                             <p className='text-green-500 font-bold'>Answer</p>
                                                             <p className='p-2 bg-gray-100 rounded-md'>
-                                                                サポートプランのみの契約も承っております。Byteのご用意するサポートプランの契約期間については、最短2ヶ月から解約可能となっています。Shopifyサポート、広告運用支援サポートに関しては最低一年からのご契約となっております。
+                                                                サポートプランのみの契約も承っております。MULTIPLAのご用意するサポートプランの契約期間については、最短2ヶ月から解約可能となっています。Shopifyサポート、広告運用支援サポートに関しては最低一年からのご契約となっております。
                                                             </p>
                                                         </span>
                                                     </div>

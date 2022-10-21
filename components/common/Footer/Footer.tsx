@@ -11,7 +11,7 @@ const Footer = () => {
                     <Link href={"/"} passHref>
                         <div className='flex items-center'>
                             <div className={style.logo}>
-                                <Image className="w-full h-full" src={"/images/test-logo.png"} layout="fill" priority={true} loading='eager' objectFit="cover" alt="Byte Logo" />
+                                <Image className="w-full h-full" src={"/images/test-logo.png"} layout="fill" priority={true} loading='eager' objectFit="cover" alt="MULTIPLA Logo" />
                             </div>
                             <div>
                                 <p className='text-white font-bold text-base font-noto_sans'>MULTIPLA</p>

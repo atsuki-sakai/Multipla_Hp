@@ -33,7 +33,7 @@ export default function Index({blogDatas}: InferGetStaticPropsType<typeof getSta
   return (
   <>
     <MetaHead/>
-    <div className="bg-transparent z-10">
+    <div className="">
       <TopContent />
       <SalesContent/>
       <ServiceContent/>

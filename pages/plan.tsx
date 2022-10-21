@@ -43,12 +43,12 @@ const Plan = () => {
                             duration: 0.7,
                         }}
                     >
-                        {/* byte hp system Plan */}
-                        <div className='mt-12 mb-6'>
-                            <h3 className='lg:text-3xl text-xl  font-bold  text-center title-font  mb-4'><span className='font-bold text-5xl'>byte</span>Webサイト製作費用</h3>
-                            <p className='text-gray-600 text-sm lg:text-base'>byteのWEBサイト制作費の墓に別途維持費が必要</p>
+                        {/* MULTIPLA hp system Plan */}
+                        <div className='mt-12 mb-6 text-center'>
+                            <h3 className='lg:text-3xl text-xl  font-bold  text-center title-font  mb-4'><span className='font-bold text-5xl'>MULTIPLA</span>Webサイト製作費用</h3>
+                            <p className='text-gray-600 text-sm lg:text-base'>MULTIPLAのWEBサイト制作費の他に別途維持費が必要</p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-8 xl:mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl xl:mx-auto">
                             {/* Basic Plan*/}
                             <PlanCard
                                 isShopifyPlan={true}
@@ -89,9 +89,9 @@ const Plan = () => {
                                 ]}
                             />
                         </div>
-                        {/* Byte EC Plan */}
+                        {/* MULTIPLA EC Plan */}
                         <div className='mt-24 mb-6'>
-                            <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-black font-bold text-6xl '>byte</span>ECサイト構築</h3>
+                            <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-black font-bold text-6xl '>MULTIPLA</span>ECサイト構築</h3>
                             <p className='text-gray-600 text-sm lg:text-base'>弊社のECサイト構築に対してお支払い頂く費用です</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-8 xl:mx-auto">
@@ -210,9 +210,9 @@ const Plan = () => {
                                 ]}
                             />
                         </div>
-                        {/* Byte Suport Plan */}
+                        {/* MULTIPLA Suport Plan */}
                         <div className='mt-24 mb-12'>
-                            <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-black font-bold text-6xl '>byte</span>のサポートサービス</h3>
+                            <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-black font-bold text-6xl '>MULTIPLA</span>のサポートサービス</h3>
                             <p className='text-gray-600 text-sm lg:text-base'> 弊社の月額サポートに対してお支払い頂く費用です</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-8 xl:mx-auto">

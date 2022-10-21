@@ -35,7 +35,7 @@ const StrongPointContents = () => {
                         </StrongCard>
                     </motion.div>
                     <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0.4 }}>
-                        <StrongCard title={"優れたSEO対策"} num={3} description={"弊社では構築したサイトは標準でSEO対策を行なっております。例えばサイトのメタ情報の登録、構造化データ、サイトマップの登録などを設定することでより精度の高いSEO対策を行うことができます。構築したサイトを２キーワードで1ページ表示を保証致します。例： byte ec で１ページ目表示"} >
+                        <StrongCard title={"優れたSEO対策"} num={3} description={"弊社では構築したサイトは標準でSEO対策を行なっております。例えばサイトのメタ情報の登録、構造化データ、サイトマップの登録などを設定することでより精度の高いSEO対策を行うことができます。構築したサイトを２キーワードで1ページ表示を保証致します。例： multipla ec で１ページ目表示"} >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-10 md:w-10 lg:h-12 lg:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
                             </svg>

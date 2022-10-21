@@ -6,7 +6,7 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { microcmsClient, MICROCMS_ENDPOINT_BLOG, MICROCMS_ENDPOINT_CATEGORY } from '@service/micro-cms'
 import { MetaHead } from '@components/common'
 import { motion } from 'framer-motion'
-import { Container, BreadcrumbList } from '@components/ui'
+import { Container, BreadcrumbList, BlogCard } from '@components/ui'
 import { createArticleJsonLd, createBreadcrumListJsonLd, SITE_URL }  from '@components/utils'
 import { truncate } from "@components/utils"
 
@@ -27,22 +27,24 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
     const id = context.params?.handle;
+
     const blog = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_BLOG, queries: {ids: id} });
+    const allBlogs = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_BLOG, queries: { filters: `id[not_equals]${id}`, limit: 3, orders: "-publishedAt" }})
     const categories = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_CATEGORY });
     return {
         props: {
             blogData: blog.contents,
             categories: categories.contents,
+            categoryBlogs: allBlogs.contents
         },
     };
 };
 
 
+TODO: // Shareできるのか確認
 
-const BlogHandle = ({blogData, categories} : InferGetStaticPropsType<typeof getStaticProps>) => {
 
-    categories.map((category: Category) => {console.log(category.category)})
-    console.log(typeof(categories))
+const BlogHandle = ({blogData, categories, categoryBlogs} : InferGetStaticPropsType<typeof getStaticProps>) => {
 
     const router = useRouter()
     const blog: Blog = blogData[0]
@@ -51,6 +53,7 @@ const BlogHandle = ({blogData, categories} : InferGetStaticPropsType<typeof getS
 
     const breadcrumbItems: BreadcrumbItem[] = [
         {name: "ホーム", url: "/"},
+        {name: "ブログ一覧", url: "/blog/page/1"},
         {name: `${blog.title}`, url: `/blog/${blog.id}?=index=1`}
     ]
     const blogSchemaBody = truncate(blog.text.replace(/(<([^>]+)>)/gi, ''), 120)
@@ -63,7 +66,6 @@ const BlogHandle = ({blogData, categories} : InferGetStaticPropsType<typeof getS
             text: element.children[0].children[0].data,
             id: element.attribs.id
         }));
-        console.log('heading Text : line:67 => ', headingTexts)
         return headingTexts;
     };
 
@@ -94,6 +96,7 @@ const BlogHandle = ({blogData, categories} : InferGetStaticPropsType<typeof getS
         }else{
             setShowShare(true);
         }
+
     },[])
 
 
@@ -150,8 +153,8 @@ const BlogHandle = ({blogData, categories} : InferGetStaticPropsType<typeof getS
                                                 {
                                                     blog.category.map((category,index) => {
                                                         return <div key={index} className='border border-indigo-700 w-fit rounded-sm py-0.5 px-3'>
-                                                        <Link href={`/blog/category/${category.id}`} passHref><a><span className='text-indigo-700 text-xs md:text-sm'>{category.category}</span></a></Link>
-                                                    </div>;
+                                                                    <Link href={`/blog/category/${category.id}`} passHref><a><span className='text-indigo-700 text-xs md:text-sm'>{category.category}</span></a></Link>
+                                                                </div>;
                                                     })
                                                 }
                                             </div>
@@ -215,7 +218,7 @@ const BlogHandle = ({blogData, categories} : InferGetStaticPropsType<typeof getS
                                         </article>
                                     </section>
                                 </div>
-                                <div className='bg-gray-100 px-4 rounded-md pt-6 md:pt-8 mb-4 mt-8 lg:hidden shadow-md'>
+                                <div className='bg-gray-100 px-4 rounded-md pt-6 md:pt-8 mb-8 mt-8 lg:hidden shadow-md'>
                                     <p className='mb-4 md:mb-8 text-2xl md:text-3xl font-bold'>カテゴリー</p>
                                     <div className="grid grid-cols-3 items-start gap-2 pb-4">
                                         {
@@ -225,17 +228,17 @@ const BlogHandle = ({blogData, categories} : InferGetStaticPropsType<typeof getS
                                         }
                                     </div>
                                 </div>
-                                {/* <div className='lg:hidden bg-gray-100 pt-10 px-2 rounded-md shadow-md'>
+                                <div className='lg:hidden bg-gray-100 pt-10 px-2 rounded-md shadow-md'>
                                     <p className='text-2xl md:text-3xl font-bold max-w-md md:max-w-6xl mx-auto pb-6'>人気の記事</p>
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-2 max-w-6xl mx-auto">
                                         {
-                                            categoryBlog.map((blog, index) => {
+                                            categoryBlogs.map((blog: Blog, index: number) => {
                                                 return <BlogCard key={index} blog={blog} />
                                             })
                                         }
                                     </div>
-                                </div> */}
-                                <div className='flex justify-center py-4'>
+                                </div>
+                                <div className='flex justify-center my-10'>
                                     <Link href={"/blog/page/1"} passHref>
                                         <a>
                                             <button className="shadow-md text-sm md:text-lg lg:text-xl text-indigo-600 rounded-full border border-indigo-600 bg-transparent transform duration-300 ease-in-out hover:bg-indigo-600 hover:text-white">
@@ -258,16 +261,16 @@ const BlogHandle = ({blogData, categories} : InferGetStaticPropsType<typeof getS
                                         }
                                     </div>
                                 </div>
-                                {/* <div className='bg-gray-100 px-4 rounded-md pt-6 md:pt-8 shadow-md'>
+                                <div className='bg-gray-100 px-4 rounded-md pt-6 md:pt-8 shadow-md'>
                                     <p className='mb-4 md:mb-8 text-xl md:text-xl font-bold'>人気の記事</p>
                                     <div className="grid grid-cols-1 space-y-3">
                                         {
-                                            categoryBlog.map((blog, index) => {
+                                            categoryBlogs.map((blog: Blog, index: number) => {
                                                 return <BlogCard key={index} blog={blog} />
                                             })
                                         }
                                     </div>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                     </motion.div>

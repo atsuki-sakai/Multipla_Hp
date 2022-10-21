@@ -27,7 +27,7 @@ const TopContent = () => {
 
     return (
         <>
-            <div className="h-screen w-full sticky top-0 overflow-hidden -z-10">
+            <div className="h-screen w-full sticky top-0 overflow-hidden">
                 <div style={{
                                 transform:`translateY(-${scrollY > 1400 ? 0.0 : progress * 30 }vh)`
                             }} ref={ref} className='h-full w-full -z-20' >

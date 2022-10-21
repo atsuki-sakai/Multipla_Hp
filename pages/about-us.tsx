@@ -19,7 +19,7 @@ const AboutUs = () => {
         <>
             <MetaHead
                 title={"私たちについて"}
-                description={"ECサイト制作ならbyte/バイト!EC以外でもWEBのことならぜひ一度ご相談ください。遠方のお客様も全てオンライン上で全て完結いたしますので是非ご利用下さい。直接打ち合わせも可"}
+                description={"WEBのことならぜひMULTIPLA/マルチプラに一度ご相談ください。遠方のお客様も全てオンライン上で全て完結いたしますので是非ご利用下さい。直接打ち合わせも可"}
             >
             <Script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-about-us`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
@@ -65,7 +65,7 @@ const AboutUs = () => {
                         <div className="max-w-3xl mx-auto mt-12">
                             <div className="flex items-center space-x-4 lg:space-x-8 p-2 mx-8">
                                 <h5 className="text-left w-32 inline-block lg:text-xl font-bold">会社名</h5>
-                                <span className="text-left lg:text-xl w-full font-bold">byte</span>
+                                <span className="text-left lg:text-xl w-full font-bold">MULTIPLA</span>
                             </div>
                         </div>
                         <div className="max-w-3xl mx-auto">
@@ -77,7 +77,7 @@ const AboutUs = () => {
                         <div className="max-w-3xl mx-auto">
                             <div className="flex items-center space-x-4 lg:space-x-8 p-2 mx-8">
                                 <h5 className="text-left w-32 inline-block lg:text-xl font-bold">アドレス</h5>
-                                <p className="text-left lg:text-xl w-full overflow-hidden font-bold">suport@byte-ecommerce.com</p>
+                                <p className="text-left lg:text-xl w-full overflow-hidden font-bold">suport@multipla-webservice.com</p>
                             </div>
                         </div>
                         <div className="max-w-3xl mx-auto">

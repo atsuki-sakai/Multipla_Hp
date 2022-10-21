@@ -28,7 +28,7 @@ const BlogContent = ({blogData}: Props) => {
                     <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1.0, y:0 }} transition={{ duration:0.7 }} className='text-center mx-auto py-8 md:py-12 lg:py-16 pb-6 md:pb-12'>
                         <Link href={"/blog/page/1"}>
                             <a>
-                                <button className="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden text-sm md:text-lg lg:text-xl rounded-full px-12 py-3 transition-all ease-in duration-500 bg-cyan-800 text-white hover:text-cyan-800 hover:bg-white border border-white hover:border-cyan-800">
+                                <button className="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden text-sm md:text-lg lg:text-xl rounded-full px-12 py-3 transition-all ease-in duration-500 border border-indigo-500 bg-white text-indigo-500 font-noto_sans">
                                     <span className="">
                                         他のブログを見る
                                     </span>

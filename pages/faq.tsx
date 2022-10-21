@@ -79,12 +79,12 @@ const Faq = () => {
 
                                             <FaqDetail
                                                 questionText={"サポートプランは解約できますか？"}
-                                                answerText={"Byteのご用意するサポートプランの契約期間については、最短2ヶ月から解約可能となっています。Shopifyサポート、広告運用支援サポートに関しては最低一年からのご契約となっております。"}
+                                                answerText={"MULTIPLAのご用意するサポートプランの契約期間については、最短2ヶ月から解約可能となっています。Shopifyサポート、広告運用支援サポートに関しては最低一年からのご契約となっております。"}
                                             />
 
                                             <FaqDetail
                                                 questionText={"SNSと連携させて販売は出来ますか？"}
-                                                answerText={"ShopifyではInstagramやFacebook、Amazonと連携することができるほか、LINEなどに購入ボタンをつける機能もございます。ByteではSNS連携の実績もございますので、お気軽にご相談ください。"}
+                                                answerText={"ShopifyではInstagramやFacebook、Amazonと連携することができるほか、LINEなどに購入ボタンをつける機能もございます。MULTIPLAではSNS連携の実績もございますので、お気軽にご相談ください。"}
                                             />
                                         </div>
                                     </div>
