@@ -18,29 +18,32 @@ import type { Blog, Category } from '@service/micro-cms/type/Blog'
 
 
 export const getStaticPaths: GetStaticPaths = async () => {
+
     const repos = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_BLOG });
     const paths = repos.contents.map((blog: Blog) => `/blog/${blog.id}`)
+
     return { paths, fallback: false };
 };
 
 
 export const getStaticProps: GetStaticProps = async (context) => {
+
     const id = context.params?.handle;
 
     const blog = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_BLOG, queries: {ids: id} });
-    const allBlogs = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_BLOG, queries: { filters: `id[not_equals]${id}`, limit: 3, orders: "-publishedAt" }})
+    const pickupBlogs = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_BLOG, queries: { filters: `id[not_equals]${id}`, limit: 3, orders: "-publishedAt" }})
     const categories = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_CATEGORY });
+
     return {
         props: {
             blogData: blog.contents,
             categories: categories.contents,
-            categoryBlogs: allBlogs.contents
+            categoryBlogs: pickupBlogs.contents
         },
     };
 };
 
-
-TODO: // Shareできるのか確認
+// TODO: - shareできるか確認
 
 
 const BlogHandle = ({blogData, categories, categoryBlogs} : InferGetStaticPropsType<typeof getStaticProps>) => {
