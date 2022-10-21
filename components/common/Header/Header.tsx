@@ -95,7 +95,6 @@ const Header = ({hidden = false}: Props) => {
             <UnderLineAnimationLink text="ブログ" link="/blog/page/1"/>
             <UnderLineAnimationLink text="よくある質問" link="/faq"/>
             <UnderLineAnimationLink text="お問い合せ" link="/contact"/>
-            <UnderLineAnimationLink text="ECお見積りシュミレーター" link="/plan-calc"/>
           </div>
         </div>
       </header>
