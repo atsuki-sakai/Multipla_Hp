@@ -24,7 +24,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 
-
 export const getStaticProps: GetStaticProps = async (context) => {
     const id = context.params?.handle;
 
@@ -44,7 +43,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 TODO: // Shareできるのか確認
 
 
-function BlogHandle({blogData, categories, categoryBlogs} : InferGetStaticPropsType<typeof getStaticProps>) {
+const BlogHandle = ({blogData, categories, categoryBlogs} : InferGetStaticPropsType<typeof getStaticProps>) => {
 
     const router = useRouter()
     const blog: Blog = blogData[0]
@@ -96,10 +95,7 @@ function BlogHandle({blogData, categories, categoryBlogs} : InferGetStaticPropsT
         }else{
             setShowShare(true);
         }
-
     },[])
-
-
     return (
         <>
             <MetaHead
