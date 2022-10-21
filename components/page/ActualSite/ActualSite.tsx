@@ -9,7 +9,7 @@ const ActualSite = () => {
     return (
 
         <div className='md:mx-auto lg:w-1/2 px-8 py-6 md:py-12'>
-            <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
+            <motion.div initial={{ y: 30, opacity: 0.0 }} animate={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
                 <h3 className='text-xl md:text-2xl lg:text-3xl font-bold text-center title-font'>制作実績</h3>
             </motion.div>
             <p className='hidden text-center text-gray-500 font-noto text-xl py-12'>現在制作実績はありません。</p>

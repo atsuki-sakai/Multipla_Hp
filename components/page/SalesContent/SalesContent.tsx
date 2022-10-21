@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const SalesContent = () => {
     return (
         <>
-            <div className="px-8 md:px-12 relative py-6 bg-white z-10">
+            <div className="px-8 md:px-12 relative py-6 bg-gray-100 z-10">
                 <div className='w-full mx-auto '>
                     <motion.div initial={{ y: 30, opacity: 0 }} whileInView={{ y: 0, opacity: 1.0 }} transition={{ duration:0.8 }} className='max-w-lg md:max-w-4xl py-1  mx-auto text-left mt-6 md:mt-12'>
                         <h3 className='text-xl sm:text-2xl md:text-3xl lg:text-5xl tracking-wide font-bold text-black'>自社のITインフラを整えて</h3>
