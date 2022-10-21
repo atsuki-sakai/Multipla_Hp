@@ -44,7 +44,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 TODO: // Shareできるのか確認
 
 
-const BlogHandle = ({blogData, categories, categoryBlogs} : InferGetStaticPropsType<typeof getStaticProps>) => {
+function BlogHandle({blogData, categories, categoryBlogs} : InferGetStaticPropsType<typeof getStaticProps>) {
 
     const router = useRouter()
     const blog: Blog = blogData[0]
