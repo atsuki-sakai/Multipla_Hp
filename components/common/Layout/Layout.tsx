@@ -36,9 +36,9 @@ const Layout: FC<Props> = ({ children }: Props) => {
     return (
         <div className='relative'>
             <motion.div
-                initial={{ x:0, opacity:1 }}
-                animate={{ x: isLoaded ? "-100%": "0", opacity: isLoaded ? 0: 1 }}
-                transition={{ duration:1, ease: "easeInOut" }}
+                initial={{ opacity:1 }}
+                animate={{ opacity: isLoaded ? 0: 1 }}
+                transition={{ duration:0.6, ease: "easeInOut" }}
                 className="absolute top-0 left-0 h-screen w-screen z-50"
             >
                 <LoadingView/>
