@@ -3,6 +3,10 @@ import Link from 'next/link'
 import Image from 'next/image';
 import Script from 'next/script';
 
+import { createBreadcrumListJsonLd } from '@components/utils';
+import type { BreadcrumbItem } from '@components/utils/createBreadcrumbList-json-ld';
+import { BreadcrumbList, Container } from '@components/ui';
+
 import { Field, CustomSelect } from '@components/ui';
 import { init, send } from "@emailjs/browser"
 import { MetaHead } from '@components/common';
@@ -93,29 +97,11 @@ const Contact = () => {
         setUrl('')
         setBody('')
     }
-    const createBreadcrumbList = () => {
-        return {__html: `
-            {
-                "name": "contact",
-                "@context": "https://schema.org",
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "ホーム",
-                        "item": "https://byte-ecommerce.com/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "お問い合わせ",
-                        "item": "https://byte-ecommerce.com/contact"
-                    }
-                ]
-            }
-        `};
-    }
+
+    const items: BreadcrumbItem[] = [
+        {name: "ホーム", url: "/"},
+        {name: "お問い合せ", url: "/contact"}
+    ]
 
     const disabled =
         name === '' || email === '' || phoneNumber === '' || isLoading || !isPrivacyPolicy;
@@ -125,7 +111,7 @@ const Contact = () => {
             <MetaHead
                 title='お問い合わせ'
             >
-            <Script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-contact`}  dangerouslySetInnerHTML={createBreadcrumbList()}/>
+            <Script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-contact`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
             <motion.div
                 initial={{ opacity:0 }}
@@ -135,12 +121,8 @@ const Contact = () => {
                     duration: 0.7,
                 }}
             >
-                <div className='pt-24 md:pt-48  text-center py-6 bg-gray-100'>
-                    <div className='flex items-center text-left max-w-2xl mx-auto  mb-4 px-8 text-xs md:text-sm text-gray-600'>
-                        <Link href={'/'} passHref><a>ホーム </a></Link>
-                        <p className='px-1'>{' > '}</p>
-                        <p> お問い合せ</p>
-                    </div>
+                <Container>
+                    <BreadcrumbList items={items}/>
                     <motion.div
                             initial={{ opacity:0, y:10 }}
                             animate={{ opacity:1, y:0 }}
@@ -149,6 +131,7 @@ const Contact = () => {
                                 delay:0.3,
                                 duration: 0.7,
                             }}
+                            className="text-center"
                     >
 
                         <h3 className='text-xl md:text-3xl font-bold text-center title-font'>お問い合わせ</h3>
@@ -160,16 +143,11 @@ const Contact = () => {
                             </div>
                             <p className="mx-8 my-3 text-xl text-gray-800 font-bold pt-8">弊社へのご依頼、疑問など何でもお気軽にご質問下さい。</p>
                             <div className='max-w-2xl mx-auto'>
-                                <div className='flex justify-center items-center mx-8 my-12 px-2 border py-3 rounded-md shadow-md space-x-2 bg-white'>
-                                    <p className='grow w-64 text-gray-500 tracking-wide text-sm md:text-base lg:text-xl'><span className='text-green-500 text-2xl md:text-3xl lg:text-4xl font-bold'>Line</span>でお問い合わせ</p>
-                                    <div className='grow'>
-                                        <Link href="https://lin.ee/KDk1uI3">
-                                            <a>
-                                                <Image src={"https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" } alt={"友だち追加"} height={36} width={96} layout="responsive"/>
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </div>
+                                    <a target="_blank" href="https://lin.ee/KDk1uI3" rel='noreferrer'>
+                                        <div className='flex justify-center items-center mx-8 my-12 px-2 border py-3 rounded-md shadow-md space-x-2 bg-white'>
+                                            <p className='grow w-64 text-gray-500 tracking-wide text-sm md:text-base lg:text-xl'><span className='text-green-500 text-2xl md:text-3xl lg:text-4xl font-bold'>Line</span>でお問い合わせ</p>
+                                        </div>
+                                    </a>
                                 <div className="mt-6 max-w-6xl mx-auto">
                                     <form className='mx-8'>
                                         <CustomSelect id="contact-type" name="message-type" label="お問合せ内容" options={contactType_list} />
@@ -208,7 +186,7 @@ const Contact = () => {
                             </div>
                         </div>
                     </motion.div>
-                </div>
+                </Container>
             </motion.div>
         </>
     );
