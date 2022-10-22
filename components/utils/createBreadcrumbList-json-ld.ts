@@ -15,10 +15,10 @@ export default function createBreadcrumbList_JSON_LD(items: BreadcrumbItem[]) {
                         items.map((item, index) => {
                             return (
                                 `{
-                                "@type":"ListItem",
-                                "position": ${index++},
-                                "name": "${item.name}",
-                                "item": "${item.url}"
+                                    "@type":"ListItem",
+                                    "position": ${index++},
+                                    "name": "${item.name}",
+                                    "id": "https://multipla.io/${item.url}"
                                 }`
                                 )
                         })
