@@ -1,4 +1,13 @@
 
 .root {
-    @apply px-8 md:px-12 relative py-6 bg-gray-100 z-10 font-noto_sans;
+    @apply px-8 md:px-12 relative py-6 bg-white z-10 font-noto_sans;
+}
+
+.sales_container {
+    @apply max-w-4xl mx-auto flex items-start justify-center space-x-12 text-base md:text-lg lg:text-xl mt-12 bg-gradient-to-tl to-purple-700 from-red-400 py-12 rounded-full border shadow-md;
+    & > p {
+        @apply font-bold text-3xl text-white;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
 }

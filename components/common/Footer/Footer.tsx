@@ -3,6 +3,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import style from "./Footer.module.css"
 
+// TODO: - facebook, instagram　アカウント作成
+
 const Footer = () => {
     return (
         <footer className={style.root}>
@@ -25,7 +27,7 @@ const Footer = () => {
                         <h3 className={style.navTitle}>MULTIPLAについて</h3>
                         <ul className={style.navbar}>
                             <li className="mb-4">
-                                <Link href="/question">
+                                <Link href="/faq">
                                     <a rel="nofollow" className={style.link}>よくある質問</a>
                                 </Link>
                             </li>
@@ -75,7 +77,6 @@ const Footer = () => {
             </div>
             <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             {/* 公式アカウント */}
-
             <div className="hidden sm:flex sm:items-center sm:justify-between">
                 <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                     <a href="https://www.facebook.com/%E5%A3%B2%E3%82%8C%E3%82%8BEC%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AA%E3%82%89Byte-100535229345034" aria-label="FaceBook" className={style.sns_icon}>

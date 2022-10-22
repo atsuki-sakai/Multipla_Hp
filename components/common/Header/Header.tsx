@@ -16,7 +16,7 @@ const Header = ({hidden = false}: Props) => {
   const { openDrawer, isDrawerOpen } = useUI();
 
   const [scrollY, setScrollY] = useState(0);
-  const switchAnimationY = 500;
+  const switchAnimationY = 1200;
   const [scrollListner, setScrollListoner] = useState(true);
 
   const showUnderLink = scrollY >= switchAnimationY
@@ -109,7 +109,7 @@ const Header = ({hidden = false}: Props) => {
           className={style.under_button}
           onClick={(e) => windowToTop(e)}
         >
-          <UpArrow className="text-gray-700 w-24 h-24" />
+          <UpArrow className="text-white w-12 h-12  md:w-[60px] md:h-[60px]" />
         </div>
       </div>
     </>

@@ -28,7 +28,7 @@ const ECLP = () => {
             <div className="bg-gray-100 relative">
                 <div >
                     {/* MAIN  */}
-                    <div className="relative pt-14">
+                    <div className="relative">
                         {/* FIXED BANNER */}
                         <div className="fixed w-fit z-20 bottom-0 md:bottom-16 left-0">
                             <Link href={"/plan-calc"} passHref>
@@ -49,15 +49,6 @@ const ECLP = () => {
                         <div className="relative h-[600px] lg:h-[900px] w-full overflow-hidden">
                             <Image src={"/images/lp_b.jpg"} loading="eager" priority={true} layout="fill" objectFit='cover' alt='bg-image' />
                             <div className="absolute z-10 inset-0">
-                                <div className="p-2 bg-purple-600 bg-opacity-60 rounded-md w-fit flex justify-start items-center space-x-2 mx-8 my-2">
-                                    <div className="relative w-[70px] h-[25px]">
-                                        <Image className="w-full h-full" src={"/images/byte-logo.png"} layout="fill" loading='eager' objectFit="cover" alt="MULTIPLA Logo" />
-                                    </div>
-                                    <p className='text-xl'>×</p>
-                                    <div className="relative w-[84px] h-[30px] p-2">
-                                        <Image src={"/images/shopify_logo.png"} layout="fill" objectFit='cover' alt='Logo' />
-                                    </div>
-                                </div>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:pt-24 lg:pt-36">
                                     <div className='mx-8'>
                                         <div className="max-w-md lg:max-w-none lg:mx-12 mx-auto">

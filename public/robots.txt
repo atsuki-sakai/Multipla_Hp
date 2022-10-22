@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://multipla.io
+
+# Sitemaps
+Sitemap: https://multipla.io/sitemap.xml

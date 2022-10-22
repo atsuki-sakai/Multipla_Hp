@@ -20,7 +20,9 @@ const Layout: FC<Props> = ({ children }: Props) => {
     useEffect(() => {
         window.addEventListener('load', function() {
             console.log('load')
-            setIsLoaded(true);
+            this.setTimeout(() => {
+                setIsLoaded(true);
+            }, 0.6 * 1000)
         })
         if(!isLoaded){
             document.addEventListener('wheel',handle,{ passive: false })
