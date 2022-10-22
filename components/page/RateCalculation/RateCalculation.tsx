@@ -48,11 +48,11 @@ const RateCalculation = () => {
 
     const sendmail = () => {
         setLoading(true)
-        const userID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
+        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
         const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
         const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_2;
-        if (userID !== undefined && serviceID !== undefined && templateID !== undefined) {
-            init(userID);
+        if (publicKey !== undefined && serviceID !== undefined && templateID !== undefined) {
+            init(publicKey);
             const templete_params = {
                 name: name,
                 email: email,
