@@ -14,9 +14,9 @@ interface Props {
 // TODO: facebook app idを新しく取得
 
 const MetaHead = ({
-                    title = "MULTIPLA/マルチプラ",
+                    title = "マルチプラ/MULTIPLA",
                     description = "WEBのことならぜひ一度ご相談ください。遠方のお客様も全てオンライン上で全て完結いたしますので是非ご利用下さい。直接打ち合わせも可",
-                    keyword = ["マルチプラ","MALTIPLA","ホームページ","ECサイト", "篠山"],
+                    keyword = ["マルチプラ","MALTIPLA","ホームページ","web", "ECサイト", "webサイト", "篠山", "兵庫"],
                     ogImgPath = "https://multipla-webservice/images/test-og-image.png",
                     url = "https://multipla-webservice.com",
                     type = "website",
