@@ -9,8 +9,8 @@
         left: 0;
         content: '';
         width: 100%;
-        height: 1px;
-        background: black;
+        height: 1.5px;
+        background: #ff8c00;
         transform: scale(0, 1);
         transform-origin: left top;
         transition: transform .3s;

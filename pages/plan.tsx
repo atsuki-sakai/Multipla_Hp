@@ -42,11 +42,12 @@ const Plan = () => {
                             delay: 0.5,
                             duration: 0.7,
                         }}
+                        className={"text-center"}
                     >
                         {/* MULTIPLA hp system Plan */}
                         <div className='mt-12 mb-6 text-center'>
-                            <h3 className='lg:text-3xl text-xl  font-bold  text-center title-font  mb-4'><span className='font-bold text-5xl'>MULTIPLA</span>Webサイト製作費用</h3>
-                            <p className='text-gray-600 text-sm lg:text-base'>MULTIPLAのWEBサイト制作費の他に別途維持費が必要</p>
+                            <h3 className='lg:text-2xl text-xl  font-bold  text-center title-font  mb-4'><span className='font-bold text-4xl text-purple-800'>MULTIPLA</span>サイト製作費用</h3>
+                            <p className='text-center text-red-400 text-sm border border-red-300 w-fit mx-auto px-3 py-1 rounded-lg'>ご契約時にサーバー、サイト管理費として別途月額6800円が必要になります。</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl xl:mx-auto">
                             {/* Basic Plan*/}
@@ -91,8 +92,9 @@ const Plan = () => {
                         </div>
                         {/* MULTIPLA EC Plan */}
                         <div className='mt-24 mb-6'>
-                            <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-black font-bold text-6xl '>MULTIPLA</span>ECサイト構築</h3>
+                            <h3 className='lg:text-2xl text-xl  font-bold  text-center title-font  mb-4'><span className='font-bold text-4xl text-purple-800'>MULTIPLA</span>ECサイト構築費用</h3>
                             <p className='text-gray-600 text-sm lg:text-base'>弊社のECサイト構築に対してお支払い頂く費用です</p>
+                            <p className='text-center text-red-400 text-sm border border-red-300 w-fit mx-auto px-3 py-1 rounded-lg'>ご契約時に別途Shopifyプランに応じた月額費用が必要になります。</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-8 xl:mx-auto">
                             {/* Normal Plan */}
@@ -212,7 +214,7 @@ const Plan = () => {
                         </div>
                         {/* MULTIPLA Suport Plan */}
                         <div className='mt-24 mb-12'>
-                            <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-black font-bold text-6xl '>MULTIPLA</span>のサポートサービス</h3>
+                        <h3 className='lg:text-2xl text-xl  font-bold  text-center title-font  mb-4'><span className='font-bold text-4xl text-purple-800'>MULTIPLA</span>サポートサービス</h3>
                             <p className='text-gray-600 text-sm lg:text-base'> 弊社の月額サポートに対してお支払い頂く費用です</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-8 xl:mx-auto">
@@ -264,7 +266,7 @@ const Plan = () => {
                                         "ターゲット選定・分析",
                                     ]}
                                 />
-                                <p className='text-red-500 text-xs md:text-sm  mt-4'>*広告運用サポートプランは*<br/>*別途広告費の15%を頂きます*</p>
+                                <p className='text-center text-red-400 text-sm border border-red-300 w-fit mx-auto px-3 py-1 rounded-lg mt-4'>*広告運用サポートプランは*<br/>*別途広告費の15%を頂きます*</p>
                             </div>
                         </div>
                     </motion.div>

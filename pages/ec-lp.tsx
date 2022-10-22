@@ -25,15 +25,15 @@ const ECLP = () => {
                     duration: 0.7,
                 }}
             >
-               <div className="bg-gray-100 relative">
+            <div className="bg-gray-100 relative">
                 <div >
                     {/* MAIN  */}
                     <div className="relative pt-14">
                         {/* FIXED BANNER */}
-                        {/* <div className="fixed w-fit z-20 bottom-0 md:top-0 right-0">
+                        <div className="fixed w-fit z-20 bottom-0 md:bottom-16 left-0">
                             <Link href={"/plan-calc"} passHref>
                                 <a>
-                                    <div className='text-center lg:animate-pulse bg-gradient-to-tr to-lime-400 from-green-400 pb-0.5 pt-2 lg:py-2 px-6 lg:px-12 rounded-tl-md md:rounded-bl-md md:rounded-tl-none  shadow-md  hover:scale-105 transform duration-200 ease-in-out cursor-pointer'>
+                                    <div className='text-center bg-gradient-to-tr to-lime-400 from-green-400 pb-0.5 lg:py-2 px-6 lg:px-12 rounded-br-md rounded-tr-md  shadow-md  hover:scale-105 transform duration-200 ease-in-out cursor-pointer'>
                                         <div className="flex justify-center">
                                             <p className='text-white text-xl lg:text-3xl font-bold'>無料お見積り</p>
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -44,7 +44,7 @@ const ECLP = () => {
                                     </div>
                                 </a>
                             </Link>
-                        </div> */}
+                        </div> 
                         {/* LP TOP */}
                         <div className="relative h-[600px] lg:h-[900px] w-full overflow-hidden">
                             <Image src={"/images/lp_b.jpg"} loading="eager" priority={true} layout="fill" objectFit='cover' alt='bg-image' />

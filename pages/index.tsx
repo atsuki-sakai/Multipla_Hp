@@ -11,7 +11,7 @@ import {
 } from "@components/page"
 import { MetaHead } from "@components/common";
 
-const dataLimit = 4;
+const dataLimit = 3;
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = await microcmsClient.get({

@@ -8,7 +8,7 @@ const StrongPointContents = () => {
 
     return (
         <>
-            <div className="px-8 py-12 md:py-24 bg-gray-100 ">
+            <div className="px-8 py-12 md:py-24 bg-gray-100">
                 <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
                     <h3 className='text-xl md:text-2xl lg:text-3xl font-bold text-center title-font '><span className=' font-bold text-4xl md:text-5xl lg:text-6xl'>MULTIPLA</span>の強み</h3>
                 </motion.div>
@@ -19,7 +19,7 @@ const StrongPointContents = () => {
                         </div>
                     </div>
                 </motion.div>
-                <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 gap-2 md:gap-x-8 md:gap-y-10">
+                <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 gap-2 md:gap-x-8 md:gap-y-10 max-w-7xl mx-auto">
                     <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
                         <StrongCard title={"イメージに合ったデザイン"} num={1} description={"お客様のイメージ、ブランドに合った美しく機能的で豊かな表現力のあるサイトの構築、感覚的に使える管理画面で運用にストレスを感じません。ハイクオリティでモダンなサイトの制作がコストを抑えて構築可能です。高機能なサイトで顧客体験を改善。"} >
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-10 md:w-10 lg:h-12 lg:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">

@@ -11,7 +11,7 @@ import { createBreadcrumListJsonLd } from '@components/utils';
 import type { BreadcrumbItem } from '@components/utils/createBreadcrumbList-json-ld';
 import { Category, Blog } from '@service/micro-cms/type/Blog';
 
-const PER_PAGE = 5;
+const PER_PAGE = 6;
 
 export const getStaticPaths: GetStaticPaths = async () => {
 
@@ -22,17 +22,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const id = context.params?.id as string;
-  const data = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_BLOG, queries: { offset: (parseInt(id) - 1) * PER_PAGE, limit: PER_PAGE } });
-  const categories = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_CATEGORY });
-  return {
-      props: {
-          blogs: data.contents,
-          categories: categories.contents,
-          totalCount: data.totalCount,
-          id: id,
-      },
-  };
+    const id = context.params?.id as string;
+    const data = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_BLOG, queries: { offset: (parseInt(id) - 1) * PER_PAGE, limit: PER_PAGE } });
+    const categories = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_CATEGORY });
+    return {
+        props: {
+            blogs: data.contents,
+            categories: categories.contents,
+            totalCount: data.totalCount,
+            id: id,
+        },
+    };
 };
 
 const BlogId = ({blogs, categories, totalCount, id}: InferGetStaticPropsType<typeof getStaticProps>) => {

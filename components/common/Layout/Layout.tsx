@@ -13,7 +13,6 @@ interface Props {
 const Layout: FC<Props> = ({ children }: Props) => {
 
     const [ isLoaded, setIsLoaded ] = useState(true);
-    const [ hideLoadingView, setHideLoadingView ] = useState(false)
     const handle = (e: any) => {
         e.preventDefault();
     }
@@ -27,25 +26,23 @@ const Layout: FC<Props> = ({ children }: Props) => {
             document.addEventListener('wheel',handle,{ passive: false })
             document.addEventListener('touchmove', handle, { passive: false })
         }
-        if(isLoaded && !hideLoadingView){
-            setTimeout(() => {
-                setHideLoadingView(true)
-            }, 0.7 * 1000)
-        }
         return () => {
             if(!isLoaded){
                 document.removeEventListener('wheel', handle)
                 document.removeEventListener('touchmove', handle)
             }
         }
-    }, [isLoaded, hideLoadingView])
+    }, [isLoaded])
     return (
         <div className='relative'>
             <motion.div
                 initial={{ opacity:1 }}
-                animate={{ opacity: isLoaded ? 0: 1 }}
+                animate={{
+                    opacity: isLoaded ? 0: 1,
+                    transitionEnd: { display: isLoaded ? "none" : "block" }
+                }}
                 transition={{ duration:0.7, ease: "easeInOut" }}
-                className={`absolute top-0 left-0 h-screen w-screen z-50 ${ hideLoadingView ? "hidden": "" }`}
+                className="absolute top-0 left-0 h-screen w-screen z-50"
             >
                 <LoadingView/>
             </motion.div>

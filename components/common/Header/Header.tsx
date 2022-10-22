@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image"
 import { useUI } from "@components/context";
-import { Menu } from "@components/icon"
+import { Menu, UpArrow } from "@components/icon"
 import style from "./Header.module.css";
 import cn from "classnames"
 import { UnderLineAnimationLink } from "@components/ui"
+import { motion } from "framer-motion";
 
 interface Props {
   hidden?: boolean
@@ -15,19 +16,23 @@ const Header = ({hidden = false}: Props) => {
   const { openDrawer, isDrawerOpen } = useUI();
 
   const [scrollY, setScrollY] = useState(0);
-  const switchAnimationY = 300;
+  const switchAnimationY = 500;
   const [scrollListner, setScrollListoner] = useState(true);
 
-  const underContainerClassNames = cn(
+  const showUnderLink = scrollY >= switchAnimationY
+  const showHeader = scrollY <= switchAnimationY
+
+
+  const underLinkClassNames = cn(
     style.under_link, {
-      [style.show]: scrollY >= switchAnimationY,
-      [style.hide]: scrollY <= switchAnimationY
+      [style.show]: showUnderLink,
+      [style.hide]: !showUnderLink
   })
 
   const headerClassNames = cn(
     style.header, {
-      [style.show]: scrollY <= switchAnimationY,
-      [style.hide]: scrollY >= switchAnimationY,
+      [style.show]: showHeader,
+      [style.hide]: !showHeader,
       [style.hidden_header]: hidden
     }
   )
@@ -99,12 +104,12 @@ const Header = ({hidden = false}: Props) => {
         </div>
       </header>
       <div
-        className={underContainerClassNames}>
+        className={underLinkClassNames}>
         <div
           className={style.under_button}
           onClick={(e) => windowToTop(e)}
         >
-          <Menu className="text-white w-8 h-8" />
+          <UpArrow className="text-gray-700 w-24 h-24" />
         </div>
       </div>
     </>
