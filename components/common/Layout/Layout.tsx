@@ -12,7 +12,6 @@ interface Props {
 }
 const Layout: FC<Props> = ({ children }: Props) => {
 
-    console.log('Layout.tsx :15')
     const [ isLoaded, setIsLoaded ] = useState(false);
     const handle = (e: any) => {
         e.preventDefault();
