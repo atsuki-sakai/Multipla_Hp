@@ -54,9 +54,9 @@ const TopContent = () => {
                                 initial={{ opacity: 0, y:30 }} 
                                 animate={{ opacity: 1.0, y:0 }} 
                                 transition={{ duration:0.9, delay: 0.9 }} 
-                                className='text-shadow-xl text-4xl md:text-5xl text-center lg:text-6xl w-fit h-fit -translate-x-1/2 font-bold font-noto_sans  tracking-wide mt-12 '
+                                className='text-shadow-xl text-3xl md:text-5xl text-center lg:text-6xl w-fit h-fit -translate-x-1/2 font-bold font-noto_sans  tracking-wide mt-12 '
                             >
-                                ビジネスにWEBの力を<br/><span className="text-5xl text-purple-800">PLUS</span><span className="text-orange-500">+</span>
+                                ビジネスにWEBの力を<br/><span className="text-4x md:text-5xl text-purple-800">PLUS</span><span className="text-orange-500">+</span>
                             </motion.p>
                         </motion.div>
                         <motion.div  

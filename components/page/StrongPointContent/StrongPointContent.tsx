@@ -59,16 +59,10 @@ const StrongPointContents = () => {
                 </div>
             </div >
             <Marquee variant='secondary'>
-                <div className='text-white text-lg font-bold font-mono flex justify-between items-center bg-black'>
-                    <p>NEXTJS</p>
-                    <p>TYPESCRIPT</p>
-                    <p>VERCEL</p>
-                    <p>FIREBASE</p>
-                    <p>EMAILJS</p>
-                    <p>MICROCMS</p>
-                    <p>CHANELLTALK</p>
-                    <p>SHOPIFY</p>
-                    <p>BASE</p>
+                <div className='text-white text-lg font-bold font-noto_sans flex justify-between bg-gray-800'>
+                    <p>構築</p>
+                    <p>集客</p>
+                    <p>収益化</p>
                 </div>
             </Marquee>
         </>

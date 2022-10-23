@@ -17,10 +17,10 @@ const SalesContent = () => {
                         transition={{ duration:0.8 }}
                         className='max-w-lg md:max-w-4xl py-1  mx-auto text-left mt-6 md:mt-12'
                     >
-                        <h3 className='text-xl sm:text-2xl md:text-3xl lg:text-5xl tracking-wide font-bold text-gray-800'>
-                            自社のITインフラを整えて<br/>ビジネスを次のステージへ。
+                        <h3 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wide font-bold text-gray-800'>
+                            自社のITインフラを整えて<br/>ビジネスを次のステージへ
                         </h3>
-                        <p className='text-xs md:text-sm lg:text-base text-gray-400 mt-4 ml-1'>
+                        <p className='text-sm md:text-sm lg:text-base text-gray-400 mt-2 md:mt-4 ml-1'>
                             最新技術を使用し高機能なサイトを構築
                         </p>
                     </motion.div>
@@ -37,17 +37,17 @@ const SalesContent = () => {
                                     initial={{ y:20, opacity:0}}
                                     whileInView={{ y:0, opacity:1.0 }}
                                     transition={{ duration:0.9 }}
-                                    className="mx-auto relative h-48 w-48 md:h-72 md:w-72 lg:h-96 lg:w-96"
+                                    className="mx-auto relative h-56 w-56 md:h-72 md:w-72 lg:h-96 lg:w-96"
                                 >
                                     <Image className='rounded-md shadow-md' src={"/images/data-marketing.jpg"} loading="eager" layout="fill" alt="call-center" />
                                 </motion.div>
                             </div>
                             <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1.0, y:0 }} transition={{ duration:0.8 }}>
                                 <div className='max-w-lg md:mr-6  w-fit p-3 md:p-6 rounded-md mx-auto relative'>
-                                    <p className='text-green-600 font-bold text-xs md:text-sm lg:text-base'>
+                                    <p className='text-green-600 font-bold text-sm lg:text-base'>
                                         既存ビジネスをアップグレード
                                     </p>
-                                    <p className='font-bold text-lg md:text-2xl lg:text-3xl py-2 md:py-3'>
+                                    <p className='font-bold text-xl md:text-2xl lg:text-3xl py-2 md:py-3'>
                                         構築・集客・収益化までを<br/>一貫してサポート致します
                                     </p>
                                     <p className="text-sm md:text-base  text-left text-gray-500">
@@ -59,7 +59,7 @@ const SalesContent = () => {
                     </motion.div>
                     <div className="h-0.5 w-1/2 my-12 md:my-24 mx-auto bg-gray-200 rounded-full"></div>
                     <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8 }}>
-                        <p className=' text-3xl text-center'><span className='text-5xl font-bold'>MULTIPLA</span>の得意とすること</p>
+                        <p className='text-2xl md:text-3xl text-left'><span className='text-4xl md:text-5xl font-bold'>MULTIPLA</span><br/>の得意とすること</p>
                     </motion.div>
                     <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1, y:0 }} transition={{ duration:0.8 }} >
                         <div className={style.sales_container}>

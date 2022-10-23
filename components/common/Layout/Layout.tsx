@@ -18,11 +18,12 @@ const Layout: FC<Props> = ({ children }: Props) => {
     }
 
     useEffect(() => {
-        window.addEventListener('load', function() {
+
+        window.addEventListener('load', () =>  {
             console.log('load')
-            this.setTimeout(() => {
+            setTimeout(() => {
                 setIsLoaded(true);
-            }, 0.6 * 1000)
+            }, 1 * 1000)
         })
         if(!isLoaded){
             document.addEventListener('wheel',handle,{ passive: false })

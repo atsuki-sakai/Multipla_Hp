@@ -4,9 +4,9 @@
 }
 
 .sales_container {
-    @apply max-w-4xl mx-auto flex items-start justify-center space-x-12 text-base md:text-lg lg:text-xl mt-12 bg-gradient-to-tl to-purple-700 from-red-400 py-12 rounded-full border shadow-md;
+    @apply max-w-4xl mx-auto flex items-start justify-center space-x-3 md:space-x-8 lg:space-x-12 text-base md:text-lg lg:text-xl mt-12 bg-gradient-to-tl to-purple-700 from-red-400 py-4 md:py-8 lg:py-12 rounded-full border shadow-md;
     & > p {
-        @apply font-bold text-3xl text-white;
+        @apply font-bold text-xs md:text-xl lg:text-3xl text-white;
         writing-mode: vertical-rl;
         text-orientation: upright;
     }
