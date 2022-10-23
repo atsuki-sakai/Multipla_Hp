@@ -53,7 +53,7 @@ const Faq = () => {
                                     <h3 className="text-gray-700 text-center mb-2 md:text-lg">
                                         / Question
                                     </h3>
-                                    <p className="my-6 mx-8 md:mx-24 text-lg text-gray-500">質問にない事でも柔軟に対応いたしますので<br/>まずはお気軽にお問い合わせ下さい。</p>
+                                    <p className="my-6 text-center text-lg text-gray-500">質問にない事でも柔軟に対応いたしますので<br/>まずはお気軽にお問い合わせ下さい。</p>
                                     <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx- py-12">
                                         <div className="w-full lg:w-1/2 px-4">
                                             <FaqDetail
@@ -89,7 +89,7 @@ const Faq = () => {
                                         </div>
                                     </div>
                                     <div className='mt-8'>
-                                        <div className="flex justify-center bg-cyan-800 px-6 py-2 rounded-full border hover:border-cyan-800 text-white hover:text-cyan-800 hover:bg-white transform duration-300 ease-out w-fit mx-auto">
+                                        <div className="flex justify-center bg-white px-6 py-2 rounded-full border border-purple-800 text-purple-800 hover:scale-105 transform duration-300 ease-out w-fit mx-auto">
                                             <Link href={"/contact"}>
                                                 <a className='text-center lg:text-xl'>質問する</a>
                                             </Link>

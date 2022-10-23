@@ -163,8 +163,8 @@ const Contact = () => {
                                         </div>
                                         <div className="flex items-center justify-center mt-4">
                                             <input className="h-5 w-5 foucs:outline-none" type="checkbox" onChange={() => setPrivacyPolivy(!isPrivacyPolicy)} />
-                                            <p className="ml-4 text-blue-500 underline"><a href="/privacy-policy" target="_blank">プライバシーポリシー</a></p>
-                                            <p className="text-sm">に同意する。</p>
+                                            <p className="ml-4 text-blue-500 underline text-xs md:text-sm"><a href="/privacy-policy" target="_blank">プライバシーポリシー</a></p>
+                                            <p className="text-xs md:text-sm">に同意する。</p>
                                         </div>
                                         <p className="text-xs h-4 text-red-500 mt-1">{isPrivacyPolicy ? "" : "必ずお読み下さい。"}</p>
                                         <div className='flex justify-center'>
