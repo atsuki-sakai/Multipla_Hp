@@ -19,7 +19,7 @@ const PlanCalculation = () => {
             <MetaHead
                 title='簡単１分お見積りシュミレーター'
             >
-                <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-plan-calc`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
+                <script type='application/ld+json' dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
             <motion.div
                 initial={{ opacity:0 }}
