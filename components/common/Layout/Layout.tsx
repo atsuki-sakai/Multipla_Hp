@@ -1,4 +1,5 @@
 import React, { FC, ReactNode, useState, useEffect } from 'react'
+import Script from 'next/script'
 import { Footer, Header } from "@components/common"
 import style from "./Layout.module.css"
 import { Drawer } from '@components/common'
@@ -10,9 +11,15 @@ import { motion } from "framer-motion";
 interface Props {
     children: ReactNode | ReactNode[]
 }
+
+
+
+ //TODO: - loadが呼ばれない？
+ 
 const Layout: FC<Props> = ({ children }: Props) => {
 
-    const [ isLoaded, setIsLoaded ] = useState(false);
+
+    const [ isLoaded, setIsLoaded ] = useState(true);
     const handle = (e: any) => {
         e.preventDefault();
     }
@@ -37,27 +44,29 @@ const Layout: FC<Props> = ({ children }: Props) => {
         }
     }, [isLoaded])
     return (
-        <div className='relative'>
-            <motion.div
-                initial={{ opacity:1 }}
-                animate={{
-                    opacity: isLoaded ? 0: 1,
-                    transitionEnd: { display: isLoaded ? "none" : "block" }
-                }}
-                transition={{ duration:0.7, ease: "easeInOut" }}
-                className="absolute top-0 left-0 h-screen w-screen z-50"
-            >
-                <LoadingView/>
-            </motion.div>
-            <div className={style.root}>
-                <Header />
-                    <main>
-                        { children }
-                    </main>
-                <Footer/>
-                <Drawer/>
+        <>
+            <div className='relative'>
+                <motion.div
+                    initial={{ opacity:1 }}
+                    animate={{
+                        opacity: isLoaded ? 0: 1,
+                        transitionEnd: { display: isLoaded ? "none" : "block" }
+                    }}
+                    transition={{ duration:0.7, ease: "easeInOut" }}
+                    className="absolute top-0 left-0 h-screen w-screen z-50"
+                >
+                    <LoadingView/>
+                </motion.div>
+                <div className={style.root}>
+                    <Header />
+                        <main>
+                            { children }
+                        </main>
+                    <Footer/>
+                    <Drawer/>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
