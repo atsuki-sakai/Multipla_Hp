@@ -141,7 +141,7 @@ const Contact = () => {
                             </div>
                             <p className="mx-8 my-3 text-xl text-gray-800 font-bold pt-8">弊社へのご依頼、疑問など何でもお気軽にご質問下さい。</p>
                             <div className='max-w-2xl mx-auto'>
-                                    <a target="_blank" href="https://lin.ee/KDk1uI3" rel='noreferrer'>
+                                    <a target="_blank" href="https://lin.ee/CPF8FeZ" rel='noreferrer'>
                                         <div className='flex justify-center items-center mx-8 my-12 px-2 border py-3 rounded-md shadow-md space-x-2 bg-green-500'>
                                             <p className='grow w-64 text-white tracking-wide text-sm md:text-base lg:text-xl'><span className='text-white text-2xl md:text-3xl lg:text-4xl font-bold'>Line</span>でお問い合わせ</p>
                                         </div>
