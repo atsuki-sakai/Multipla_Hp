@@ -3,7 +3,7 @@ import React, { useEffect } from "react"
 import { useRouter } from 'next/router'
 import type { AppProps } from 'next/app'
 import { Layout } from "@components/common"
-import { UIProvider} from "@components/context"
+import { UIProvider, BgMovieLoadedProvider } from "@components/context"
 import TagManager from "react-gtm-module"
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -24,11 +24,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       })
   }, [router.events])
 
-  return  <UIProvider>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          </UIProvider>
+  return  <BgMovieLoadedProvider>
+            <UIProvider>
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </UIProvider>
+          </BgMovieLoadedProvider>
 }
 
 export default MyApp

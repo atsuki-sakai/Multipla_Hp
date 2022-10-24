@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, useState, useEffect } from 'react'
-import Script from 'next/script'
+import { useBgMovieLoaded } from '@components/context'
 import { Footer, Header } from "@components/common"
 import style from "./Layout.module.css"
 import { Drawer } from '@components/common'
@@ -19,19 +19,19 @@ interface Props {
 const Layout: FC<Props> = ({ children }: Props) => {
 
 
-    const [ isLoaded, setIsLoaded ] = useState(true);
+    const { load } = useBgMovieLoaded()
+    const [ isLoaded, setIsLoaded ] = useState(false);
     const handle = (e: any) => {
         e.preventDefault();
     }
 
     useEffect(() => {
-
-        // window.addEventListener('load', () =>  {
+        if(load){
             console.log('load')
             setTimeout(() => {
                 setIsLoaded(true);
-            }, 1 * 1000)
-        // })
+            }, 1 * 0.6)
+        }
         if(!isLoaded){
             document.addEventListener('wheel',handle,{ passive: false })
             document.addEventListener('touchmove', handle, { passive: false })
@@ -42,7 +42,7 @@ const Layout: FC<Props> = ({ children }: Props) => {
                 document.removeEventListener('touchmove', handle)
             }
         }
-    }, [isLoaded])
+    }, [isLoaded, load])
 
     return (
         <>

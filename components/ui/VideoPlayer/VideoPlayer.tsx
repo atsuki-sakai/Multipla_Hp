@@ -1,6 +1,6 @@
 
 import React, { FC } from 'react'
-
+import { useBgMovieLoaded } from '@components/context'
 interface Props {
     mp4: string
     webm: string
@@ -9,8 +9,9 @@ interface Props {
 
 const VideoPlayer: FC<Props> = ({ mp4, webm, poster }: Props) => {
 
+    const { onLoaded } = useBgMovieLoaded()
     return (
-        <video autoPlay loop muted playsInline style={{ objectFit:"cover", height:"100%", width:"100%" }} poster={poster} className='absolute w-full h-screen'>
+        <video autoPlay loop muted playsInline onPlay={onLoaded} style={{ objectFit:"cover", height:"100%", width:"100%" }} poster={poster} className='absolute w-full h-screen'>
             <source src={webm} type='video/webm; codecs=vp9' />
             <source src={mp4} type='video/mp4; codecs=hvc1' />
         </video>
