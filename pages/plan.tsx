@@ -1,6 +1,5 @@
 
 import React from 'react';
-import Script from 'next/script';
 
 import { PlanCard } from '@components/ui';
 import { MetaHead } from '@components/common';
@@ -21,7 +20,7 @@ const Plan = () => {
             <MetaHead
                 title='ご契約プランについて'
             >
-            <Script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-plan`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
+            <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-plan`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
             <motion.div
                 initial={{ opacity:0 }}

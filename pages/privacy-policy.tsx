@@ -1,6 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
-import Script from 'next/script';
 
 import { MetaHead } from '@components/common';
 import { createBreadcrumListJsonLd } from '@components/utils';
@@ -21,7 +19,7 @@ const PrivacyAndPolicy = () => {
             <MetaHead
                 title='プライバシーポリシー'
             >
-            <Script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-privacy-policy`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
+            <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-privacy-policy`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
             <motion.div
                 initial={{ opacity:0 }}

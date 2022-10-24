@@ -1,6 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
-import Script from 'next/script';
 
 import { MetaHead } from '@components/common';
 import { createBreadcrumListJsonLd } from '@components/utils';
@@ -21,7 +19,7 @@ const AboutUs = () => {
                 title={"私たちについて"}
                 description={"WEBのことならぜひMULTIPLA/マルチプラに一度ご相談ください。遠方のお客様も全てオンライン上で全て完結いたしますので是非ご利用下さい。直接打ち合わせも可"}
             >
-            <Script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-about-us`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
+            <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-about-us`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
             <motion.div
                 initial={{ opacity:0 }}

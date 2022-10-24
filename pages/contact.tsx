@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import Link from 'next/link'
-import Image from 'next/image';
-import Script from 'next/script';
 
 import { createBreadcrumListJsonLd } from '@components/utils';
 import type { BreadcrumbItem } from '@components/utils/createBreadcrumbList-json-ld';
@@ -111,7 +108,7 @@ const Contact = () => {
             <MetaHead
                 title='お問い合わせ'
             >
-            <Script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-contact`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
+            <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-contact`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
             <motion.div
                 initial={{ opacity:0 }}

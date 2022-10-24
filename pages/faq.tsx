@@ -1,5 +1,4 @@
 import React from 'react';
-import Script from 'next/script';
 import Link from 'next/link'
 
 import { MetaHead } from '@components/common';
@@ -22,7 +21,7 @@ const Faq = () => {
             <MetaHead
                 title='よくある質問'
             >
-                <Script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-question`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
+                <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-question`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
             <motion.div
                 initial={{ opacity:0 }}

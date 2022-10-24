@@ -1,5 +1,4 @@
 import React from 'react'
-import Script from 'next/script'
 
 import { MetaHead } from '@components/common'
 import { RateCalculation } from '@components/page'
@@ -20,7 +19,7 @@ const PlanCalculation = () => {
             <MetaHead
                 title='簡単１分お見積りシュミレーター'
             >
-                <Script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-plan-calc`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
+                <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-plan-calc`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
             <motion.div
                 initial={{ opacity:0 }}
