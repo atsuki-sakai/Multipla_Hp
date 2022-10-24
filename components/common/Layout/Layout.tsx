@@ -12,7 +12,7 @@ interface Props {
 }
 const Layout: FC<Props> = ({ children }: Props) => {
 
-    const [ isLoaded, setIsLoaded ] = useState(true);
+    const [ isLoaded, setIsLoaded ] = useState(false);
     const handle = (e: any) => {
         e.preventDefault();
     }
