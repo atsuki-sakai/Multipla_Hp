@@ -17,7 +17,8 @@ const PlanCalculation = () => {
     return (
         <>
             <MetaHead
-                title='簡単１分お見積りシュミレーター'
+                title='簡単１分お見積りシュミレーター　| マルチプラ | 丹波篠山市のWEB制作会社'
+                description='マルチプラ/MULTIPLAのECサイトの制作(Shopifyの場合)費用を１分で簡単にお見積もりいただけます。その他、ヘッドレスコマース、BASE、Stripe、などお客様のニーズに合わせたECサイトの構築も行なっておりますのでお気軽にご相談ください。'
             >
                 <script type='application/ld+json' dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>

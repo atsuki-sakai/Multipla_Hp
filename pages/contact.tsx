@@ -106,7 +106,8 @@ const Contact = () => {
     return (
         <>
             <MetaHead
-                title='お問い合わせ'
+                title='お問い合わせ | マルチプラ | 丹波篠山市のWEB制作会社'
+                description="マルチプラ/MULTIPLAへのお問い合わせはこちらからどうぞ。ホームページ・ECサイトの制作をはじめWEB広告・印刷物の制作まで行なっております。是非お気軽にご相談ください。"
             >
             <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-contact`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>

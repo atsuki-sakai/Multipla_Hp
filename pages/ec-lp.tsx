@@ -15,7 +15,8 @@ const ECLP = () => {
     return (
         <>
         <MetaHead
-            title={'ECサイトのお悩み解決！MULTIPLA/マルチプラ'}
+            title={'ECサイトのお悩み解決| マルチプラ | 丹波篠山市のWEB制作会社'}
+            description="マルチプラ/MULTIPLAの制作するECサイトはランニングコストと機能のバランスを考えて構築致します。既存のビジネスをネット上でも始めてみませんか？詳しくはこちらのページで紹介しています。"
         />
             <motion.div
                 initial={{ opacity:0 }}

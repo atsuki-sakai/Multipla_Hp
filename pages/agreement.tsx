@@ -18,8 +18,8 @@ const Agreement = () => {
     return (
         <>
             <MetaHead
-                title={"ご契約の流れ"}
-                description={"WEBのことならぜひMULTIPLA/マルチプラ一度ご相談ください。遠方のお客様も全てオンライン上で全て完結いたしますので是非ご利用下さい。直接打ち合わせも可"}
+                title={"ご契約の流れ | マルチプラ | 丹波篠山市のWEB制作会社"}
+                description={"マルチプラ/MULTIPLAへの制作依頼の大まかな流れを簡単にご案内。制作の打ち合わせは完全オンラインで制作。お時間が少ないお客様でも無理なく利用できます。"}
             >
                 <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-agreement`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
