@@ -15,7 +15,7 @@ interface Props {
 
 
  //TODO: - loadが呼ばれない？
- 
+
 const Layout: FC<Props> = ({ children }: Props) => {
 
 
@@ -26,12 +26,12 @@ const Layout: FC<Props> = ({ children }: Props) => {
 
     useEffect(() => {
 
-        window.addEventListener('load', () =>  {
+        // window.addEventListener('load', () =>  {
             console.log('load')
             setTimeout(() => {
                 setIsLoaded(true);
             }, 1 * 1000)
-        })
+        // })
         if(!isLoaded){
             document.addEventListener('wheel',handle,{ passive: false })
             document.addEventListener('touchmove', handle, { passive: false })
@@ -43,6 +43,7 @@ const Layout: FC<Props> = ({ children }: Props) => {
             }
         }
     }, [isLoaded])
+
     return (
         <>
             <div className='relative'>
