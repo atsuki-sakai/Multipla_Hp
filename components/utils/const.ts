@@ -1,1 +1,1 @@
-export const SITE_URL = "https://multipla-webservice.com"
+export const SITE_URL = "https://multipla-io"

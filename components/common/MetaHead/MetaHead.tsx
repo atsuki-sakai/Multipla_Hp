@@ -8,24 +8,26 @@ interface Props {
     ogImgPath?: string
     url?: string
     type?: string
+    siteName?: string
     children?: ReactNode | ReactNode[]
 }
 
-// TODO: facebook app idを新しく取得
 
 const MetaHead = ({
-                    title = "マルチプラ/MULTIPLA",
-                    description = "WEBのことならぜひ一度ご相談ください。遠方のお客様も全てオンライン上で全て完結いたしますので是非ご利用下さい。直接打ち合わせも可",
-                    keyword = ["マルチプラ","MALTIPLA","ホームページ","web", "ECサイト", "webサイト", "篠山", "兵庫"],
-                    ogImgPath = "https://multipla-webservice/images/test-og-image.png",
-                    url = "https://multipla-webservice.com",
+                    title = "マルチプラ | 高機能で高コスパなWEBサイトを構築",
+                    description = "WEBのサイトに関する様々な悩みを解決。MALTIPLA/マルチプラ",
+                    keyword = ["web", "ecサイト","ec","webサイト", "ホームページ","丹波篠山", "篠山","兵庫", "マルチプラ", "MULTIPLA"],
+                    ogImgPath = "https://multipla-io/images/test-og-image.png",
+                    url = "https://multipla.io",
                     type = "website",
+                    siteName = "マルチプラ/MULTIPLA",
                     children
                 }: Props) => {
     return (
         <Head>
             <title>{title}</title>
-            <link rel="shortcut icon" href="https://multipla-webservice.com/favicon.ico"/>
+            <link rel="shortcut icon" href="https://multipla.io/favicon.ico"/>
+            <link rel="canonical" href={url}></link>
             <meta name="viewport" content="width=device-width,initial-scale=1.0" />
             <meta name="description" content={description} />
             <meta property="og:title" content={title} />
@@ -35,9 +37,9 @@ const MetaHead = ({
             <meta property="og:image" content={ogImgPath} />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
-            <meta property="og:site_name" content={title} />
+            <meta property="og:site_name" content={siteName} />
             <meta property="og:locale" content="ja_JP" />
-            {/* <meta property="fb:app_id" content="3128697494014223" /> */}
+            <meta property="fb:app_id" content="1159267118350717" />
             <meta property="og:description" content={description} />
             {children}
         </Head>

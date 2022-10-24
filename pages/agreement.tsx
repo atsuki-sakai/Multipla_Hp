@@ -14,7 +14,7 @@ const Agreement = () => {
 
     const items: BreadcrumbItem[] = [
         { name: "ホーム", url: "/" },
-        { name: "ご契約の流れ", url: "https://multipla-webservice.com/agreement" }
+        { name: "ご契約の流れ", url: "https://multipla.io/agreement" }
     ]
 
     return (

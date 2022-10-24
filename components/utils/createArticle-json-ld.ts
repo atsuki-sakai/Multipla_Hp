@@ -16,13 +16,13 @@ const createArticle_JSON_LD = (blog: Blog) => {
                     "name": "multipla",
                     "logo": {
                         "@type": "ImageObject",
-                        "url": "https://multipla-webservice.com/images/test-logo.png"
+                        "url": "https://multipla-io.com/images/test-logo.png"
                     }
                 },
                 "author": {
                     "@type": "Person",
                     "name": "${blog.writer}",
-                    "url": "https://multipla-webservice.com/about-us"
+                    "url": "https://multipla-io.com/about-us"
                 }
             }
         `};

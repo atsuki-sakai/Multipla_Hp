@@ -77,7 +77,7 @@ const AboutUs = () => {
                         <div className="max-w-3xl mx-auto">
                             <div className="flex items-center space-x-4 lg:space-x-8 p-2 mx-8">
                                 <h5 className="text-left w-32 inline-block lg:text-xl font-bold">アドレス</h5>
-                                <p className="text-left lg:text-xl w-full overflow-hidden font-bold">suport@multipla-webservice.com</p>
+                                <p className="text-left lg:text-xl w-full overflow-hidden font-bold">suport@multipla.io</p>
                             </div>
                         </div>
                         <div className="max-w-3xl mx-auto">

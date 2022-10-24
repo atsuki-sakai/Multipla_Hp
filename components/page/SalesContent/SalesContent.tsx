@@ -37,9 +37,9 @@ const SalesContent = () => {
                                     initial={{ y:20, opacity:0}}
                                     whileInView={{ y:0, opacity:1.0 }}
                                     transition={{ duration:0.9 }}
-                                    className="mx-auto relative h-56 w-56 md:h-72 md:w-72 lg:h-96 lg:w-96"
+                                    className="mx-auto relative w-full h-full md:h-72 md:w-72 lg:h-96 lg:w-96"
                                 >
-                                    <Image className='rounded-md shadow-md' src={"/images/data-marketing.jpg"} loading="eager" layout="fill" alt="call-center" />
+                                    <Image className='rounded-md shadow-md' src={"/images/data-marketing.jpg"} width={500} height={500} loading="eager" layout="responsive" alt="call-center" />
                                 </motion.div>
                             </div>
                             <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1.0, y:0 }} transition={{ duration:0.8 }}>
