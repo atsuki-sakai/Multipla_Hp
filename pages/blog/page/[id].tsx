@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 const BlogId = ({blogs, categories, totalCount, id}: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   const items: BreadcrumbItem[] = [
-    { name: "ホーム", url:"/" },
+    { name: "ホーム", url:"" },
     { name: "ブログ一覧", url: "/blog/page/1" }
   ]
   return (
