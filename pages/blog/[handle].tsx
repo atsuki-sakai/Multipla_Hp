@@ -104,7 +104,6 @@ const BlogHandle = ({blogData, categories, categoryBlogs} : InferGetStaticPropsT
             <MetaHead
                 title={blog.title}
                 description={blogSchemaBody}
-                keyword={blog.keyword.split("、")}
                 ogImgPath={blog.thumbnail.url.toString()}
                 url={SITE_URL + router.asPath}
             >

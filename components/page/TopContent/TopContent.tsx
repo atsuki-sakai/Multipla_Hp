@@ -50,7 +50,7 @@ const TopContent = () => {
                                     <Image className="w-full h-full" src={"/images/test-logo.png"} layout="fill" alt="logo" />
                                 </motion.div>
                             </div>
-                            <motion.p 
+                            <motion.div 
                                 initial={{ opacity: 0, y:30 }} 
                                 animate={{ opacity: 1.0, y:0 }} 
                                 transition={{ duration:0.9, delay: 0.9 }} 
@@ -58,7 +58,7 @@ const TopContent = () => {
                             >
                                 <p>既存ビジネスを<br/>アップデート</p>
                                 <p className="text-sm md:text-base lg:text-lg text-gray-500 mt-1">Multipla Web Developer</p>
-                            </motion.p>
+                            </motion.div>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0.0, y:-60 }} 

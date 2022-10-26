@@ -4,14 +4,12 @@ import Head from 'next/head'
 interface Props {
     title?: string
     description?: string
-    keyword?: string[]
     ogImgPath?: string
     url?: string
     type?: string
     siteName?: string
     children?: ReactNode | ReactNode[]
 }
-
 
 const MetaHead = ({
                     title = "マルチプラ | ECサイト・WEBサイト制作会社",
