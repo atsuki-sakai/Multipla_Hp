@@ -15,7 +15,7 @@ interface Props {
 
 const MetaHead = ({
                     title = "マルチプラ | ECサイト・WEBサイト制作会社 ",
-                    description = "ECサイト・ホームページの制作を行う、丹波篠山市にある制作会社 マルチプラ/MULTIPLA WEB広告・出版印刷物の作成などWEBの構築から集客・収益化までを一貫してサポート致します。",
+                    description = "ECサイト・WEBサイトの制作を行う、丹波篠山市にある制作会社 マルチプラ/MULTIPLA ホームページ制作・WEB広告・出版印刷物の作成などWEBの構築から集客・収益化までを一貫してサポート致します。",
                     ogImgPath = "https://multipla-io/images/test-og-image.png",
                     url = "https://multipla.io",
                     type = "website",
