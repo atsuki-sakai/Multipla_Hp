@@ -26,12 +26,18 @@ const Layout: FC<Props> = ({ children }: Props) => {
     }
 
     useEffect(() => {
-        if(load){
-            console.log('load')
+
+        const root = window.location.pathname;
+        if( load && root === "/" ){
+            setTimeout(() => {
+                setIsLoaded(true);
+            }, 1 * 0.6)
+        }else{
             setTimeout(() => {
                 setIsLoaded(true);
             }, 1 * 0.6)
         }
+
         if(!isLoaded){
             document.addEventListener('wheel',handle,{ passive: false })
             document.addEventListener('touchmove', handle, { passive: false })
@@ -42,7 +48,7 @@ const Layout: FC<Props> = ({ children }: Props) => {
                 document.removeEventListener('touchmove', handle)
             }
         }
-    }, [isLoaded, load])
+    }, [isLoaded])
 
     return (
         <>

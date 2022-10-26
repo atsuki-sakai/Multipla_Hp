@@ -18,7 +18,7 @@ export default function createBreadcrumbList_JSON_LD(items: BreadcrumbItem[]) {
                                         "@type":"ListItem",
                                         "position": ${index++},
                                         "name": "${item.name}",
-                                        "item": "https://multipla.io/${item.url === "/" ? "" : item.url}"
+                                        "item": "https://multipla.io/${item.url}"
                                     }`
                                 )
                         })
