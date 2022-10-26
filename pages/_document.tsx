@@ -6,7 +6,6 @@ const Document = () => {
         <Head>
             <meta name="google-site-verification" content="0XtQNlT5YH6qHvShAPXOg1uXYnODAsVWsWhMpMGV15g" />
             <meta name="facebook-domain-verification" content="n3khm8j15exid0sb7a8tlc9kwgdfnw" />
-            <meta http-equiv="Content-Security-Policy" content="script-src 'none'" />
         </Head>
         <body>
             <Main />
