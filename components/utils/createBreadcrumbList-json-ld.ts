@@ -7,7 +7,7 @@ export interface BreadcrumbItem {
 
 export default function createBreadcrumbList_JSON_LD(items: BreadcrumbItem[]) {
     return {__html: `{
-                "name": "パンくずリスト",
+                "name": "BreadcrumbList",
                 "@context":"https://schema.org",
                 "@type":"BreadcrumbList",
                 "itemListElement":[
@@ -18,8 +18,7 @@ export default function createBreadcrumbList_JSON_LD(items: BreadcrumbItem[]) {
                                         "@type":"ListItem",
                                         "position": ${index++},
                                         "name": "${item.name}",
-                                        "item": "https://multipla.io/${item.url}",
-                                        "id": "https://multipla.io/${item.url}"
+                                        "item": "https://multipla.io/${item.url === "/" ? "" : item.url}"
                                     }`
                                 )
                         })

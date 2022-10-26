@@ -3,7 +3,7 @@ import { Blog } from "@service/micro-cms/type/Blog"
 const createArticle_JSON_LD = (blog: Blog) => {
     return {__html: `
             {
-                "name":"ブログ記事",
+                "name":"ArticleBlog",
                 "@context": "https://schema.org",
                 "@type": "Article",
                 "headline": "${blog.title}",
@@ -13,7 +13,7 @@ const createArticle_JSON_LD = (blog: Blog) => {
                 "articleBody": "${blog.text.replace(/(<([^>]+)>)/gi, '')}",
                 "publisher": {
                     "@type": "Organization",
-                    "name": "multipla",
+                    "name": "Multipla",
                     "logo": {
                         "@type": "ImageObject",
                         "url": "https://multipla-io.com/images/test-logo.png"
