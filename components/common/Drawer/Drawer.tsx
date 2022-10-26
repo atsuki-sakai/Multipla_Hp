@@ -35,7 +35,7 @@ const Drawer = () => {
             <div className='h-full w-full'>
                 <div className={style.wrapper}>
                     <div className={style.drawer_header}>
-                        <h3 className="uppercase text-4xl text-white font-bold font-noto_sans">
+                        <h3 className="uppercase text-4xl font-boldfont-noto_sans text-white">
                             MULTIPLA
                         </h3>
                         <div

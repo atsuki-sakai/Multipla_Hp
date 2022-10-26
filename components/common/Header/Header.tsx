@@ -74,17 +74,17 @@ const Header = ({hidden = false}: Props) => {
     <>
       <header className={headerClassNames}>
         <div className={style.wrapper}>
-          <Link href={"/"} passHref>
             <div className="flex items-center">
               <div className="relative h-10 w-10">
                 <Image src={"/images/test-logo.png"} layout="responsive" height={80} width={80} alt={"Logo"}></Image>
               </div>
-              <a>
-                <h3 className={style.title}>MULTIPLA</h3>
-                <p className={style.subtitle}>マルチプラ</p>
-              </a>
+              <Link href={"/"} passHref>
+                <a>
+                  <h3 className={style.title}>MULTIPLA</h3>
+                  <p className={style.subtitle}>マルチプラ</p>
+                </a>
+              </Link>
             </div>
-          </Link>
           {/* sm */}
           <div
             className={style.mobile_menu}

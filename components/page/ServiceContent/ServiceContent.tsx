@@ -33,7 +33,7 @@ const ServiceContents = () => {
         <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 md:py-24 relative py-6 bg-transparent font-noto_sans">
                 <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
-                    <h3 className='text-xl md:text-2xl lg:text-3xl font-bold text-center title-font '><span className=' font-bold text-3xl md:text-4xl lg:text-5xl'>MULTIPLA</span>のサービス</h3>
+                    <h3 className='text-xl md:text-2xl lg:text-3xl font-bold text-center title-font '><span className=' font-bold text-3xl md:text-4xl lg:text-5xl'>マルチプラ</span>のサービス</h3>
                 </motion.div>
                 <div className="mt-6">
                     <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">

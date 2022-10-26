@@ -37,9 +37,9 @@ const SalesContent = () => {
                                     initial={{ y:20, opacity:0}}
                                     whileInView={{ y:0, opacity:1.0 }}
                                     transition={{ duration:0.9 }}
-                                    className="mx-auto relative w-full h-full md:h-72 md:w-72 lg:h-96 lg:w-96"
+                                    className="mx-auto relative w-full h-full "
                                 >
-                                    <Image className='rounded-md shadow-md' src={"/images/data-marketing.jpg"} width={500} height={500} loading="eager" layout="responsive" alt="call-center" />
+                                    <Image className='rounded-md shadow-md' src={"/images/data-marketing.jpg"} width={1080} height={810} loading="eager" layout="responsive" alt="call-center" />
                                 </motion.div>
                             </div>
                             <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1.0, y:0 }} transition={{ duration:0.8 }}>
@@ -59,7 +59,7 @@ const SalesContent = () => {
                     </motion.div>
                     <div className="h-0.5 w-1/2 my-12 md:my-24 mx-auto bg-gray-200 rounded-full"></div>
                     <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8 }}>
-                        <p className='text-2xl md:text-3xl text-left'><span className='text-4xl md:text-5xl font-bold'>MULTIPLA</span><br/>の得意とすること</p>
+                        <p className='text-2xl md:text-3xl max-w-7xl mx-auto'><span className='text-4xl md:text-5xl font-bold'>マルチプラ</span><br/>の得意とすること</p>
                     </motion.div>
                     <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1, y:0 }} transition={{ duration:0.8 }} >
                         <div className={style.sales_container}>

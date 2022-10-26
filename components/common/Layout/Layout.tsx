@@ -7,17 +7,11 @@ import { LoadingView } from '@components/ui'
 
 import { motion } from "framer-motion";
 
-
 interface Props {
     children: ReactNode | ReactNode[]
 }
 
-
-
- //TODO: - loadが呼ばれない？
-
 const Layout: FC<Props> = ({ children }: Props) => {
-
 
     const { load } = useBgMovieLoaded()
     const [ isLoaded, setIsLoaded ] = useState(false);
@@ -48,7 +42,7 @@ const Layout: FC<Props> = ({ children }: Props) => {
                 document.removeEventListener('touchmove', handle)
             }
         }
-    }, [isLoaded])
+    }, [isLoaded, load])
 
     return (
         <>
