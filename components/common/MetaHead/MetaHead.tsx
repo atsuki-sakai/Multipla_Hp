@@ -14,13 +14,12 @@ interface Props {
 
 
 const MetaHead = ({
-                    title = "マルチプラ | ECサイト・ホームページの制作会社",
-                    description = "ECサイト・ホームページの制作を行う、丹波篠山市にある制作会社　マルチプラ/MULTIPLA WEB広告・出版印刷物の作成などWEBの構築から集客・収益化までを一貫してサポート致します。",
-                    keyword = ["ec","ecサイト","ホームページ","web","webサイト","丹波篠山", "篠山","兵庫", "マルチプラ", "MULTIPLA"],
+                    title = "マルチプラ | ECサイト・WEBサイト制作会社 ",
+                    description = "ECサイト・ホームページの制作を行う、丹波篠山市にある制作会社 マルチプラ/MULTIPLA WEB広告・出版印刷物の作成などWEBの構築から集客・収益化までを一貫してサポート致します。",
                     ogImgPath = "https://multipla-io/images/test-og-image.png",
                     url = "https://multipla.io",
                     type = "website",
-                    siteName = "マルチプラ | ECサイト・ホームページの制作会社  | 兵庫県丹波篠山市",
+                    siteName = "マルチプラ | ECサイト・WEBサイト制作会社  | 丹波篠山市",
                     children
                 }: Props) => {
     return (
@@ -32,7 +31,6 @@ const MetaHead = ({
             <meta name="description" content={description} />
             <meta property="og:title" content={title} />
             <meta property="og:type" content={type} />
-            <meta name="keywords" content={keyword.join()} />
             <meta property="og:url" content={url} />
             <meta property="og:image" content={ogImgPath} />
             <meta property="og:image:width" content="1200" />

@@ -54,12 +54,13 @@ const TopContent = () => {
                                 initial={{ opacity: 0, y:30 }} 
                                 animate={{ opacity: 1.0, y:0 }} 
                                 transition={{ duration:0.9, delay: 0.9 }} 
-                                className='text-shadow-xl text-3xl md:text-5xl text-center lg:text-6xl w-fit h-fit -translate-x-1/2 font-bold font-noto_sans  tracking-wide mt-12 '
+                                className='text-3xl md:text-6xl lg:text-7xl text-left w-fit h-fit -translate-x-1/2 font-bold font-noto_sans  tracking-wide mt-12 '
                             >
-                                ビジネスにWEBの力を<br/><span className="text-4x md:text-5xl text-purple-800">PLUS</span><span className="text-orange-500">+</span>
+                                <p>既存ビジネスを<br/>アップデート</p>
+                                <p className="text-sm md:text-base lg:text-lg text-gray-500 mt-1">Multipla Web Developer</p>
                             </motion.p>
                         </motion.div>
-                        <motion.div  
+                        <motion.div
                             initial={{ opacity: 0.0, y:-60 }} 
                             animate={{ opacity: 1.0, y:-40 }} 
                             transition={{ duration:1.0, delay: 1.0 }} 
