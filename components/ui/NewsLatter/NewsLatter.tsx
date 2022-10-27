@@ -15,8 +15,8 @@ const NewsLatter = ({ news }: Props) => {
                 {
                     news.map((_news) => {
                         return (
-                            <div key={_news.id} className='flex items-center space-x-4 md:space-x-12 bg-white rounded-md py-1 md:py-3 px-2 md:px-5 mb-3 text-gray-500'>
-                                <div className='md:flex text-sm md:text-base'>
+                            <div key={_news.id} className='bg-white rounded-md py-1 md:py-3 px-2 md:px-5 mb-3 text-gray-500'>
+                                <div className='md:flex items-center space-x-4 md:space-x-12 text-sm md:text-base'>
                                     <p className='text-blue-500'>{_news.createdAt.split("T")[0]}</p><p>{_news.title}</p>
                                 </div>
                             </div>
