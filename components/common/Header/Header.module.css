@@ -24,7 +24,7 @@
 }
 
 .under_link {
-    @apply fixed bottom-16 lg:bottom-20 right-6 z-40 bg-gradient-to-tr to-red-400 from-purple-700 rounded-full shadow-md transform duration-300 ease-in-out hover:scale-105;
+    @apply fixed bottom-24 md:bottom-28 right-6 z-40 bg-gradient-to-tr to-red-400 from-purple-700 rounded-full shadow-md transform duration-300 ease-in-out hover:scale-105;
 }
 
 .under_button {

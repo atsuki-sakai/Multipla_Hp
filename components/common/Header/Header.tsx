@@ -109,7 +109,7 @@ const Header = ({hidden = false}: Props) => {
           className={style.under_button}
           onClick={(e) => windowToTop(e)}
         >
-          <UpArrow className="text-white w-12 h-12  md:w-[60px] md:h-[60px]" />
+          <UpArrow className="text-white w-14 h-14  md:w-[60px] md:h-[60px]" />
         </div>
       </div>
     </>

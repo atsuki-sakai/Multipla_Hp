@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import type { AppProps } from 'next/app'
 import { Layout } from "@components/common"
 import { UIProvider, BgMovieLoadedProvider } from "@components/context"
+import { ChannelTalk} from '@service/channel-talk'
 import TagManager from "react-gtm-module"
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -11,7 +12,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
   useEffect(() => {
+
     TagManager.initialize({ gtmId: String(process.env.NEXT_PUBLIC_GTM_MANAGER_ID) })
+
     import('react-facebook-pixel')
       .then((x) => x.default)
       .then((ReactPixel) => {
@@ -22,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           ReactPixel.pageView()
         })
       })
+      ChannelTalk()
   }, [router.events])
 
   return  <BgMovieLoadedProvider>
