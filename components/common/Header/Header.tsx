@@ -72,7 +72,7 @@ const Header = ({hidden = false}: Props) => {
 
   return (
     <>
-      <header className={headerClassNames}>
+      <header className={style.header}>
         <div className={style.wrapper}>
             <div className="flex items-center">
               <div className="relative h-10 w-10">
