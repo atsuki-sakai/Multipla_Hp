@@ -12,7 +12,7 @@ const BlogContent = ({blogData}: Props) => {
         <div className='px-8 py-6 md:py-12 z-10 bg-white'>
                 <div className=' max-w-6xl mx-auto'>
                     <motion.div initial={{ opacity:0.0 }} whileInView={{ opacity:1.0 }} transition={{ duration:1.0 }}>
-                    <h3 className="text-center text-gray-700 my-6 font-bold text-2xl lg:text-4xl">ブログ</h3>
+                    <h3 className="text-center text-gray-700 my-6 font-bold text-2xl md:text-3xl lg:text-4xl">ブログ</h3>
                     </motion.div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 py-12">

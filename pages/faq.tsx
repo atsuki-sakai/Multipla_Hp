@@ -46,7 +46,6 @@ const Faq = () => {
                                         duration: 0.7,
                                     }}
                                 >
-
                                     <h3 className="text-center lg:text-3xl text-2xl font-bold text-gray-700">
                                         よくある質問
                                     </h3>

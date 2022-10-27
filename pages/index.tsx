@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
-import { microcmsClient, MICROCMS_ENDPOINT_BLOG, MICROCMS_ENDPOINT_NEWS }  from "@service/micro-cms";
+import React from "react";
+import {
+  microcmsClient,
+  MICROCMS_ENDPOINT_BLOG,
+  MICROCMS_ENDPOINT_NEWS
+}  from "@service/micro-cms";
 import {
   TopContent,
   ServiceContent,
@@ -11,15 +14,13 @@ import {
 } from "@components/page"
 import { MetaHead } from "@components/common";
 import { NewsLatter } from "@components/ui";
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 const dataLimit = 3;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const blogData = await microcmsClient.get({
-    endpoint: MICROCMS_ENDPOINT_BLOG,
-    queries: { limit: dataLimit }
-  });
-  const newsData = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_NEWS, queries: { limit: dataLimit } })
+  const blogData = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_BLOG, queries: { limit: dataLimit } });
+  const newsData = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_NEWS, queries: { limit: dataLimit } });
   return {
       props: {
           blog: blogData.contents,
@@ -37,10 +38,10 @@ export default function Index({blog, news}: InferGetStaticPropsType<typeof getSt
     <div className="">
       <TopContent />
       <SalesContent/>
-      <NewsLatter news={news} />
       <ServiceContent/>
       <ActualSite/>
       <StrongPointContent/>
+      <NewsLatter news={news} />
       <BlogContent blogData={blog} />
     </div>
   </>
