@@ -19,7 +19,7 @@ const Faq = () => {
     return (
         <>
             <MetaHead
-                title='よくある質問　| マルチプラ | 丹波篠山市のWEB制作会社'
+                title='よくある質問 | マルチプラ | 丹波篠山市のWEB制作会社'
                 description='マルチプラ/MULTIPLAへの質問をまとめて紹介しています。お悩み・疑問が解決されない方はお気軽にお問い合わせください。'
             >
                 <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-question`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>

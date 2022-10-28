@@ -16,7 +16,7 @@ const PrivacyAndPolicy = () => {
     return (
         <>
             <MetaHead
-                title='プライバシーポリシー　| マルチプラ | 丹波篠山市のWEB制作会社'
+                title='プライバシーポリシー | マルチプラ | 丹波篠山市のWEB制作会社'
                 description='マルチプラ/MULTIPLAをご利用上の留意点などを記載しております。ご利用の際にぜひご一読ください。'
             >
             <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-privacy-policy`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>

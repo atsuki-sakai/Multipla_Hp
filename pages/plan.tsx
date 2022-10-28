@@ -18,7 +18,7 @@ const Plan = () => {
     return (
         <>
             <MetaHead
-                title='ご契約プランについて　| マルチプラ | 丹波篠山市のWEB制作会社'
+                title='ご契約プランについて | マルチプラ | 丹波篠山市のWEB制作会社'
                 description='マルチプラ/MULTIPLAのご用意する契約プラン、構築費用・管理費用・広告出稿料などプラン別の費用紹介しています。'
             >
             <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-plan`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>

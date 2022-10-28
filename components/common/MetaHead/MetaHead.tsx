@@ -12,12 +12,12 @@ interface Props {
 }
 
 const MetaHead = ({
-                    title = "マルチプラ | ECサイト・WEBサイト制作会社",
-                    description = "ECサイト・WEBサイトの制作を行う、丹波篠山市にある制作会社 マルチプラ/MULTIPLA ホームページ制作・WEB広告・出版印刷物の作成などWEBの構築から集客・収益化までを一貫してサポート致します。",
+                    title = "マルチプラ | 丹波篠山市のWEBサイト・ECサイト制作会社",
+                    description = "マルチプラ/MultiplaはWEBサイト・ECサイトの制作を行う、丹波篠山市にある制作会社 ホームページ制作・WEB広告・出版印刷物の作成まで、WEBの構築から集客・収益化までを一貫してサポート致します。",
                     ogImgPath = "https://multipla.io/images/test-og-image.png",
                     url = "https://multipla.io",
                     type = "website",
-                    siteName = "マルチプラ | ECサイト・WEBサイト制作会社  | 丹波篠山市",
+                    siteName = "マルチプラ | 丹波篠山市WEBサイト・ECサイトの制作会社",
                     children
                 }: Props) => {
     return (

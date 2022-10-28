@@ -12,7 +12,7 @@ import type { Category, Blog } from '@service/micro-cms/type/Blog'
 
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const categoryContents = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_CATEGORY });
+  const categoryContents = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_CATEGORY  });
   const paths = categoryContents.contents.map((category: Category) => `/blog/category/${category.id}`)
   return { paths, fallback: false };
 };

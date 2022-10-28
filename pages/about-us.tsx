@@ -17,7 +17,7 @@ const AboutUs = () => {
         <>
             <MetaHead
                 title={"私たちについて | マルチプラ | 丹波篠山市のWEB制作会社"}
-                description={"マルチプラ/MULTIPLAは丹波篠山市を拠点にWEBサイトの制作から集客・収益化までを一貫してサポートする会社です。WEBサイトのお困り事がございましたらお気軽にお問い合わせください。"}
+                description={"マルチプラ/MULTIPLAは丹波篠山市を拠点にWEBサイト・ECサイトの制作から集客・収益化までを一貫してサポートする会社です。WEBサイトのお困り事がございましたらお気軽にお問い合わせください。"}
             >
             <script id='breadcrumb' type='application/ld+json' key={`breadcrumbJSON-about-us`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
