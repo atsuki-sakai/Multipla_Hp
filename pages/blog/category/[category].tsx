@@ -60,7 +60,7 @@ const Category = ({blogs, id, searchWord}: InferGetStaticPropsType<typeof getSta
           }}
       >
         <MetaHead
-          title={`${searchWord} - 記事一覧`}
+          title={`${searchWord} - 記事一覧 | マルチプラ | 丹波篠山市のWEB制作会社 `}
         >
           <script type='application/ld+json' key={"breadcrumbJSON-category"} dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}></script>
         </MetaHead>
@@ -69,7 +69,7 @@ const Category = ({blogs, id, searchWord}: InferGetStaticPropsType<typeof getSta
                 <BreadcrumbList items={items}/>
                   <div className='max-w-lg md:max-w-4xl lg:max-w-6xl mx-auto'>
                       <div>
-                          <h3 className="my-6 font-bold text-2xl md:text-3xl lg:text-4xl"><span className='text-indigo-800 text-4xl md:text-5xl lg:text-6xl'>MULTIPLA</span>ブログ</h3>
+                          <h1 className="my-6 font-bold text-xl md:text-2xl lg:text-3xl"><span className='text-3xl md:text-4xl lg:text-5xl'>マルチプラ</span>ブログ</h1>
                       </div>
                       <div className={`${ blogs.length !== 0 ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 py-12" : "grid grid-cols-1 gap-6 py-12" }`}>
                           {

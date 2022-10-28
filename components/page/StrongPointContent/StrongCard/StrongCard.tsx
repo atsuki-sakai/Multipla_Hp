@@ -13,7 +13,7 @@ const StrongCard: FC<Props> = ({ title, description, num, children}: Props) => {
             <div>
                 <p className="text-xl md:text-2xl lg:text-3xl font-bold text-white">{ title }</p>
             </div>
-            <p className=" mt-2 text-xs md:text-sm lg:text-lg text-white md:py-2 ">{ description }</p>
+            <p className=" mt-2 text-xs md:text-sm lg:text-base text-white md:py-2 ">{ description }</p>
         </div>
     )
 }

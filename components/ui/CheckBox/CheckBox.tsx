@@ -20,7 +20,7 @@ const Checkbox = ({ label, defaultValue, onChenged, disabled, title, description
         <div className='relative'>
             {
                 isShow ?
-                    disabled ? <div className='bg-orange-300 text-gray-700 flex justify-between w-full p-2'>
+                    disabled ? <div className='bg-green-200 text-gray-700 flex justify-between w-full p-2'>
                         <input onChange={() => onChenged(!state) } onClick={() => changeState(!state)} className='w-6 h-6' type="checkbox" defaultChecked disabled />
                         <p className='ml-4 text-sm'>{label}</p>
                         <button onClick={() => showInfoState(!showInfo)}>
@@ -30,7 +30,7 @@ const Checkbox = ({ label, defaultValue, onChenged, disabled, title, description
                         </button>
                     </div>
                         :
-                        isChecked ? <div className='bg-orange-300 text-gray-700 flex justify-between w-full p-2'>
+                        isChecked ? <div className='bg-green-200 text-gray-700 flex justify-between w-full p-2'>
                             < input onChange={() => onChenged(!state)} onClick={() => changeState(!state)} className='w-6 h-6 flex-shrink' type="checkbox" defaultChecked />
                             <p className='ml-4 text-sm'>{label}</p>
                             <button onClick={() => showInfoState(!showInfo)}>
@@ -52,7 +52,7 @@ const Checkbox = ({ label, defaultValue, onChenged, disabled, title, description
             }
             {
                 showInfo ?
-                    <div className='absolute z-20 top-4 -left-2 -right-2 bg-gray-50 shadow border-2 border-purple-800 rounded-md'>
+                    <div className='absolute z-20 top-4 -left-2 -right-2 bg-gray-50 shadow-md border rounded-md'>
                         <div className='p-4'>
                             <div className='flex justify-between'>
                                 <h3 className='font-bold text-lg'>{title}</h3>

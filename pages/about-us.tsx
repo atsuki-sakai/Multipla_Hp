@@ -37,24 +37,24 @@ const AboutUs = () => {
                                 delay:0.3,
                                 duration: 0.7,
                             }}
+                            className={"font-noto_sans"}
                 >
                     <Container>
                         <BreadcrumbList items={items}/>
-                        <h3 className='lg:text-3xl text-2xl text-gray-700 font-bold text-center title-font'>私たちについて</h3>
-                        <h3 className='text-gray-700 font-bold text-center title-font mb-4 uppercase'>/ about</h3>
+                        <h1 className='lg:text-3xl text-2xl text-gray-700 font-bold text-center title-font'>私たちについて</h1>
+                        <h2 className='text-gray-700 font-bold text-center title-font mb-4 uppercase'>/ about</h2>
                         <div className="w-full">
                             <div className="font-bold text-xl lg:text-3xl text-center tracking-wide max-w-4xl mx-auto">
                                 <p className="pt-8 mx-8">『 <span className="text-2xl lg:text-5xl">構築</span>だけじゃない<span className="text-2xl lg:text-5xl">集客</span></p>
-                                <p className="mx-8"><span className="text-2xl lg:text-5xl">内製化</span>まで徹底サポート 』</p>
+                                <p className="mx-8"><span className="text-2xl lg:text-5xl">収益化</span>まで徹底サポート 』</p>
                             </div>
                         </div>
-                        <div className='mx-auto w-2/3  my-8 text-gray-500 mb-6 text-xs lg:text-sm max-w-xl'>
-                            弊社は最新技術を利用してお客さまのビジネスにフィットしたECサイトの構築を心がけています。
-                            アフターサービスも手厚く行なっており、サイト構築から集客、内製化までを一貫してサポートいたします。
-                            内製化することでランニングコストの大幅な削減とお客様自身で育てていける持続可能なサイトの構築を心がけています。
+                        <div className='mx-auto w-2/3 my-8 text-gray-500 mb-6 text-xs lg:text-sm max-w-xl'>
+                            マルチプラは最新技術を利用してお客さまのビジネスにフィットしたWEBサイト・ECサイトの構築を心がけています。
+                            様々な外部サービスと連携し、コストを抑えて開発いたします。
                         </div>
                         <div className="max-w-3xl mx-auto my-6">
-                            <div className="mx-8">
+                            <div className="mx-2">
                                 <p className='mt-8 text-left ml-8 text-lg lg:text-2xl  font-bold'>会社概要</p>
                                 <div className="mx-8 h-0.5  bg-black rounded-full"></div>
                                 <p className='mb-2 text-left ml-8 text-lg lg:text-2xl  font-bold'>Company</p>
@@ -63,7 +63,7 @@ const AboutUs = () => {
                         <div className="max-w-3xl mx-auto mt-12">
                             <div className="flex items-center space-x-4 lg:space-x-8 p-2 mx-8">
                                 <h5 className="text-left w-32 inline-block lg:text-xl font-bold">会社名</h5>
-                                <span className="text-left lg:text-xl w-full font-bold">MULTIPLA</span>
+                                <span className="text-left lg:text-xl w-full font-bold">マルチプラ/MULTIPLA</span>
                             </div>
                         </div>
                         <div className="max-w-3xl mx-auto">
@@ -90,7 +90,7 @@ const AboutUs = () => {
                                 <p className="text-left lg:text-xl w-full font-bold">酒井専冴</p>
                             </div>
                         </div>
-                        <div className="max-w-3xl mx-auto">
+                        <div className="max-w-3xl mx-auto pb-12 md:pb-24">
                             <div className="flex items-center space-x-4 lg:space-x-8 p-2 mx-8">
                                 <h5 className="text-left w-32 inline-block lg:text-xl font-bold">資本金</h5>
                                 <p className="text-left lg:text-xl w-full font-bold">100万円</p>

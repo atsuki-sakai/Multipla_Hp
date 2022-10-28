@@ -33,7 +33,7 @@ const ServiceContents = () => {
         <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 md:py-24 relative py-6 bg-transparent font-noto_sans">
                 <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
-                    <h3 className='text-xl md:text-2xl lg:text-3xl font-bold text-center title-font '><span className=' font-bold text-3xl md:text-4xl lg:text-5xl'>マルチプラ</span>のサービス</h3>
+                    <h3 className='text-xl md:text-2xl lg:text-3xl font-bold text-center title-font py-6 md:py-12'><span className=' font-bold text-3xl md:text-4xl lg:text-5xl'>マルチプラ</span>のサービス</h3>
                 </motion.div>
                 <div className="mt-6">
                     <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
@@ -49,7 +49,7 @@ const ServiceContents = () => {
                     </div>
                 </div>
             </div>
-            <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1.0, y:0 }} transition={{ duration:0.7 }} className='text-center mx-auto py-8 md:py-12 lg:py-16 pb-6 md:pb-12'>
+            <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1.0, y:0 }} transition={{ duration:0.7 }} className='text-center mx-auto py-8 md:py-12 lg:py-1 pb-6 md:pb-12'>
                 <Link href={"/ec-lp"}>
                     <a>
                         <button className="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden text-sm md:text-lg lg:text-xl rounded-full px-12 py-3 transition-all ease-in duration-300 bg-white border border-purple-700 text-purple-700 hover:-translate-y-1">

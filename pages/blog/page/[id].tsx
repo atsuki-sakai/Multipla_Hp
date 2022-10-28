@@ -44,7 +44,7 @@ const BlogId = ({blogs, categories, totalCount, id}: InferGetStaticPropsType<typ
   return (
     <>
         <MetaHead
-            title='MULTIPLA ブログ一覧'
+            title='ブログ一覧 | マルチプラ | 丹波篠山市のWEB制作会社'
         >
             <script type='application/ld+json' key={`breadcrumbJSON-pages`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
         </MetaHead>
@@ -74,7 +74,7 @@ const BlogId = ({blogs, categories, totalCount, id}: InferGetStaticPropsType<typ
                                 <p>ブログ一覧</p>
                             </div>
                             <div>
-                                <h3 className="my-6 font-bold text-2xl md:text-3xl lg:text-4xl"><span className='text-indigo-800 text-4xl md:text-5xl lg:text-6xl'>MULTIPLA</span>ブログ</h3>
+                                <h1 className="my-6 font-bold text-xl md:text-2xl lg:text-3xl"><span className='text-3xl md:text-4xl lg:text-5xl'>マルチプラ</span>ブログ</h1>
                             </div>
                             <div className='bg-gray-100 px-4 rounded-md shadow-md pt-6 md:pt-8 mb-4 mt-8'>
                                 <p className='mb-4 md:mb-8 text-2xl md:text-3xl font-bold'>カテゴリー</p>

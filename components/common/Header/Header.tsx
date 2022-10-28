@@ -99,6 +99,7 @@ const Header = ({hidden = false}: Props) => {
             <UnderLineAnimationLink text="ECサイト構築" link="/ec-lp"/>
             <UnderLineAnimationLink text="ブログ" link="/blog/page/1"/>
             <UnderLineAnimationLink text="よくある質問" link="/faq"/>
+            <UnderLineAnimationLink text="ECサイトお見積もり" link="/plan-calc"/>
             <UnderLineAnimationLink text="お問い合せ" link="/contact"/>
           </div>
         </div>

@@ -102,13 +102,13 @@ const BlogHandle = ({blogData, categories, categoryBlogs} : InferGetStaticPropsT
     return (
         <>
             <MetaHead
-                title={blog.title}
+                title={`${blog.title} | マルチプラ | 丹波篠山市のWEB制作会社`}
                 description={blogSchemaBody}
                 ogImgPath={blog.thumbnail.url.toString()}
                 url={SITE_URL + router.asPath}
             >
                 <script type='application/ld+json' key={`articleJSON-${blog.id}`} dangerouslySetInnerHTML={createArticleJsonLd(blog)}/>
-                <script type='application/ld+json' key={`breadcrumbJSON-${blog?.id}`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(breadcrumbItems)}/>
+                <script type='application/ld+json' key={`breadcrumbJSON-${blog.id}`}  dangerouslySetInnerHTML={createBreadcrumListJsonLd(breadcrumbItems)}/>
             </MetaHead>
             <motion.div
                 initial={{ opacity:0 }}
@@ -156,7 +156,7 @@ const BlogHandle = ({blogData, categories, categoryBlogs} : InferGetStaticPropsT
                                                     })
                                                 }
                                             </div>
-                                            <h2 className='text-3xl md:text-3xl lg:text-4xl font-bold pb-6 pt-2 md:pt-4 lg:pt-6 md:pb-10 lg:pb-14 my-4 md:my-8 mb-4'>{blog.title}</h2>
+                                            <h1 className='text-3xl md:text-3xl lg:text-4xl font-bold pb-6 pt-2 md:pt-4 lg:pt-6 md:pb-10 lg:pb-14 my-4 md:my-8 mb-4'>{blog.title}</h1>
                                             <div className="flex items-center justify-end space-x-1 mb-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />

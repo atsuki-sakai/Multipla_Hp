@@ -559,8 +559,8 @@ const RateCalculation = () => {
                         <p className='px-1'>{' > '}</p>
                         <p> お見積りシュミレーター</p>
                     </div>
-                    <div className='p-4 text-base md:text-lg bg-gradient-to-tr to-purple-800 from-red-700 rounded-md space-y-2 text-left shadow-md shadow-gray-300 mx-8'>
-                        <h2 className='text-2xl font-bold text-gray-200 my-2'><span className='text-5xl font-bold text-white'>EC</span> サイト構築費<br/>お見積りシュミレーター</h2>
+                    <div className='p-4 text-base md:text-lg bg-gradient-to-tr to-purple-600 from-red-500 rounded-md space-y-2 text-left shadow-md shadow-gray-300 mx-8'>
+                        <h2 className='text-2xl font-bold text-white my-2'><span className='text-5xl font-bold text-white'>EC</span> サイト構築費<br/>お見積りシュミレーター</h2>
                         <p className='text-gray-500 bg-white p-2 rounded-md'>
                             <span>
                                 ShopifyでのECサイト制作費用のご参考として、こちらのお見積りシュミレーターをご利用下さい。基本プラン30万円2週間+各種オプションを含めた制作費用がすぐにお見積り可能です。
@@ -1002,7 +1002,7 @@ const RateCalculation = () => {
                     </svg>
                 </div>
                 {/* PRODUCT PRICE */}
-                <div className='p-3 bg-gradient-to-tr to-purple-800 from-red-700 rounded-xl h-fit md:w-80 lg:w-auto md:sticky top-44 md:right-0 lg:right-20 xl:right-42 2xl:right-60 shadow-md mx-8'>
+                <div className='p-3 bg-gradient-to-tr to-purple-600 from-red-500 rounded-xl h-fit md:w-80 lg:w-auto md:sticky top-44 md:right-0 lg:right-20 xl:right-42 2xl:right-60 shadow-md mx-8'>
                     <div className='flex justify-center  mr-4 items-center space-x-2'>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 my-2 text-white" strokeWidth="1" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 1a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm4-4a1 1 0 100 2h.01a1 1 0 100-2H13zM9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM7 8a1 1 0 000 2h.01a1 1 0 000-2H7z" clipRule="evenodd" />
@@ -1075,7 +1075,7 @@ const RateCalculation = () => {
             <div className="mx-8 pt-8 md:pt-12 lg:pt-16">
                 <div className="max-w-5xl flex  justify-center mx-auto">
                     <button onClick={() => adoptionCanpaign()}>
-                        <div className={`z-10 text-white w-full py-2 px-1 md:px-4  ${campaign ? "bg-gray-500 text-gray-200" : "bg-gradient-to-tr to-purple-800 from-red-700 hover:scale-105"} rounded-full shadow-md transform duration-200 ease-in-out`}>
+                        <div className={`z-10 text-white w-full py-2 px-1 md:px-4  ${campaign ? "bg-gray-500 text-gray-200" : "bg-gradient-to-tr to-purple-600 from-red-500 hover:scale-105"} rounded-full shadow-md transform duration-200 ease-in-out`}>
                             <p className='text-center font-bold px-3 py-1.5 text-lg md:text-xl lg:text-2xl'>
                                 {
                                     campaign ? "キャンペーン適用済み" : "初回構築限定キャンペーンを適用"
@@ -1087,7 +1087,7 @@ const RateCalculation = () => {
                 <p className='text-center text-xs md:text-sm  text-red-500 pt-3'>こちらは初めてShopifyで構築されるお客様限定です</p>
             </div>
             {/* MOBILE UNDER INFO PRICE AND DAYS */}
-            <div className='md:hidden fixed h-14 w-screen bg-gradient-to-tr to-orange-600 from-purple-600 z-40 bottom-0'>
+            <div className='md:hidden fixed h-14 w-screen bg-gradient-to-tr to-red-400 from-purple-600 z-40 bottom-0'>
                 <div className="flex divide-x-2 divide-white">
                     <div className='w-full h-14 p-2 py-1'>
                         <p className='text-white text-xs font-bold'>予想制作費用</p>
