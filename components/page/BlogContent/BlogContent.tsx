@@ -9,7 +9,7 @@ interface Props {
 const BlogContent = ({blogData}: Props) => {
     return (
         <div className='px-8 md:px-12 py-6 md:py-12 z-10 bg-white'>
-                <div className='px-8 md:px-12 max-w-6xl mx-auto'>
+                <div className=' max-w-6xl mx-auto'>
                     <motion.div initial={{ opacity:0.0 }} whileInView={{ opacity:1.0 }} transition={{ duration:1.0 }}>
                         <div className='w-fit my-4 md:my-8'>
                             <h3 className="text-gray-700 text-3xl md:text-4xl">Blog</h3>
