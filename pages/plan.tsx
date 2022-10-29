@@ -89,7 +89,7 @@ const Plan = () => {
                         <h3 className='text-2xl lg:text-4xl  font-bold  text-center title-font text-gray-800  mb-4'>ECサイト構築費用</h3>
                         <p className='text-gray-600 text-sm lg:text-base'>マルチプラのECサイト構築に対してお支払い頂く費用です</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-8 xl:mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl xl:mx-auto">
                         {/* Normal Plan */}
                         <PlanCard
                             planText={"Normal"}
@@ -142,7 +142,7 @@ const Plan = () => {
                         <h3 className='text-2xl lg:text-4xl  font-bold  text-center title-font text-gray-800  mb-4'>サポートサービス</h3>
                         <p className='text-gray-600 text-sm lg:text-base'> マルチプラの月額サポートに対してお支払い頂く費用です</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-8 xl:mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl  xl:mx-auto">
                         <PlanCard
                             planText={"WEBサポート"}
                             priceText={"1"}
@@ -199,7 +199,7 @@ const Plan = () => {
                         <h3 className='lg:text-3xl text-xl  font-bold  text-center title-font  mb-4'><span className='text-green-500 font-bold text-5xl'>Shopify</span>の月額料金</h3>
                         <p className='text-gray-600 text-sm lg:text-base'>Shopifyの利用に対してお支払い頂く費用です</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-8 xl:mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl  xl:mx-auto">
                         {/* Basic Plan*/}
                         <PlanCard
                             isShopifyPlan={true}
