@@ -24,18 +24,23 @@
 }
 
 .under_link {
-    @apply hidden fixed bottom-24 md:bottom-28 right-6 z-40 bg-gradient-to-tr to-red-400 from-purple-700 rounded-full shadow-md transform duration-300 ease-in-out hover:scale-105;
+    @apply fixed bottom-24 md:bottom-28 right-6 z-40 bg-gradient-to-tr to-red-400 from-purple-700 rounded-full shadow-md transform duration-300 ease-in-out hover:scale-105;
 }
 
 .under_button {
     @apply cursor-pointer;
+}
+.under_text {
+    @apply mx-auto text-xs text-gray-500;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
 }
 .show {
     @apply opacity-100;
     pointer-events: auto;
 }
 .hide {
-    @apply bg-white shadow-md ;
+    @apply bg-white shadow-md text-xs;
     ponter-events: auto;
 }
 

@@ -104,15 +104,20 @@ const Header = ({hidden = false}: Props) => {
           </div>
         </div>
       </header>
-      <div
-        className={underLinkClassNames}>
-        <div
-          className={style.under_button}
-          onClick={(e) => windowToTop(e)}
-        >
-          <UpArrow className="text-white w-14 h-14  md:w-[60px] md:h-[60px]" />
+      <motion.div
+        initial={{ scale:0.7, opacity:0 }}
+        animate={{ scale:1, opacity:1 }}
+        transition={{ duration: 0.5, delay: 5.0 }}
+        className="fixed bottom-16 right-3 bg-white border pt-3 px-1 rounded-md-tl rounded-md-bl shadow-md z-50"
+      >
+        <div className="flex items-end">
+          <p className={style.under_text}>チャットで質問する。</p>
+          <p className={style.under_text}>
+            <span className="text-sm font-bold text-green-600">何かお困りでしょうか？</span>
+          </p>
         </div>
-      </div>
+        <p className="text-center font-bold text-gray-500">↓</p>
+      </motion.div>
     </>
   );
 };
