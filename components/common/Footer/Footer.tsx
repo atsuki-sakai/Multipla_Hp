@@ -86,7 +86,7 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-            <p className="w-full block mt-4 text-base text-center text-white font-thin">© 2022 マルチプラ/Multipla™. All Rights Reserved.</p>
+            <p className="w-full block mt-4 text-xs md:text-sm text-center text-white font-thin">© 2022 マルチプラ/Multipla™. All Rights Reserved.</p>
         </footer>
     )
 }
