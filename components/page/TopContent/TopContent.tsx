@@ -56,8 +56,8 @@ const TopContent = () => {
                                 transition={{ duration:0.9, delay: 0.9 }} 
                                 className='text-3xl md:text-6xl lg:text-7xl text-left w-fit h-fit -translate-x-1/2 font-bold tracking-wide mt-12'
                             >
-                                <p>既存ビジネスを<br/>アップデート</p>
-                                <p className="text-sm md:text-base lg:text-lg text-gray-500 mt-1">Multipla Web Developer</p>
+                                <p>WEBの力で<br/>ビジネスを加速させる</p>
+                                <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-1">Multipla Web Developer</p>
                             </motion.div>
                         </motion.div>
                         <motion.div
