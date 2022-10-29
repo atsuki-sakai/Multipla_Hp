@@ -17,11 +17,10 @@ const SalesContent = () => {
                         transition={{ duration:0.8 }}
                         className='max-w-lg md:max-w-4xl py-1  mx-auto text-left'
                     >
-                        <h2 className='text-5xl text-white bg-gradient-to-tl to-green-500 from-lime-400 px-6 py-3 my-12 rounded-full shadow-md text-center w-full font-bold'>
+                        <h2 className='text-3xl md:text-4xl lg:text-5xl text-white bg-gradient-to-tl to-green-500 from-lime-400 px-6 py-3 my-12 rounded-full shadow-md text-center w-full font-bold'>
                             Multipla Mission
-
-                            <div className='bg-white w-full h-1 rounded-full my-3'></div>
-                            <p className='text-lg'>マルチプラのミッション</p>
+                            <div className='bg-white w-full h-[1px] md:h-[2px] rounded-full my-1 md:my-2 lg:my-3'></div>
+                            <p className='text-sm md:text-base lg:text-lg'>マルチプラのミッション</p>
                         </h2>
                         <h3 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wide font-bold text-gray-800'>
                             WEBの力を駆使して<br/>ビジネスを次のステージへ
