@@ -1,10 +1,10 @@
 
 .root {
-    @apply px-8 md:px-12 relative py-6 bg-white z-10 font-noto_sans;
+    @apply px-8 md:px-12 relative py-6 bg-white z-10 font-noto_sans overflow-hidden;
 }
 
 .sales_container {
-    @apply max-w-5xl mx-auto flex items-start justify-center space-x-3 md:space-x-8 lg:space-x-12 text-base md:text-lg lg:text-xl mt-12 bg-gradient-to-tl to-purple-700 from-red-400 py-4 md:py-8 lg:py-12 rounded-md shadow-md;
+    @apply px-10 md:px-20 lg:px-32 flex items-start justify-around space-x-5 md:space-x-8 lg:space-x-12 text-base md:text-lg lg:text-xl mt-12 bg-gradient-to-tl to-purple-700 from-red-400 py-4 md:py-8 lg:py-12 rounded-3xl shadow-md;
     & > p {
         @apply font-bold text-xs md:text-2xl lg:text-3xl text-white;
         writing-mode: vertical-rl;

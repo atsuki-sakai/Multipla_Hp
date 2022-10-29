@@ -32,11 +32,15 @@ const ServiceContents = () => {
 
     return (
         <>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 md:pt-24 relative py-6 bg-transparent font-noto_sans">
+            <div className="max-w-6xl mx-auto px-8 md:px-12 sm:px-6 lg:px-12 md:pt-24 relative py-6 bg-transparent font-noto_sans">
                 <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
-                    <h3 className='text-xl md:text-2xl lg:text-3xl font-bold text-center title-font py-6 md:py-12'><span className=' font-bold text-3xl md:text-4xl lg:text-5xl'>マルチプラ</span>のサービス</h3>
+                <div className='w-fit my-4 md:my-8'>
+                    <h3 className="text-gray-700 text-3xl md:text-4xl">Service</h3>
+                    <div className='h-[2px] w-full bg-green-300'></div>
+                    <p className='text-xs md:text-sm'>サービス</p>
+                </div>
                 </motion.div>
-                <div className="mt-6">
+                <div className="mt-12 md:mt-20">
                     <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 gap-4">
                         {
                             serviceTextList.map((value, index) => {

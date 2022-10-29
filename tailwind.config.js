@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        noto_sans: ['Noto Sans JP', "sans-serif"]
+        noto_sans: ['Noto Sans JP', "sans-serif"],
+        press_start_2p: ['Press Start 2P', "cursive"]
       }
     },
   },

@@ -18,7 +18,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 
 export const getStaticProps: GetStaticProps = async () => {
-  const blogData = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_BLOG, queries: { limit: 3 } });
+  const blogData = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_BLOG, queries: { limit: 4 } });
   const newsData = await microcmsClient.get({ endpoint: MICROCMS_ENDPOINT_NEWS, queries: { limit: 3 } });
   return {
       props: {

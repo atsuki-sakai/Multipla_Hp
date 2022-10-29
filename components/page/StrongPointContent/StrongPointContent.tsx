@@ -9,11 +9,15 @@ const StrongPointContents = () => {
 
     return (
         <>
-            <div className="px-8 py-12 md:py-24 bg-gray-100 font-noto_sans">
+            <div className="px-8 md:px-12 max-w-6xl mx-auto py-12 md:py-24 bg-white font-noto_sans mb-12 md:mb-20">
                 <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
-                    <h3 className='text-xl md:text-2xl lg:text-3xl font-bold text-center title-font '><span className=' font-bold text-4xl md:text-5xl lg:text-6xl'>マルチプラ</span>の強み</h3>
+                <div className='w-fit my-4 md:my-8'>
+                    <h3 className="text-gray-700 text-3xl md:text-4xl">StrongPoint</h3>
+                    <div className='h-[2px] w-full bg-green-300'></div>
+                    <p className='text-xs md:text-sm'>マルチプラの強み</p>
+                </div>
                 </motion.div>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-24 max-w-7xl mx-auto'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-20 max-w-7xl mx-auto'>
                     <motion.div  initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
                         <StrongCard 
                             title={"イメージに合ったデザイン"} 
@@ -63,7 +67,7 @@ const StrongPointContents = () => {
                 </div>
             </div >
             <Marquee variant='secondary'>
-                <div className='text-white text-lg font-bold font-mono flex justify-between space-x-6 items-center bg-black'>
+                <div className='text-purple-800 text-lg font-bold border-y border-purple-800 font-noto_sans flex justify-between space-x-6 items-center bg-white'>
                     <p>NEXTJS</p>
                     <p>TYPESCRIPT</p>
                     <p>VERCEL</p>
