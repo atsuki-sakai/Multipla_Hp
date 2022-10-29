@@ -19,7 +19,11 @@ const Slider = ({ children }: Props) => {
     })
     return (
         <>
-            <div className='align-baseline font-bold rouneded-full px-3 py-1 bg-gray-50 w-fit'>回答数 <span className='font-bold text-blue-500 text-2xl'>{currentSlide + 1}</span> / <span className='text-gray-500 text-lg font-light'>{children.length}</span></div>
+            <div className='flex justify-center w-full'>
+                <div className='px-6 py-2 bg-gray-50 rouneded-full text-lg font-noto shadow-md'>
+                    残り質問数は<span className='font-bold text-2xl text-green-500 px-1'>{(children.length - 1) - currentSlide }</span>件
+                </div>
+            </div>
             <div ref={sliderRef} className="keen-slider flex h-fit w-full overflow-x-hidden">
                 {
                     Children.map(children, (child) => {
@@ -42,7 +46,9 @@ const Slider = ({ children }: Props) => {
                 </button>
                 <button
                     className='bg-blue-500 text-white font-bold px-6 py-2  rounded-full shadow-md'
-                    onClick={ () => slider.current?.next() }
+                    onClick={() => {
+                        slider.current?.next()
+                    }}
                 >
                     次へ
                 </button>
