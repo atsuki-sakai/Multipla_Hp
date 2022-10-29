@@ -56,7 +56,7 @@ const BlogHandle = ({blogData, categories, categoryBlogs} : InferGetStaticPropsT
     const breadcrumbItems: BreadcrumbItem[] = [
         {name: "ホーム", url: "/"},
         {name: "ブログ一覧", url: "/blog/page/1"},
-        {name: `${blog.title}`, url: `/blog/${blog.id}?=index=1`}
+        {name: `${blog.title}`, url: `blog/${blog.id}?=index=1`}
     ]
     const blogSchemaBody = truncate(blog.text.replace(/(<([^>]+)>)/gi, ''), 120)
 
