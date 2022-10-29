@@ -31,7 +31,7 @@
     @apply cursor-pointer;
 }
 .under_text {
-    @apply mx-auto text-xs text-gray-500;
+    @apply mx-auto text-xs md:text-sm lg:text-base text-gray-500;
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
