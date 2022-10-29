@@ -9,7 +9,7 @@ const StrongPointContents = () => {
 
     return (
         <>
-            <div className="px-8 md:px-12 max-w-6xl mx-auto py-12 md:py-24 bg-white font-noto_sans mb-12 md:mb-20">
+            <div className="px-8 md:px-12 max-w-6xl mx-auto py-12 md:py-24 font-noto_sans mb-12 md:mb-20">
                 <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
                 <div className='w-fit my-4 md:my-8'>
                     <h3 className="text-gray-700 text-3xl md:text-4xl">StrongPoint</h3>

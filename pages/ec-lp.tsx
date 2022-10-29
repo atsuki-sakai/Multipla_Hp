@@ -18,7 +18,7 @@ const ECLP = () => {
             title={'ECサイトのお悩みありませんか？ | マルチプラ | 丹波篠山市のWEB制作会社'}
             description="マルチプラ/Multiplaの制作するECサイトはランニングコストと機能のバランスを考えて構築致します。既存のビジネスをネット上でも始めてみませんか？詳しくはこちらのページで紹介しています。"
         />
-            <div className="pt-14">
+            <div className="pt-14 lg:pt-20">
             <div className="bg-gray-100 relative">
                 <div >
                     {/* MAIN  */}

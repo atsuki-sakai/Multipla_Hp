@@ -64,9 +64,11 @@ const NewsIndex = ({allNews, id, totalCount}: InferGetStaticPropsType<typeof get
                         duration: 0.7,
                     }}
                 >
-                    <div>
-                        <h1 className="my-6 font-bold text-xl md:text-2xl lg:text-3xl"><span className='text-3xl md:text-4xl lg:text-5xl'>マルチプラ</span>News</h1>
-                    </div>
+                    <div className='w-fit my-4 md:my-8'>
+                            <h3 className="text-gray-700 text-3xl md:text-4xl">News</h3>
+                            <div className='h-[2px] w-full bg-green-300'></div>
+                            <p className='text-xs md:text-sm'>ニュース</p>
+                        </div>
                     <div className='my-12'>
                         {
                             allNews.map((news: News) => {
