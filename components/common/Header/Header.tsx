@@ -108,7 +108,7 @@ const Header = ({hidden = false}: Props) => {
         initial={{ scale:0.7, opacity:0 }}
         animate={{ scale:1, opacity:1 }}
         transition={{ duration: 0.5, delay: 5.0 }}
-        className="fixed bottom-16 md:bottom-24 lg:bottom-32 right-3 md:right-5 lg:right-7 bg-white border pt-3 md:pt-5 lg:pt-7 px-1 md:px-2 lg:px-3 rounded-md-tl rounded-md-bl shadow-md z-50"
+        className="fixed bottom-16 md:bottom-24 lg:bottom-28  right-3 md:right-5 bg-white border pt-3 md:pt-5 px-1 md:px-2 rounded-md-tl rounded-md-bl shadow-md z-50"
       >
         <div className="flex items-end">
           <p className={style.under_text}>チャットで質問する。</p>
