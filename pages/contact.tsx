@@ -124,18 +124,18 @@ const Contact = () => {
                     <h2 className='text-sm md:text-lg mb-4 uppercase'> / Contact</h2>
                     <div>
                         <div className='max-w-lg mx-auto'>
-                            <p className='text-gray-500 pt-2 text-sm md:text-lg mx-8'>お問い合わせにつきましては、以下の窓口よりお受けしております。
+                            <p className='text-gray-500 pt-2 text-sm md:text-lg'>お問い合わせにつきましては、以下の窓口よりお受けしております。
                                 なお、お問い合わせ内容によっては、回答にお時間がかかる場合があります。</p>
                         </div>
-                        <p className="mx-8 my-3 text-xl text-gray-800 font-bold pt-8">マルチプラへのご依頼、疑問など何でもお気軽にご質問下さい。</p>
+                        <p className="my-3 text-xl text-gray-800 font-bold pt-8">マルチプラへのご依頼、疑問など何でもお気軽にご質問下さい。</p>
                         <div className='max-w-2xl mx-auto'>
                                 <a target="_blank" href="https://lin.ee/CPF8FeZ" rel='noreferrer'>
-                                    <div className='flex justify-center items-center mx-8 my-12 px-2 border py-3 rounded-md shadow-md space-x-2 bg-green-500'>
+                                    <div className='flex justify-center items-center my-12 px-2 border py-3 rounded-md shadow-md space-x-2 bg-green-500'>
                                         <p className='grow w-64 text-white tracking-wide text-sm md:text-base lg:text-xl'><span className='text-white text-2xl md:text-3xl lg:text-4xl font-bold'>Line</span>でお問い合わせ</p>
                                     </div>
                                 </a>
                             <div className="mt-6 max-w-6xl mx-auto">
-                                <form className='mx-8'>
+                                <form className=''>
                                     <CustomSelect id="contact-type" name="message-type" label="お問合せ内容" options={contactType_list} />
                                     <CustomSelect defaultText='ご予算を選択して下さい' id="money-type" name="money-type" label="ご予算" options={moneyType_list} />
                                     <CustomSelect defaultText='ご希望納期を選択して下さい' id="deliverydatetype-list" name="deliverydatetype-list" label="ご希望納期" options={deliveryDateType_list} />

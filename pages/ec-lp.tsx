@@ -18,7 +18,7 @@ const ECLP = () => {
             title={'ECサイトのお悩みありませんか？ | マルチプラ | 丹波篠山市のWEB制作会社'}
             description="マルチプラ/Multiplaの制作するECサイトはランニングコストと機能のバランスを考えて構築致します。既存のビジネスをネット上でも始めてみませんか？詳しくはこちらのページで紹介しています。"
         />
-            <Container>
+            <div className="pt-14">
             <div className="bg-gray-100 relative">
                 <div >
                     {/* MAIN  */}
@@ -69,7 +69,7 @@ const ECLP = () => {
                         {/* 悩みに訴求→解決 */}
                         <div className='bg-gradient-to-tr from-blue-100 to-purple-50'>
                             <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
-                                <div className="mx-8 sm:mx-24 md:mx-12 pt-8 md:pt-14">
+                                <div className="sm:mx-24 md:mx-12 pt-8 md:pt-14">
                                     <p className='text-center font-bold text-xl md:text-2xl lg:text-4xl mb-4'>こんなお悩みありませんか？</p>
                                     <div className="relative h-[200px] w-[200px] lg:h-[350px] lg:w-[350px] mx-auto my-4">
                                         <Image src={"/images/problem.png"} layout="fill" alt='bg-image' />
@@ -79,7 +79,7 @@ const ECLP = () => {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                                         </svg>
                                     </div>
-                                    <div className="md:mx-8">
+                                    <div className="mx-8">
                                         <div className="max-w-5xl mx-auto">
                                             <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
                                                 <details className='mb-4'>
@@ -170,7 +170,7 @@ const ECLP = () => {
                         {/* なぜMultiplaなのか？*/}
                         <div className='bg-gradient-to-tr from-blue-100 to-purple-50'>
                             <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
-                                <div className='mx-12 md:mx-24 py-12 '>
+                                <div className='mx-8 md:mx-24 py-12 '>
                                     <div className='max-w-3xl mx-auto'>
                                         <div className='flex justify-around items-center sm:mx-12 md:mx-0'>
                                             <div className='w-full'>
@@ -804,7 +804,7 @@ const ECLP = () => {
                     </div>
                 </div >
             </div >
-            </Container>
+            </div>
         </>
     )
 }

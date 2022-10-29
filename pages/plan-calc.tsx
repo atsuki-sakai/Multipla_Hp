@@ -20,11 +20,10 @@ const PlanCalculation = () => {
             >
                 <script type='application/ld+json' dangerouslySetInnerHTML={createBreadcrumListJsonLd(items)}/>
             </MetaHead>
-            <Container>
-                <BreadcrumbList items={items}/>
+            <div className='pt-14'>
                 <RateCalculation />
                 <div className='h-12 w-full md:hidden'></div>
-            </Container>
+            </div>
         </>
     )
 }

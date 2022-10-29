@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Field, CheckBox, LPSectionHeader } from '@components/ui'
+import { Field, CheckBox, LPSectionHeader, Container, BreadcrumbList } from '@components/ui'
 import { init, send } from "@emailjs/browser"
 import Router from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
 import LpSectionHeader from '@components/ui/LPSectionHeader/LPSectionHeader'
+import { BreadcrumbItem } from '@components/utils/createBreadcrumbList-json-ld'
 
 // TODO: - Popupの画像を変える
 
@@ -485,6 +486,11 @@ const RateCalculation = () => {
         setCampaign(true)
     }
 
+    const items: BreadcrumbItem[] = [
+        { name: "ホーム", url: "/" },
+        { name: "お見積りシュミレーター", url: "/plan-calc" }
+    ]
+
     const [lisnerState, setListnerState] = useState(true)
     useEffect(() => {
         // addEventListenerなどでイベント登録
@@ -505,7 +511,7 @@ const RateCalculation = () => {
             {/* PopUP */}
             <div className={` ${showPopup ? "" : "hidden"} `}>
                 <div className='fixed inset-0 bg-black bg-opacity-60  z-40'>
-                    <div className="flex justify-center pt-12 mx-8">
+                    <div className="flex justify-center pt-12">
                         <div className='bg-white rounded-md shadow-md p-3 md:p-6 lg:p-9 text-center'>
                             <div className=' border-2 rounded-t-md p-3 md:p-6 lg:p-9'>
                                 <div className="max-w-md mx-auto">
@@ -549,17 +555,12 @@ const RateCalculation = () => {
                     </div>
                 </div>
             </div >
-            <div className='pt-24 md:pt-48'></div>
             {/* OPTIONS INFO */}
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:max-w-6xl md:mx-auto relative'>
                 {/* MAIN CONTENTS */}
-                <div>
-                    <div className='flex items-center text-left max-w-7xl mx-auto px-4 mb-4 text-xs md:text-sm text-gray-600'>
-                        <Link href={'/'} passHref><a>ホーム </a></Link>
-                        <p className='px-1'>{' > '}</p>
-                        <p> お見積りシュミレーター</p>
-                    </div>
-                    <div className='p-4 text-base md:text-lg bg-gradient-to-tr to-purple-600 from-red-500 rounded-md space-y-2 text-left shadow-md shadow-gray-300 mx-8'>
+                <Container>
+                    <BreadcrumbList items={items}/>
+                    <div className='p-4 text-base md:text-lg bg-gradient-to-tr to-purple-600 from-red-500 rounded-md space-y-2 text-left shadow-md shadow-gray-300'>
                         <h2 className='text-2xl font-bold text-white my-2'><span className='text-5xl font-bold text-white'>EC</span> サイト構築費<br/>お見積りシュミレーター</h2>
                         <p className='text-gray-500 bg-white p-2 rounded-md'>
                             <span>
@@ -573,7 +574,7 @@ const RateCalculation = () => {
                             title={"サイトデザイン"}
                             description={"テンプレートによるデザイン制作とフルカスタムのサイトからヘッドレスコマースまで構築可能ですので、お客様の事業規模に合わせてお選びください。"}
                         />
-                        <div className='mr-12 px-8'>
+                        <div className='mr-12'>
                             <div className="border shadow-md">
                                 <CheckBox
                                     label={"Shopify公式テーマを使用"}
@@ -617,7 +618,7 @@ const RateCalculation = () => {
                             title={"各種設定"}
                             description={"Shopifyサイト制作と同時に独自ドメイン取得代行もしております。"}
                         />
-                        <div className='mr-12 px-8'>
+                        <div className='mr-12 '>
                             <div className="border shadow-md">
                                 <CheckBox
                                     label={"ストア開設の基本設定"}
@@ -664,7 +665,7 @@ const RateCalculation = () => {
                             title={"決済方法"}
                             description={"Shppifyペイメント使用することでカード情報漏洩のリスク無く、安全で豊富な決済方法をご用意いたします。"}
                         />
-                        <div className='mr-12 px-8'>
+                        <div className='mr-12 '>
                             <div className="border shadow-md">
 
                                 <CheckBox
@@ -698,7 +699,7 @@ const RateCalculation = () => {
                             title={"制作ページ"}
                             description={"ECサイトの基本ページ以外にも顧客のニーズに合わせたページの制作も可能です。"}
                         / >
-                        <div className='mr-12 px-8'>
+                        <div className='mr-12 '>
                             <div className="border shadow-md">
 
                                 <CheckBox
@@ -793,7 +794,7 @@ const RateCalculation = () => {
                             title={"ショップ機能追加"}
                             description={"利用頻度の高い簡単なアプリであれば月額費用を払うより開発した方が安い場合がありますのでその場合はアプリ開発をご提案させて頂きます。"}
                         />
-                        <div className='mr-12 px-8'>
+                        <div className='mr-12 '>
                             <div className="border shadow-md">
                                 <CheckBox
                                     label={"配送日時指定"}
@@ -995,7 +996,7 @@ const RateCalculation = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </Container>
                 <div className='md:hidden flex justify-center my-6 animate-pulse'>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clipRule="evenodd" />
