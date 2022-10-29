@@ -83,14 +83,14 @@ const Hearing = () => {
         {title: "掲載したい内容 ", description: "お客様のビジネスに合った情報を掲載することで、集客効果が上がります。", placeholder: "店舗情報・メニュー表など", stateKey: stateKeys[6], value: state.wantToPublish},
         {title: "ご予算", description: "お客様のご予算に合ったWEBサイトを構築いたします。", placeholder: "30万円ほど", stateKey: stateKeys[7], value: state.budget},
         {title: "サイトに欲しい機能", description: "ブログ機能など外部サービスとの連携が発生する場合は別途費用が必要になります。", placeholder: "ブログ・お知らせ・決済機能など", stateKey: stateKeys[8], value: state.siteFunc},
-        {title: "メインカラー,サブカラー,アクセントカラー", description: "最初にカラーを決め、デザインに統一感を持たせます。", placeholder: "グリーン・ホワイト・グレー", stateKey: stateKeys[9], value: state.colors},
+        {title: "メインカラー,サブカラー,アクセントカラー", description: "カラーを決め、デザインに統一感を持たせます。", placeholder: "グリーン・ホワイト・グレー", stateKey: stateKeys[9], value: state.colors},
         {title: "サイトのイメージ", description: "お客様の好みの雰囲気にサイトのデザインに近づけます。", placeholder: "シックで高級感のあるイメージ", stateKey: stateKeys[10], value: state.designImage},
         {title: "トップビューのイメージ", description: "トップページは顧客が一番初めに目にするのでとても重要なページになります。", placeholder: "シンプルでごちゃごちゃしてないイメージ", stateKey: stateKeys[11], value: state.topPageImage},
         {title: "サイトで使用したいフォント", description: "サイトに使用したいお好みのフォントがございましたらご記入ください。", placeholder: "ゼンマルゴシックなど", stateKey: stateKeys[12], value: state.font},
         {title: "お客様でご用意いただけるもの", description: "商品画像、バナー画像、用意できる素材がございましらご記入ください。", placeholder: "商品画像・バナー画像など", stateKey: stateKeys[13], value: state.canProvide},
         {title: "やめて欲しいWebサイトやデザイン", description: "お客様のビジネスに合わない、嫌いなデザインをご記入ください。", placeholder: "ごちゃごちゃしたデザイン", stateKey: stateKeys[14], value: state.hateDesign},
         {title: "その他ご要望がございましたらご記入ください。", description: "ここにない事、気になることなどございましたらご記入ください。", placeholder: "バナーなども作って欲しい", stateKey: stateKeys[15], value: state.other},
-        {title: "更新作業（1ヶ月間は無料でサポートいたします）", description: "初月は更新費無料ですが、２ヶ月目からは更新費として10000円がかかります。", placeholder: "月に3回ほど更新してほしい", stateKey: stateKeys[16], value: state.updateWork}
+        {title: "更新作業（1ヶ月間は無料）", description: "初月は更新費無料ですが、２ヶ月目からは更新費として10000円がかかります。", placeholder: "月に3回ほど更新してほしい", stateKey: stateKeys[16], value: state.updateWork}
 
     ]
 

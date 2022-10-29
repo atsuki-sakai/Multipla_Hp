@@ -39,13 +39,13 @@ const Slider = ({ children }: Props) => {
             </div>
             <div className='flex items-center justify-around mt-2 md:mt-4 mb-12'>
                 <button
-                    className='bg-red-500 text-white font-bold px-6 py-2 rounded-full shadow-md'
+                    className='bg-red-600 text-white font-bold px-6 md:px-10 md:py-4 py-2 rounded-full shadow-md text-lg md:text-xl'
                     onClick={ () => slider.current?.prev() }
                 >
                     戻る
                 </button>
                 <button
-                    className='bg-blue-500 text-white font-bold px-6 py-2  rounded-full shadow-md'
+                    className='bg-blue-600 text-white font-bold px-6  md:px-10 md:py-4 py-2 rounded-full shadow-md text-lg md:text-xl'
                     onClick={() => {
                         slider.current?.next()
                     }}
