@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { MetaHead } from '@components/common'
-import { PlanCard } from '@components/ui'
+import { PlanCard, Container } from '@components/ui'
 
 import { motion } from 'framer-motion'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,16 +16,9 @@ const ECLP = () => {
         <>
         <MetaHead
             title={'ECサイトのお悩みありませんか？ | マルチプラ | 丹波篠山市のWEB制作会社'}
-            description="マルチプラ/MULTIPLAの制作するECサイトはランニングコストと機能のバランスを考えて構築致します。既存のビジネスをネット上でも始めてみませんか？詳しくはこちらのページで紹介しています。"
+            description="マルチプラ/Multiplaの制作するECサイトはランニングコストと機能のバランスを考えて構築致します。既存のビジネスをネット上でも始めてみませんか？詳しくはこちらのページで紹介しています。"
         />
-            <motion.div
-                initial={{ opacity:0 }}
-                animate={{ opacity:1 }}
-                exit={{ opacity:0 }}
-                transition={{
-                    duration: 0.7,
-                }}
-            >
+            <Container>
             <div className="bg-gray-100 relative">
                 <div >
                     {/* MAIN  */}
@@ -127,7 +120,7 @@ const ECLP = () => {
                                                             <span className='text-gray-600 text-left text-sm md:text-base xl:text-lg tracking-wide'>
                                                                 <p className='text-green-500 font-bold'>解決</p>
                                                                 <p className='p-2 bg-gray-100 rounded-md'>
-                                                                    初めてのお客様でも安心してご利用頂ける様に弊社では無料相談Lineをご用意しておりますので、構築時のご不明な点など無料で相談受付しています。
+                                                                    初めてのお客様でも安心してご利用頂ける様にマルチプラでは無料相談Lineをご用意しておりますので、構築時のご不明な点など無料で相談受付しています。
                                                                 </p>
                                                             </span>
                                                         </div>
@@ -174,7 +167,7 @@ const ECLP = () => {
                                 </div>
                             </motion.div>
                         </div>
-                        {/* なぜMULTIPLAなのか？*/}
+                        {/* なぜMultiplaなのか？*/}
                         <div className='bg-gradient-to-tr from-blue-100 to-purple-50'>
                             <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
                                 <div className='mx-12 md:mx-24 py-12 '>
@@ -185,9 +178,9 @@ const ECLP = () => {
                                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 lg:h-10 lg:w-10  text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
                                                         <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                                     </svg>
-                                                    <p className='ml-1 text-sm text-gray-500 font-thin md:text-lg lg:text-3xl'>why MULTIPLA</p>
+                                                    <p className='ml-1 text-sm text-gray-500 font-thin md:text-lg lg:text-3xl'>why Multipla</p>
                                                 </div>
-                                                <p className='text-xl md:text-2xl lg:text-4xl font-bold'>MULTIPLAが<br/>選ばれる理由</p>
+                                                <p className='text-xl md:text-2xl lg:text-4xl font-bold'>Multiplaが<br/>選ばれる理由</p>
                                             </div>
                                             <div className='w-full'>
                                                 <div className="flex justify-center">
@@ -222,7 +215,7 @@ const ECLP = () => {
                                                     <div className="h-[270px] md:h-[350px] lg:h-[400px] px-8 md:px-16 lg:px-24 py-4 rounded-md bg-white mt-4">
                                                         <p className='text-base md:text-3xl lg:text-4xl font-bold'>本格的なSEO対策</p>
                                                         <div className="w-24 md:w-32 lg:w-44 h-0.5 my-1 bg-purple-500"></div>
-                                                        <p className='mt-2 text-sm md:text-2xl lg:text-3xl text-gray-500  md:py-4'>Shopifyを用いることで基本的なSEO対策が可能な上、弊社で、サイトの構造化データ、サイトマップなどShopify標準でない、SEO対策も必要に応じて設定することで精度の高いSEO対策も行うことが可能。自然流入での顧客の集客が見込めます。</p>
+                                                        <p className='mt-2 text-sm md:text-2xl lg:text-3xl text-gray-500  md:py-4'>Shopifyを用いることで基本的なSEO対策が可能な上、マルチプラで、サイトの構造化データ、サイトマップなどShopify標準でない、SEO対策も必要に応じて設定することで精度の高いSEO対策も行うことが可能。自然流入での顧客の集客が見込めます。</p>
                                                     </div>
                                                 </SwiperSlide>
                                                 <SwiperSlide>
@@ -516,9 +509,9 @@ const ECLP = () => {
                                     <div className='pt-24 pb-12'>
                                         <div className='flex justify-around items-center max-w-5xl mx-auto'>
                                             <div className='w-full'>
-                                                <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-gray-800 font-bold text-5xl'>MULTIPLA</span></h3>
+                                                <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-gray-800 font-bold text-5xl'>Multipla</span></h3>
                                                 <p className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'>構築費用</p>
-                                                <p className='text-center text-gray-600 text-sm lg:text-xl'> 弊社のサイト構築に対してお支払い頂く費用</p>
+                                                <p className='text-center text-gray-600 text-sm lg:text-xl'> マルチプラのサイト構築に対してお支払い頂く費用</p>
                                             </div>
                                             <div className='w-full'>
                                                 <div className="flex justify-center">
@@ -584,13 +577,13 @@ const ECLP = () => {
                                 </div>
                             </motion.div>
                         </div>
-                        {/* MULTIPLAのサポートプラン */}
+                        {/* Multiplaのサポートプラン */}
                         <div className='bg-gradient-to-tl from-purple-50 to-blue-100'>
                             <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
                                 <div className='mx-8 sm:mx-24 md:mx-12'>
                                     <div className='pt-24 pb-6'>
-                                        <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-gray-800 font-bold text-5xl'>MULTIPLA</span>のサポートサービス</h3>
-                                        <p className='text-gray-600 text-sm lg:text-xl text-center'> 弊社の月額サポートに対してお支払い頂く費用です。必要に応じて加入できます。</p>
+                                        <h3 className='lg:text-3xl text-xl text-center title-font font-bold  mb-4'><span className='text-gray-800 font-bold text-5xl'>Multipla</span>のサポートサービス</h3>
+                                        <p className='text-gray-600 text-sm lg:text-xl text-center'> マルチプラの月額サポートに対してお支払い頂く費用です。必要に応じて加入できます。</p>
                                     </div>
                                     <div className="flex justify-center">
                                         <div className=" relative h-48 w-48 md:w-62 md:h-62 lg:h-80 lg:w-80">
@@ -731,7 +724,7 @@ const ECLP = () => {
                                                         <span className='text-gray-600 text-left text-sm md:text-base xl:text-lg tracking-wide'>
                                                             <p className='text-green-500 font-bold'>Answer</p>
                                                             <p className='p-2 bg-gray-100 rounded-md'>
-                                                                サポートプランのみの契約も承っております。MULTIPLAのご用意するサポートプランの契約期間については、最短2ヶ月から解約可能となっています。Shopifyサポート、広告運用支援サポートに関しては最低一年からのご契約となっております。
+                                                                サポートプランのみの契約も承っております。マルチプラのご用意するサポートプランの契約期間については、最短2ヶ月から解約可能となっています。Shopifyサポート、広告運用支援サポートに関しては最低一年からのご契約となっております。
                                                             </p>
                                                         </span>
                                                     </div>
@@ -811,7 +804,7 @@ const ECLP = () => {
                     </div>
                 </div >
             </div >
-            </motion.div>
+            </Container>
         </>
     )
 }

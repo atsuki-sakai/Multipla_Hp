@@ -4,7 +4,6 @@ import React from 'react';
 import Image from 'next/image'
 import { motion } from 'framer-motion';
 import style from "./SalesContent.module.css"
-import { Marquee } from '@components/ui';
 
 const SalesContent = () => {
     return (

@@ -18,7 +18,7 @@ const LoadingView = () => {
                     <Image src={"/images/test-logo.png"} layout="responsive" height={80} width={80} alt={"Logo"}></Image>
                 </div>
                 <div className='text-gray-700 font-noto_sans'>
-                    <h3 className="text-2xl font-bold text-left">MULTIPLA</h3>
+                    <h3 className="text-2xl font-bold text-left">Multipla</h3>
                     <p className="text-sm text-left">マルチプラ</p>
                 </div>
                 </div>

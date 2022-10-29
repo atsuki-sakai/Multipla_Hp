@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { BlogCard } from "@components/ui"
+import { BlogCard, CustomButton } from "@components/ui"
 import Link from 'next/link';
 
 interface Props {
@@ -15,26 +15,18 @@ const BlogContent = ({blogData}: Props) => {
                     <h3 className="text-center text-gray-700 my-6 font-bold text-2xl md:text-3xl lg:text-4xl">ブログ</h3>
                     </motion.div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 py-12">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {
                         blogData.map((blog: any, index: number) => (
                             <motion.div key={index} initial={{ opacity:0.0 }} whileInView={{ opacity:1.0 }} transition={{ duration:0.3 }}>
-                            <BlogCard blog={blog} />
+                                <BlogCard blog={blog} />
                             </motion.div>
                         ))
                     }
                 </div>
-                    <div className='flex justify-center pb-12'>
-                    <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1.0, y:0 }} transition={{ duration:0.7 }} className='text-center mx-auto py-8 md:py-12 lg:py-16 pb-6 md:pb-12'>
-                        <Link href={"/blog/page/1"}>
-                            <a>
-                                <button className="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden text-sm md:text-lg lg:text-xl rounded-full px-12 py-3 transition-all ease-in duration-500 border border-purple-700 bg-white text-purple-700 font-noto_sans">
-                                    <span className="">
-                                        他のブログを見る
-                                    </span>
-                                </button>
-                            </a>
-                        </Link>
+                <div className='flex justify-center'>
+                    <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1.0, y:0 }} transition={{ duration:0.7 }} className='text-center mx-auto '>
+                        <CustomButton text={"他のブログを見る"} href={"/blog/page/1"} />
                     </motion.div>
                 </div>
             </div>

@@ -80,7 +80,7 @@ const Header = ({hidden = false}: Props) => {
               </div>
               <Link href={"/"} passHref>
                 <a>
-                  <h3 className={style.title}>MULTIPLA</h3>
+                  <h3 className={style.title}>Multipla</h3>
                   <p className={style.subtitle}>マルチプラ</p>
                 </a>
               </Link>

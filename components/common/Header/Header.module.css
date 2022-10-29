@@ -20,7 +20,7 @@
 }
 
 .desktop_menu {
-    @apply hidden md:flex items-center justify-end space-x-3 text-xs lg:text-sm lg:space-x-8 ml-8 bg-white px-6 lg:px-8 rounded-full shadow-md text-gray-800 border  font-noto_sans font-bold;
+    @apply hidden md:flex items-center justify-end space-x-3 text-xs xl:text-sm lg:space-x-8 ml-8 bg-white px-6 lg:px-8 rounded-full shadow-md text-gray-800 border  font-noto_sans font-bold;
 }
 
 .under_link {

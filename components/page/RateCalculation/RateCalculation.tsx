@@ -624,7 +624,7 @@ const RateCalculation = () => {
                                     defaultValue={true}
                                     onChenged={(state) => setOptions({ ...options, isDefaultSettings: state })}
                                     title={"ストア基本設定"}
-                                    description={"ストア公開に必要な各種設定、全て弊社にお任せ下さい。各機能の使い方や説明、アフターフォロー体制もございますのでご利用頂けます。"}
+                                    description={"ストア公開に必要な各種設定、全てマルチプラにお任せ下さい。各機能の使い方や説明、アフターフォロー体制もございますのでご利用頂けます。"}
                                     disabled
 
                                 >
@@ -850,7 +850,7 @@ const RateCalculation = () => {
                                     defaultValue={false}
                                     onChenged={(state) => setOptions({ ...options, isLineContact: state })}
                                     title={"Lineお問合せ機能"}
-                                    description={"メールでのお問合せでは入力フォームにメールアドレス、その他文字の打ち込みが多くなりお問合せまでのハードルが高く返信までの時間も長くなりがちです。弊社がご用意するLineお問合せ機能を追加することでお問合せがLine感覚で気軽に出来るようになり、顧客満足度UPが図れます。複数名でトークに参加できる為お問合せ業務の負担軽減にもオススメです。"}
+                                    description={"メールでのお問合せでは入力フォームにメールアドレス、その他文字の打ち込みが多くなりお問合せまでのハードルが高く返信までの時間も長くなりがちです。マルチプラがご用意するLineお問合せ機能を追加することでお問合せがLine感覚で気軽に出来るようになり、顧客満足度UPが図れます。複数名でトークに参加できる為お問合せ業務の負担軽減にもオススメです。"}
                                 >
                                     <div className='mt-2'>
                                         <div className='bg-white p-2 rounded-md shadow-md'>
@@ -1141,7 +1141,7 @@ const RateCalculation = () => {
                     <div className='flex justify-center mt-4'>
                         <button disabled={completed} onClick={(e) => { handleClick(e) }} className="my-2 text-lg font-bold text-gray-900 rounded-md">
                             <p className=
-                                {`px-6 py-3 rounded-md shadow-md transform duration-300 ease-in-out ${completed ? "bg-gray-500 border-2 border-gray-300 text-gray-400" : "bg-blue-500 border-2 border-blue-600 text-white hover:-translate-y-1"}  `}>
+                                {`px-6 py-3 rounded-md shadow-md transform duration-300 ease-in-out ${completed ? "bg-gray-500 border-2 border-gray-300 text-gray-400" : "bg-purple-800 border-2 border-purple-900 text-white hover:-translate-y-1"}  `}>
                                 お問合せを送信
                             </p>
                         </button>

@@ -12,10 +12,10 @@ const Footer = () => {
                     <Link href={"/"} passHref>
                         <div className='flex items-center'>
                             <div className={style.logo}>
-                                <Image className="w-full h-full" src={"/images/test-logo.png"} layout="fill" loading='eager' objectFit="cover" alt="MULTIPLA Logo" />
+                                <Image className="w-full h-full" src={"/images/test-logo.png"} layout="fill" loading='eager' objectFit="cover" alt="Multipla Logo" />
                             </div>
                             <div>
-                                <p className='text-white font-bold text-base font-noto_sans'>MULTIPLA</p>
+                                <p className='text-white font-bold text-base font-noto_sans'>Multipla</p>
                                 <p className='text-[10px] text-white'>マルチプラ</p>
                             </div>
                         </div>
@@ -23,7 +23,7 @@ const Footer = () => {
                 </div>
                 <div className={style.navigation}>
                     <div>
-                        <h3 className={style.navTitle}>MULTIPLAについて</h3>
+                        <h3 className={style.navTitle}>マルチプラについて</h3>
                         <ul className={style.navbar}>
                             <li className="mb-4">
                                 <Link href="/faq">
@@ -86,7 +86,7 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-            <p className="w-full block mt-4 text-base text-center text-white font-thin">© 2022 MULTIPLA™. All Rights Reserved.</p>
+            <p className="w-full block mt-4 text-base text-center text-white font-thin">© 2022 マルチプラ/Multipla™. All Rights Reserved.</p>
         </footer>
     )
 }

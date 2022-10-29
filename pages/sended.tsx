@@ -8,7 +8,7 @@ const Sended = () => {
             <div className="mx-4">
                 <div className='py-48 max-w-xl mx-auto h-screen'>
                     <div id="alert-additional-content-3" className="p-4 mb-4 bg-green-100 rounded-lg dark:bg-green-200 " role="alert">
-                        <h3 className="text-lg font-bold text-green-700 dark:text-green-800">お問い合わせ完了</h3>
+                        <h1 className="text-lg font-bold text-green-700 dark:text-green-800">お問い合わせ完了</h1>
                         <div className="mt-2 mb-4 text-sm text-green-700 dark:text-green-800">
                             お問い合わせありがとうございました。
                             内容を確認のうえ、回答させて頂きます。しばらくお待ちください。

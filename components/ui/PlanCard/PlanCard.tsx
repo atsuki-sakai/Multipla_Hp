@@ -25,14 +25,14 @@ const PlanCard = ({
 }: Props) => {
 
     return (
-        <div className=' rounded-xl p-4 shadow-md max-w-md mt-3 mx-auto bg-white'>
+        <div className=' rounded-xl p-4 shadow-md max-w-md mt-3 mx-auto bg-gray-50'>
             <div className='flex items-center'>
                 <h5 className='font-bold text-left text-2xl md:text-3xl mb-2'> {planText}<span className='text-sm md:text-base text-gray-500'>プラン</span></h5>
                 {
                     isShopifyPlan ? hideShopifyLogo ? " " : <p className='text-xs bg-green-500 px-1.5 py-0.5 rounded-full mb-4 ml-2 text-white shadow-md'>Shopify</p> : ""
                 }
             </div>
-            <p className='text-xs md:text-sm text-left text-gray-800'>{planDescription}</p>
+            <p className='text-xs md:text-sm text-left text-gray-800 bg-white p-2 rounded-md'>{planDescription}</p>
             <div className='flex space-x-4 mb-2'>
                 <h5 className='text-gray-500 text-sm tracking-wider'><span className='text-black text-3xl font-bold'>{isShopifyPlan ? hideShopifyLogo ? "" : "$" : ""}{priceText}</span>{isShopifyPlan ? hideShopifyLogo ? "万円から" : "/月" : "万円から"}</h5>
             </div>
