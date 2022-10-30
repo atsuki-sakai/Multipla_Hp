@@ -37,7 +37,7 @@ const MetaHead = ({
             <meta property="og:locale" content="ja_JP" />
             <meta property="og:description" content={description} />
             <meta name='twitter:site' content="@rKW0OxHzlwaTp3U" />
-            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:card" content="summary_large_image" />
             <meta name='twitter:domain' content="multipla.io" />
             <meta name='twitter:title' content={title} />
             <meta name='twitter:description' content={description} />

@@ -91,6 +91,8 @@ const BlogHandle = ({blogData, categories, categoryBlogs} : InferGetStaticPropsT
     }
     const headingTexts = renderToc(blog.text)
 
+    console.log("router.asPath",router.asPath)
+
     useEffect(() => {
         makeHeaderPadding();
         if(!window.navigator.share) {
@@ -180,24 +182,24 @@ const BlogHandle = ({blogData, categories, categoryBlogs} : InferGetStaticPropsT
                                         </div>
                                         <div className={`pt-4 flex items-center space-x-2 ${ showShare ? "hidden" : ""}`}>
                                             <div className='bg-indigo-800 text-white px-3 py-1.5 text-sm font-bold rounded-md shadow-md'>
-                                                <a href={`http://www.facebook.com/share.php?u=https://byte-ecommerce.com${router.asPath}`}>
+                                                <a href={`http://www.facebook.com/share.php?u=https://multipla.io${router.asPath}`}>
                                                     Facebookでシェアする
                                                 </a>
                                             </div>
                                             <div className='bg-blue-500 text-white px-3 py-1.5 text-sm font-bold rounded-md shadow-md'>
-                                            <a className="twitter" href={`http://twitter.com/intent/tweet?text=${blog.title}&url=https://byte-ecommerce.com${router.asPath}`}>
+                                            <a className="twitter" href={`http://twitter.com/intent/tweet?text=${blog.title}&url=https://multipla.io${router.asPath}`}>
                                             <p>
                                                 Twitterでシェアする
                                             </p>
                                             </a>
                                             </div>
                                             <div className='bg-green-500 text-white px-3 py-1.5 text-sm font-bold rounded-md shadow-md'>
-                                                <a href={`https://social-plugins.line.me/lineit/share?url=https://byte-ecommerce.com${router.asPath}`}>
+                                                <a href={`https://social-plugins.line.me/lineit/share?url=https://multipla.io${router.asPath}`}>
                                                     LINEでシェアする
                                                 </a>
                                             </div>
                                         </div>
-                                            <button className='text-sm font-bold w-full' onClick={ async () => await share(blog.title, `https://byte-ecommerce.com${router.asPath}`)}>
+                                            <button className='text-sm font-bold w-full' onClick={ async () => await share(blog.title, `https://multipla.io${router.asPath}`)}>
                                                 <div className={` ${ showShare ? "bg-gray-800 text-white px-3 py-1.5 mt-4 flex items-center justify-center text-center w-full rounded-md shadow-md" : "hidden" } `}>
                                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
                                                         <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
