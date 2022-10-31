@@ -70,12 +70,12 @@ const NewsHandle = ({ news }: InferGetStaticPropsType<typeof getStaticProps>) =>
                         }}
                 >
                     <div className="md:h-[600px] max-w-xl mx-auto">
-                        <div className='flex items-center justify-around mb-8'>
+                        <div className='flex items-center justify-around pb-8'>
                             <p className='border-2 border-blue-600 text-blue-600 px-6 py-1'>{_news.category}</p>
                             <p className='text-sm text-gray-500'>投稿日: {_news.createdAt.split('T')[0]}</p>
                         </div>
                         <h1 className='text-xl '>{_news.title}</h1>
-                        <p className='mt-4 p-2 text-gray-500 mb-12'>{_news.body}</p>
+                        <p className='mt-4 p-2 bg-white rounded-md text-gray-500 pb-12'>{_news.body}</p>
                     </div>
                 </motion.div>
             </motion.div>

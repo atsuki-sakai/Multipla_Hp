@@ -8,7 +8,7 @@ interface Props {
 
 const BlogContent = ({blogData}: Props) => {
     return (
-        <div className='px-8 md:px-12 py-6 md:py-12 z-10 bg-white'>
+        <div className='px-8 md:px-12 py-6 md:py-12 z-10 bg-gray-200'>
                 <div className=' max-w-6xl mx-auto'>
                     <motion.div initial={{ opacity:0.0 }} whileInView={{ opacity:1.0 }} transition={{ duration:1.0 }}>
                         <div className='w-fit my-4 md:my-8'>
@@ -29,7 +29,7 @@ const BlogContent = ({blogData}: Props) => {
                 </div>
                 <div className='flex justify-center'>
                     <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1.0, y:0 }} transition={{ duration:0.7 }} className='text-center mx-auto '>
-                        <CustomButton text={"他のブログを見る"} href={"/blog/page/1"} />
+                        <CustomButton text={"ブログ一覧へ"} href={"/blog/page/1"} />
                     </motion.div>
                 </div>
             </div>

@@ -31,8 +31,8 @@ const TopContent = () => {
                                 transform:`translateY(-${scrollY > 1400 ? 0.0 : progress * 30 }vh)`,
                             }} ref={ref} className='h-full w-full -z-20' >
                     <VideoPlayer
-                        mp4={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1666118009/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%81%AE%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3_3_ye5s54.mp4"}
-                        webm={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1666118752/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%81%AE%E3%83%86%E3%82%99%E3%82%B5%E3%82%99%E3%82%A4%E3%83%B3-_3__1_dfdju8.webm"}
+                        mp4={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1659753868/bg-particel_vqwbgl.mp4"}
+                        webm={"https://res.cloudinary.com/fdsfmsadlfmaslkdmfalksk/video/upload/v1659753884/bg-particel_yb8as0.webm"}
                     />
                     <div className={`absolute flex flex-col justify-around items-center w-full h-full`}>
                         <motion.div 
@@ -54,10 +54,10 @@ const TopContent = () => {
                                 initial={{ opacity: 0, y:30 }} 
                                 animate={{ opacity: 1.0, y:0 }} 
                                 transition={{ duration:0.9, delay: 0.9 }} 
-                                className='text-3xl md:text-6xl lg:text-7xl text-left w-fit h-fit -translate-x-1/2 font-bold tracking-wide mt-12'
+                                className='text-3xl md:text-6xl lg:text-7xl text-white text-left w-fit h-fit -translate-x-1/2 font-bold tracking-wide mt-12'
                             >
                                 <p>WEBの力で<br/>ビジネスを加速させる</p>
-                                <p className="text-sm md:text-base lg:text-lg text-gray-600 mt-1">Multipla Web Developer</p>
+                                <p className="text-sm md:text-base lg:text-lg text-gray-500 mt-1">Multipla Web Developer</p>
                             </motion.div>
                         </motion.div>
                         <motion.div
@@ -71,7 +71,7 @@ const TopContent = () => {
                                 animate={{ y:10 }} 
                                 transition={{ duration:1.2, repeat: Infinity, repeatType:"reverse" }}
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 md:h-12 md:w-12 lg:w-16 lg:h-16 text-purple-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 md:h-12 md:w-12 lg:w-16 lg:h-16 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </motion.div>

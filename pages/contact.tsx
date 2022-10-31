@@ -161,7 +161,7 @@ const Contact = () => {
                                             </p>
                                         </button>
                                     </div>
-                                    <div className="h-4 mb-6">
+                                    <div className="h-4 pb-12">
                                         <p className={`text-red-600 text-center text-sm ${disabled && !isLoading ? "" : "hidden"} `}>入力項目をご確認下さい。</p>
                                     </div>
                                     {

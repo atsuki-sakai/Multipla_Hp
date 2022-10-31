@@ -38,7 +38,7 @@ const Agreement = () => {
                     <div className="in-range:">
                         <div className="max-w-6xl mx-auto">
                             <div className="h-fit py-6">
-                                <div className='mb-12'>
+                                <div className='pb-12'>
                                     <h5 className="text-center font-bold text-xl md:text-2xl lg:text-3xl mt-12">制作依頼から納品まで</h5>
                                     <div className="relative flex justify-center items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 md:h-12 md:w-12 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">

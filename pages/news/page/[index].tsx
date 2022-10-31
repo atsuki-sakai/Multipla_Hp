@@ -13,7 +13,7 @@ import { motion } from 'framer-motion'
 import { News } from '@service/micro-cms/type/News'
 
 
-const PER_PAGE = 10;
+const PER_PAGE = 6;
 
 export const getStaticPaths: GetStaticPaths = async () => {
 
@@ -54,7 +54,7 @@ const NewsIndex = ({allNews, id, totalCount}: InferGetStaticPropsType<typeof get
         </MetaHead>
         <Container>
             <BreadcrumbList items={items} />
-            <div className='max-w-lg md:max-w-4xl lg:max-w-6xl mx-auto mb-6 md:mb-12'>
+            <div className='max-w-lg md:max-w-4xl lg:max-w-6xl mx-auto pb-6 md:pb-12 py-12 md:py-24'>
                 <motion.div
                     initial={{ opacity:0, y:10 }}
                     animate={{ opacity:1, y:0 }}
@@ -74,11 +74,14 @@ const NewsIndex = ({allNews, id, totalCount}: InferGetStaticPropsType<typeof get
                             allNews.map((news: News) => {
                                 return (
                                     <div key={news.id} className='bg-gray-50 shadow-md rounded-md py-1 md:py-3 px-2 md:px-5 mb-5 text-gray-500'>
-                                        <div className='md:flex items-center  md:space-x-12 text-sm md:text-base'>
-                                            <div className='my-2 flex items-center justify-between' >
-                                                <p className='text-blue-600'>{news.createdAt.split("T")[0]}</p><p className='ml-4 border border-green-500 px-3 rounded-full font-normal text-green-500'>{news.category}</p>
+                                        <div className='md:grid md:grid-cols-4 items-center  text-sm md:text-base'>
+                                            <div className='my-2 col-span-1 flex md:flex-col items-center justify-between' >
+                                                <p className='text-blue-600 text-left w-full'>{news.createdAt.split("T")[0]}</p>
+                                                <p className='ml-4 border text-center md:mt-4 border-green-500 px-3 rounded-full font-normal w-full text-green-500'>{news.category}</p>
                                             </div>
-                                            <p className='bg-white w-full py-2 px-6'>{news.title}</p>
+                                            <div className='bg-white col-span-3  w-ful py-2 mx-6'>
+                                                <p className='px-3'>{news.title}</p>
+                                            </div>
                                         </div>
                                         <div className='w-full flex justify-center'>
                                             <p className='w-fit text-sm md:text-base underline text-blue-500'>
@@ -95,7 +98,9 @@ const NewsIndex = ({allNews, id, totalCount}: InferGetStaticPropsType<typeof get
                         }
                     </div>
                 </motion.div>
-                <Pagination totalCount={totalCount} pageIndex={id} perPage={PER_PAGE} />
+                {
+                    PER_PAGE < totalCount ? <Pagination totalCount={totalCount} pageIndex={id} perPage={PER_PAGE} path={"/news/page"} /> :  <></>
+                }
             </div>
         </Container>
         </>

@@ -34,7 +34,7 @@ const Plan = () => {
                         delay: 0.5,
                         duration: 0.7,
                     }}
-                    className={"text-center"}
+                    className={"text-center pb-12"}
                 >
                     {/* MULTIPLA hp system Plan */}
                     <div className='mt-12 mb-6 text-center'>
@@ -263,7 +263,6 @@ const Plan = () => {
                         />
                     </div>
                 </motion.div>
-                <div className="mb-12"></div>
             </Container>
         </>
     );

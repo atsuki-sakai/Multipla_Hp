@@ -51,7 +51,7 @@ return (
         </MetaHead>
         <Container>
             <BreadcrumbList items={items}/>
-            <div className='max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto mb-6 md:mb-12'>
+            <div className='max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto pb-6 md:pb-12'>
                 <motion.div
                     initial={{ opacity:0, y:10 }}
                     animate={{ opacity:1, y:0 }}
@@ -88,7 +88,9 @@ return (
                         ))
                     }
                 </div>
-                <Pagination totalCount={totalCount} pageIndex={id} perPage={PER_PAGE} />
+                {
+                    PER_PAGE < totalCount ? <Pagination totalCount={totalCount} pageIndex={id} perPage={PER_PAGE} path={"/blog/page"} /> : <></>
+                }
             </div>
         </Container>
         </>

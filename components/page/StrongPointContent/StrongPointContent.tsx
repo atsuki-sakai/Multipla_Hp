@@ -12,9 +12,9 @@ const StrongPointContents = () => {
             <div className="px-8 md:px-12 max-w-6xl mx-auto py-12 md:py-24 font-noto_sans mb-12 md:mb-20">
                 <motion.div initial={{ y: 30, opacity: 0.0 }} whileInView={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
                 <div className='w-fit my-4 md:my-8'>
-                    <h3 className="text-gray-700 text-3xl md:text-4xl">StrongPoint</h3>
+                    <h3 className="text-white text-3xl md:text-4xl">StrongPoint</h3>
                     <div className='h-[2px] w-full bg-green-300'></div>
-                    <p className='text-xs md:text-sm'>マルチプラの強み</p>
+                    <p className='text-xs md:text-sm text-white'>マルチプラの強み</p>
                 </div>
                 </motion.div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-20 max-w-7xl mx-auto'>

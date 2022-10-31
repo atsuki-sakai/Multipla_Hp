@@ -507,7 +507,7 @@ const RateCalculation = () => {
     }, [lisnerState])
 
     return (
-        <div className='relative bg-white '>
+        <div className='relative bg-gray-200'>
             {/* PopUP */}
             <div className={` ${showPopup ? "" : "hidden"} `}>
                 <div className='fixed inset-0 bg-black bg-opacity-60  z-40'>
@@ -1147,7 +1147,7 @@ const RateCalculation = () => {
                             </p>
                         </button>
                     </div>
-                    <div className="h-4 mb-4">
+                    <div className="h-4 pb-12">
                         <p className={`text-red-600 text-center text-sm ${completed && !isLoading ? "" : "hidden"} `}>入力項目をご確認下さい。</p>
                     </div>
                     {
@@ -1155,7 +1155,6 @@ const RateCalculation = () => {
                     }
                 </form>
             </div>
-            <div className='mt-12'></div>
         </div >
     )
 }

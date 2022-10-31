@@ -9,7 +9,7 @@ interface Props {
 
 const NewsLatter = ({ news }: Props) => {
     return (
-        <div className='w-full h-full bg-gray-100 py-8'>
+        <div className='w-full h-full bg-gray-400 py-8'>
             <div className='px-8 md:px-12 max-w-6xl mx-auto font-noto_sans'>
                 <div className='w-fit my-2 md:my-4'>
                     <h5 className='text-3xl md:text-4xl'>News</h5>

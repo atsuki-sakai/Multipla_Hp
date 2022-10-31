@@ -8,7 +8,7 @@ const ActualSite = () => {
 
     return (
 
-        <div className='bg-gray-100 w-full'>
+        <div className='bg-gray-200 w-full'>
             <div className='md:mx-auto lg:w-1/2 px-8 md:px-12 py-6 md:py-12 lg:py-24 font-noto_sans'>
                 <motion.div initial={{ y: 30, opacity: 0.0 }} animate={{ y:0, opacity:1.0 }} transition={{ duration:0.8, delay:0 }}>
                 <div className='w-fit my-4 md:my-8'>

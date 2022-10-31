@@ -93,9 +93,9 @@ const SalesContent = () => {
                     </div>
                     <div className="h-0.5 w-1/2 my-12 md:my-24 mx-auto bg-gray-200 rounded-full"></div>
                     <motion.div initial={{ opacity:0, y:30 }} whileInView={{ opacity:1, y:0 }} transition={{ duration:0.8 }} >
-                        <p className="text-center mt-4 md:mt-8 text-gray-500 lg:mt-12 text-base md:text-xl lg:text-2xl pb-6 md:pb-12">上記以外のお問合せにも対応いたします。<br/>お気軽にご相談ください。</p>
+                        <p className="text-center mt-4 md:mt-8 text-gray-700 lg:mt-12 text-base md:text-xl lg:text-2xl pb-6 md:pb-12">上記以外のお問合せにも対応いたします。<br/>お気軽にご相談ください。</p>
                         <CustomButton href={"/contact"} text={"質問する"}>
-                            <Chat className='h-8 w-8 md:h-10 md:w-10' />
+                            <Chat className='h-8 w-8 md:h-8 md:w-8' />
                         </CustomButton>
                     </motion.div>
                 </div>

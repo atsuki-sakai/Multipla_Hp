@@ -16,36 +16,8 @@ const Header = ({hidden = false}: Props) => {
   const { openDrawer, isDrawerOpen } = useUI();
 
   const [scrollY, setScrollY] = useState(0);
-  const switchAnimationY = 1200;
   const [scrollListner, setScrollListoner] = useState(true);
 
-  const showUnderLink = scrollY >= switchAnimationY
-  const showHeader = scrollY <= switchAnimationY
-
-
-  const underLinkClassNames = cn(
-    style.under_link, {
-      [style.show]: showUnderLink,
-      [style.hide]: !showUnderLink
-  })
-
-  const headerClassNames = cn(
-    style.header, {
-      [style.show]: showHeader,
-      [style.hide]: !showHeader,
-      [style.hidden_header]: hidden
-    }
-  )
-
-  const windowToTop = (e: any) => {
-    setScrollY(0);
-    window.scrollTo(0, 0);
-    if (e.preventDefault) {
-      e.preventDefault();
-    } else {
-      e.returnValue = false;
-    }
-  };
   const handle = (e: any) => {
     e.preventDefault();
   };
