@@ -115,7 +115,7 @@ const AboutUs = () => {
               <h5 className="text-left w-32 inline-block lg:text-xl font-bold">
                 代表
               </h5>
-              <p className="text-left lg:text-xl w-full font-bold">数元伸哉</p>
+              <p className="text-left lg:text-xl w-full font-bold">酒井専冴</p>
             </div>
           </div>
           <div className="max-w-3xl mx-auto pb-12 md:pb-24">
