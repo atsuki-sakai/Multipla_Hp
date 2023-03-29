@@ -37,7 +37,7 @@ const Plan = () => {
             delay: 0.5,
             duration: 0.7,
           }}
-          className={"text-center pb-12"}
+          className={"text-center pb-12 tracking-[1px]"}
         >
           {/* MULTIPLA hp system Plan */}
           <div className="mt-12 mb-6 text-center">

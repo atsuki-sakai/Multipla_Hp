@@ -36,7 +36,7 @@ const ServiceContents = () => {
           whileInView={{ y: 0, opacity: 1.0 }}
           transition={{ duration: 0.8, delay: 0 }}
         >
-          <div className="w-fit my-4 md:my-8">
+          <div className="w-fit my-4 md:my-8 tracking-[2px]">
             <h3 className="text-3xl md:text-4xl">Service</h3>
             <div className="h-[2px] w-full bg-green-300"></div>
             <p className="text-xs md:text-sm">サービス</p>

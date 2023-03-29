@@ -14,7 +14,7 @@ const SalesContent = () => {
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1.0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-lg md:max-w-6xl py-1  mx-auto text-left"
+            className="max-w-lg md:max-w-6xl py-1  mx-auto text-left tracking-[1px]"
           >
             <div className="relative w-full h-full">
               <div>
@@ -64,7 +64,7 @@ const SalesContent = () => {
                   whileInView={{ opacity: 1.0, y: 0 }}
                   transition={{ duration: 0.8 }}
                 >
-                  <div className="max-w-lg w-fit p-3 md:p-6 bg-white border shadow-md mt-4 md:-mt-12 rounded-md mx-auto relative">
+                  <div className="max-w-lg w-fit p-3 md:p-6 bg-white border shadow-md mt-4 md:-mt-12 rounded-md mx-auto relative tracking-[1px]">
                     <div className="px-3 py-1 bg-green-100 rounded-md w-fit">
                       <p className="text-green-600 font-bold text-sm md:text-base lg:text-lg">
                         既存ビジネスをアップグレード

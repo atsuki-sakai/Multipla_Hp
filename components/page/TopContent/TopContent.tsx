@@ -71,7 +71,7 @@ const TopContent = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1.0, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.9 }}
-                className="text-3xl md:text-6xl lg:text-7xltext-left w-fit h-fit -translate-x-1/2 font-bold tracking-wide mt-12"
+                className="text-3xl md:text-6xl lg:text-7xltext-left w-fit h-fit -translate-x-1/2 font-bold tracking-wide tracking-[1px] mt-12"
               >
                 <p>
                   WEBの力で
